@@ -1,0 +1,19 @@
+{
+    "require-dev": {
+        "symfony/var-dumper": "^6.0",
+        "filp/whoops": "^2.14"
+    },
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    },
+    "autoload-dev": {
+        "files": ["_dev/whoops.php"]
+    },
+    "autoload": {
+        "files": ["app/func/master.php"],
+        "psr-4": {
+            "App\\": "app/",
+            "Router\\": "router/"
+        }
+    }
+}
