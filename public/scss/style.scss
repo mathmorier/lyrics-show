@@ -1,9 +1,36 @@
 // Suppression des éléments par défaut
+$bgPrinc : #dadada;
 *{
     margin: 0;
     padding: 0;
     outline: 0;
-
+    font-family: Arial, Helvetica, sans-serif;
+}
 a{
     text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+html{
+    background-color: $bgPrinc;
+}
+.rg_embed{
+    width: 100%;
+    background-color: $bgPrinc !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+}
+.rg_embed_body p{
+    text-align: center;
+    font-size: 3vw;
+    a{
+        background-color: transparent !important;
+    }
+}
+.rg_embed_logo{
+    z-index: 1;
+}
+.rg_embed_footer a{
+    color: black;
 }

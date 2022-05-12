@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
     <?php foreach ($main['head'] as $key => $value) {echo $value;}?>
 </head>
 <body>
@@ -19,5 +20,6 @@
     </footer>
 </body>
 <script src="/js/script.js"></script>
+<script src="/js/header.js"></script>
 <?php foreach ($main['script'] as $key => $value) {echo $value;}?>
 </html>
