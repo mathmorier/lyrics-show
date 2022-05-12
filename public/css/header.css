@@ -1,3 +1,4 @@
+/* SCSS Gradient */
 #nav-princ {
   position: fixed;
   top: 0;
@@ -81,6 +82,8 @@
 
 #nav-princ .slider.show {
   width: 250px;
+  -webkit-box-shadow: 1px 0px 4px 0px #444;
+          box-shadow: 1px 0px 4px 0px #444;
 }
 
 #nav-princ .slider.show * {

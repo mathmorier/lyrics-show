@@ -1,5 +1,7 @@
 // Suppression des éléments par défaut
-$bgPrinc : #dadada;
+@import 'colors';
+
+
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +15,10 @@ ul{
     list-style: none;
 }
 html{
-    background-color: $bgPrinc;
+    background: $bgPrinc ;
+}
+main{
+    min-height: 100vh;
 }
 .rg_embed{
     width: 100%;

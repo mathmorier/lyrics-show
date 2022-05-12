@@ -9,7 +9,8 @@ class Lyrics
         require __DIR__.'/../models/lyrics.php';
 
         $main['head'] = [
-            '<link rel="stylesheet" href="/css/lyrics.css">'
+            '<link rel="stylesheet" href="/css/lyrics.css">',
+            '<link rel="stylesheet" href="/css/searchBar.css">'
         ];
         $main['script'] = [
             '<script src="/js/lyrics.js"></script>'

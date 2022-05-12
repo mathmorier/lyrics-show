@@ -1,5 +1,13 @@
 <?php
+namespace App\Models;
 
-$title = 'Lyrics';
+class Lyrics  
+{
+    static function getData($id)
+    {
+        return false ;
+    }
+}
+
 
 ?>

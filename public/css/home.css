@@ -1,0 +1,20 @@
+/* SCSS Gradient */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.container .overlay {
+  background-color: #f4da63ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container .overlay h2 {
+  padding: 0 0 0 10px;
+}
+
+.container .overlay p {
+  margin: 10px 0 10px 0;
+}
+/*# sourceMappingURL=home.css.map */

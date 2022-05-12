@@ -1,19 +1,22 @@
 <?php
 namespace App\Controllers;
+use App\Models\Home as HomeModel ;
 
 class Home
 {
     public function index($params)
     {
-
-        require __DIR__.'/../models/home.php';
-
-        $main['head'] = [
-            '<link rel="stylesheet" href="/css/CSSVIEW.css">'
+        $main = [
+            'head' => [
+                '<link rel="stylesheet" href="/css/home.css">',
+                '<link rel="stylesheet" href="/css/searchBar.css">'
+            ],
+            'script' => [
+                '<script src="/js/home.js"></script>'
+            ]
         ];
-        $main['script'] = [
-            '<script src="/js/JSVIEW.js"></script>'
-        ];
+
+        $data = HomeModel::getData();
 
         ob_start();
         require __DIR__.'/../views/home.php';

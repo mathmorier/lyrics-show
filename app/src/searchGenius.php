@@ -1,7 +1,16 @@
 <div class="search-box">
-        <label for="search">Search Song :</label>
-        <input type="text" name="search" id="search" placeholder="Search ..." autofocus>
-        <a href="/">X</a>
+        <div id="search-ask">
+        <label for="search">Search Song</label>
+        <div>
+            <input type="text" name="search" id="search" placeholder="Search ..." autofocus>
+            <a href="/">
+                <div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </a>
+        </div>
+        </div>
         <div id="search-res"></div>
 </div>
 
@@ -47,7 +56,7 @@
     }
 </script>
 
-<style>
+<!-- <style>
     .search-box{
         margin: 10px;
         margin-top: 25px;
@@ -69,4 +78,4 @@
     .serach-list:hover{
         color: #713c3cf0;
     }
-</style>
+</style> -->

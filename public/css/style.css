@@ -1,3 +1,4 @@
+/* SCSS Gradient */
 * {
   margin: 0;
   padding: 0;
@@ -14,12 +15,16 @@ ul {
 }
 
 html {
-  background-color: #dadada;
+  background: #f0f0f0;
+}
+
+main {
+  min-height: 100vh;
 }
 
 .rg_embed {
   width: 100%;
-  background-color: #dadada !important;
+  background-color: #f0f0f0 !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
