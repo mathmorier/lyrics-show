@@ -22,4 +22,15 @@ function error($num)
 
 }
 
+
+function getGenuisSong($id)
+{
+    $path = "/songs/".$id;
+    $api = 'https://api.genius.com';
+    $token = 'xkHGfcbtHLNZuvfUoHkz9ioSIISH7YsnvQSO_Mav4y9E2c-Z3iTo5FbzJqHb_fyI';
+    $url = $api.$path.'?access_token='.$token;
+    $res = json_decode(file_get_contents($url));
+    return $res->response->song;
+}
+
 ?>

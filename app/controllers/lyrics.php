@@ -3,7 +3,7 @@ namespace App\Controllers;
 
 class Lyrics
 {
-    public function index($params)
+    public function index($params = null, $song = null)
     {
 
         require __DIR__.'/../models/lyrics.php';
@@ -20,6 +20,16 @@ class Lyrics
         $main['view'] = ob_get_clean();
 
         require __DIR__.'/../layouts/default.php';
+    }
+
+    public function firstShow($params)
+    {
+
+        require __DIR__.'/../models/lyricsFristShow.php';
+
+        $this->index(null,$song);
+
+
     }
 }
 
