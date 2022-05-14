@@ -8,6 +8,7 @@
   background-color: #f4da63ff;
   padding: 20px;
   border-radius: 10px;
+  min-height: 70vh;
 }
 
 .container .overlay h2 {

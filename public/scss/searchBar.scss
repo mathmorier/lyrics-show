@@ -1,6 +1,7 @@
 @import 'colors';
 
 .search-box{
+    position: relative;
     margin: 10px auto;
     width: 80%;
     display: flex;
@@ -10,6 +11,8 @@
     #search-ask{
         display: flex;
         flex-direction: column;
+        max-width: 800px;
+        width: 100%;
         label{
             background-color: transparent;
             margin: 0 0 5px 20px;
@@ -18,11 +21,10 @@
         }
         div{
             display: flex;
-
+            height: 50px;
             input{
-                height: 50px;
-                width: 80%;
                 padding: 10px;
+                width: 100%;
                 border-radius: 15px 0 0 15px;
                 outline: none;
                 border: 2px solid $y3;
@@ -30,25 +32,25 @@
             }
             a{
                 color: $black;
-                div{
+                .corss{
                     background-color: $y3;
                     height: 50px;
                     width: 50px;
                     border-radius: 0 15px 15px 0;
                     position: relative;
-                    div{
+                    .cross-line{
                         position: absolute;
-                        top: 100%;
-                        left: 100%;
+                        top: 25px;
+                        left: 25px;
                         
                         height: 2px;
-                        width: 40px;
-                        background-color: #fff;
+                        width: 25px;
+                        background-color: $white;
                         &:first-child{
-                            transform: rotate(45deg) translate(-50%, -50%);
+                            transform: translateX(-50%) rotate(-45deg);
                         }
                         &:last-child{
-                            transform: rotate(45deg) translate(-50%, -50%);
+                            transform: translateX(-50%) rotate(45deg);
                         }
                     }
                 }
@@ -56,6 +58,26 @@
         }
     }
     #search-res{
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        .serach-list{
+            background-color: $white;
+            margin: auto;
+            padding: 7px 10px;
+            width: 94%;
+            max-width: 750px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: 1px solid $gray;
+            box-shadow: 2px 2px 4px 0px $shadow;
+            gap: 10px;
+        }
     }
 }

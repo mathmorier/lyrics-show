@@ -1,5 +1,6 @@
 /* SCSS Gradient */
 .search-box {
+  position: relative;
   margin: 10px auto;
   width: 80%;
   display: -webkit-box;
@@ -25,6 +26,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 800px;
+  width: 100%;
 }
 
 .search-box #search-ask label {
@@ -38,12 +41,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 50px;
 }
 
 .search-box #search-ask div input {
-  height: 50px;
-  width: 80%;
   padding: 10px;
+  width: 100%;
   border-radius: 15px 0 0 15px;
   outline: none;
   border: 2px solid #fdd04fff;
@@ -55,7 +58,7 @@
   color: #000;
 }
 
-.search-box #search-ask div a div {
+.search-box #search-ask div a .corss {
   background-color: #fdd04fff;
   height: 50px;
   width: 50px;
@@ -63,26 +66,63 @@
   position: relative;
 }
 
-.search-box #search-ask div a div div {
+.search-box #search-ask div a .corss .cross-line {
   position: absolute;
-  top: 100%;
-  left: 100%;
+  top: 25px;
+  left: 25px;
   height: 2px;
-  width: 40px;
+  width: 25px;
   background-color: #fff;
 }
 
-.search-box #search-ask div a div div:first-child {
-  -webkit-transform: rotate(45deg) translate(-50%, -50%);
-          transform: rotate(45deg) translate(-50%, -50%);
+.search-box #search-ask div a .corss .cross-line:first-child {
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
 }
 
-.search-box #search-ask div a div div:last-child {
-  -webkit-transform: rotate(45deg) translate(-50%, -50%);
-          transform: rotate(45deg) translate(-50%, -50%);
+.search-box #search-ask div a .corss .cross-line:last-child {
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
 }
 
 .search-box #search-res {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+}
+
+.search-box #search-res .serach-list {
+  background-color: #fff;
+  margin: auto;
+  padding: 7px 10px;
+  width: 94%;
+  max-width: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-shadow: 2px 2px 4px 0px #444;
+          box-shadow: 2px 2px 4px 0px #444;
+  gap: 10px;
 }
 /*# sourceMappingURL=searchBar.css.map */
