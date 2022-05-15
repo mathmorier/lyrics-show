@@ -18,4 +18,19 @@
 .container .overlay p {
   margin: 10px 0 10px 0;
 }
+
+.search-genuis {
+  margin-top: 40vh;
+  margin-bottom: 30vh;
+}
+
+.title-princ {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+}
+
+.title-princ h1 {
+  text-transform: capitalize;
+}
 /*# sourceMappingURL=home.css.map */

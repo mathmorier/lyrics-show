@@ -1,0 +1,15 @@
+/* SCSS Gradient */
+#search-ask div input {
+  border: 2px solid #954396 !important;
+}
+
+#search-ask div a .corss {
+  background-color: #954396 !important;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 800px;
+}
+/*# sourceMappingURL=os.css.map */

@@ -7,8 +7,8 @@
     <div id="slider-princ" class="slider">
         <ul>
             <li><a href="/">home</a></li>
-            <li><a href="/">lyrics</a></li>
-            <li><a href="/">OpenSong</a></li>
+            <li><a href="/lyrics">lyrics</a></li>
+            <li><a href="/os">OpenSong</a></li>
         </ul>
 
     </div>

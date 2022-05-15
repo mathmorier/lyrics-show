@@ -1,3 +1,6 @@
+<div class="title-princ">
+    <h1>lyrics-show</h1>
+</div>
 <div class="search-genuis">
     <?=$main['src']['searchGenius'] ?? ''?>
 </div>
@@ -9,4 +12,9 @@
         </div>
     </div>
 </div>
+
+
+
+
+
 
