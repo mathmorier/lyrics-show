@@ -5,8 +5,9 @@ namespace App\Src;
 
 class SearchGenius  
 {
-    static function index($callBack = "/")
+    static function index($callBack = null)
     {
+        # Par défaut le call back est l'URI -> /....
         ob_start();
         ?>
         <div class="search-box">
@@ -14,7 +15,7 @@ class SearchGenius
             <label for="search">Search Song</label>
             <div>
                 <input type="text" name="search" id="search" placeholder="Search ..." autofocus>
-                <a href="<?=$callBack?>">
+                <a href="<?=$callBack = null ? $_SERVER['REQUEST_URI'] : $callBack?>">
                     <div class="corss">
                         <div class="cross-line"></div>
                         <div class="cross-line"></div>

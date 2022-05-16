@@ -13,6 +13,19 @@ class Lyrics
         $res = json_decode(file_get_contents($url));
         return $res->response->song;
     }
+    public function createLinkSave($song = null)
+    {
+        ob_start();
+        ?>
+        <script>
+            localStorage.setItem('api_path',                        '<?=$song->api_path ?? null?>' );
+            localStorage.setItem('song_art_image_thumbnail_url',    '<?=$song->song_art_image_thumbnail_url ?? null?>' );
+            localStorage.setItem('title',                           '<?=$song->title ?? null?>' );
+        </script>
+        <?php
+        return ob_get_clean();       
+        
+    }
     public function getLyricsToGenuis($id = null){
         $lyric = [];
         if ($id != null) {

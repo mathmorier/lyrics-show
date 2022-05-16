@@ -49,5 +49,6 @@ main {
 
 .rg_embed_footer a {
   color: #000;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */

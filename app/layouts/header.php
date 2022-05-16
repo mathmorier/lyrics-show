@@ -8,8 +8,12 @@
         <ul>
             <li><a href="/">home</a></li>
             <li><a href="/lyrics">lyrics</a></li>
-            <li><a href="/os">OpenSong</a></li>
+            <li><a href="/os<?=$main['api_path'] ?? ""?>">OpenSong</a></li>
         </ul>
-
+        <div id="list-item"></div>
+        <div id="list-btn">
+            <button id="save-lyrics">save</button>
+            <button id="clear-lyrics">clear</button>
+        </div>
     </div>
 </nav>
