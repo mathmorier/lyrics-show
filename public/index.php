@@ -1,6 +1,6 @@
 <?php
     require __DIR__ . '/../vendor/autoload.php';
-
+    
     $router = new AltoRouter();
 
     $router->addRoutes(Router\Routes::getRoutes());

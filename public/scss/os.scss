@@ -1,0 +1,20 @@
+@import 'colors';
+
+#search-ask{
+    div{
+        input{
+            border: 2px solid $osColor !important;
+        }
+        a{
+            .corss{
+                background-color: $osColor !important;
+            }
+        }
+    }
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    max-width: 800px;
+}

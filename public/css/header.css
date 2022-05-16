@@ -1,0 +1,92 @@
+/* SCSS Gradient */
+#nav-princ {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#nav-princ .btn-menu {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#nav-princ .btn-menu .line {
+  background-color: #000;
+  height: 2px;
+  width: 90%;
+}
+
+#nav-princ .btn-menu.show .line {
+  position: absolute;
+  top: 20px;
+  left: 15%;
+  width: 70%;
+}
+
+#nav-princ .btn-menu.show .line:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#nav-princ .btn-menu.show .line:nth-child(2) {
+  display: none;
+}
+
+#nav-princ .btn-menu.show .line:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#nav-princ .slider {
+  background-color: #FDD04F;
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-transition: width 500ms ease-in-out;
+  transition: width 500ms ease-in-out;
+}
+
+#nav-princ .slider * {
+  display: none;
+}
+
+#nav-princ .slider li {
+  width: 100%;
+  margin: 10px 25px;
+}
+
+#nav-princ .slider li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: large;
+}
+
+#nav-princ .slider.show {
+  width: 250px;
+  -webkit-box-shadow: 1px 0px 4px 0px #444;
+          box-shadow: 1px 0px 4px 0px #444;
+}
+
+#nav-princ .slider.show * {
+  display: block;
+}
+/*# sourceMappingURL=header.css.map */

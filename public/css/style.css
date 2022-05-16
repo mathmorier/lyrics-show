@@ -1,10 +1,53 @@
+/* SCSS Gradient */
 * {
   margin: 0;
   padding: 0;
   outline: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  background: url("/assets/image/bg-princ.jpg") #f0f0f0;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.rg_embed {
+  width: 100%;
+  background-color: #f0f0f0 !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: reverse !important;
+      -ms-flex-direction: column-reverse !important;
+          flex-direction: column-reverse !important;
+}
+
+.rg_embed_body p {
+  text-align: center;
+  font-size: 3vw;
+}
+
+.rg_embed_body p a {
+  background-color: transparent !important;
+}
+
+.rg_embed_logo {
+  z-index: 1;
+}
+
+.rg_embed_footer a {
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */

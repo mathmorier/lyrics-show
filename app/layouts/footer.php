@@ -1,1 +1,1 @@
-<p>Footer</p>
+<p>© developed by M.Morier</p>

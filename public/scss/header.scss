@@ -1,0 +1,73 @@
+@import 'colors';
+
+
+#nav-princ{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    .btn-menu{
+        position: absolute;
+        top: 0;
+        left: -40px;
+        padding: 10px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        .line{
+            background-color: $black;
+            height: 2px;
+            width: 90%;
+        }
+        &.show{
+            .line{
+                position: absolute;
+                top: 20px;
+                left: 15%;
+                width: 70%;
+                &:first-child{
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                &:last-child{
+                    transform: rotate(-45deg);
+                }
+                
+            }
+        }
+    }
+    .slider{
+        background-color: $bgSlider;
+        width: 0;
+        height: 100vh;
+        overflow: hidden;
+        transition: width 500ms ease-in-out;
+        *{
+            display: none;
+        }
+        li{
+            width: 100%;
+            margin: 10px 25px;
+            a{
+                color: #fff;
+                text-transform: uppercase;
+                font-size: large;
+            }
+        }
+        &.show{
+            width: 250px;
+            box-shadow: 1px 0px 4px 0px $shadow;
+            *{
+                display: block;
+            }
+        }
+    }
+}

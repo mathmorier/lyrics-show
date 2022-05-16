@@ -1,0 +1,128 @@
+/* SCSS Gradient */
+.search-box {
+  position: relative;
+  margin: 10px auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-box #search-ask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+}
+
+.search-box #search-ask label {
+  background-color: transparent;
+  margin: 0 0 5px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.search-box #search-ask div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+}
+
+.search-box #search-ask div input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px 0 0 15px;
+  outline: none;
+  border: 2px solid #fdd04fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.search-box #search-ask div a {
+  color: #000;
+}
+
+.search-box #search-ask div a .corss {
+  background-color: #fdd04fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 0 15px 15px 0;
+  position: relative;
+}
+
+.search-box #search-ask div a .corss .cross-line {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  height: 2px;
+  width: 25px;
+  background-color: #fff;
+}
+
+.search-box #search-ask div a .corss .cross-line:first-child {
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
+}
+
+.search-box #search-ask div a .corss .cross-line:last-child {
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+}
+
+.search-box #search-res {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+}
+
+.search-box #search-res .serach-list {
+  background-color: #fff;
+  margin: auto;
+  padding: 7px 10px;
+  width: 94%;
+  max-width: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-shadow: 2px 2px 4px 0px #444;
+          box-shadow: 2px 2px 4px 0px #444;
+  gap: 10px;
+}
+/*# sourceMappingURL=searchBar.css.map */

@@ -1,0 +1,31 @@
+@import 'colors';
+
+.container{
+    width: 90%;
+    margin: auto;
+    .overlay{
+        background-color: $y2;
+        padding: 20px;
+        border-radius: 10px;
+        min-height: 70vh;
+
+        h2{
+            padding: 0 0 0 10px;
+        }
+        p{
+            margin: 10px 0 10px 0;
+        }
+    }
+}
+.search-genuis{
+    margin-top: 40vh;
+    margin-bottom: 30vh;
+}
+.title-princ{
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    h1{
+        text-transform: capitalize;
+    }
+}

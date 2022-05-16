@@ -1,0 +1,36 @@
+/* SCSS Gradient */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.container .overlay {
+  background-color: #f4da63ff;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 70vh;
+}
+
+.container .overlay h2 {
+  padding: 0 0 0 10px;
+}
+
+.container .overlay p {
+  margin: 10px 0 10px 0;
+}
+
+.search-genuis {
+  margin-top: 40vh;
+  margin-bottom: 30vh;
+}
+
+.title-princ {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+}
+
+.title-princ h1 {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=home.css.map */
