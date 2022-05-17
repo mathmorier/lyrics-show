@@ -12,9 +12,13 @@
         </ul>
         <div id="list-item"></div>
         <div id="list-btn">
-            <button id="save-lyrics">save</button>
-            <button id="clear-lyrics">clear</button>
-            <button id="share-lyrics">share</button>
+            <button id="save-lyrics">S</button>
+            <button id="clear-lyrics">D</button>
+            <button id="share-lyrics">></button>
+        </div>
+        <div id="list-link">
+            <input type="text" id="link">
+            <button id="copy-link">C</button>
         </div>
     </div>
 </nav>

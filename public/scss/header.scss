@@ -46,10 +46,11 @@
     }
     .slider{
         background-color: $bgSlider;
+        min-width: 0;
         width: 0;
         height: 100vh;
         overflow: hidden;
-        transition: width 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
         *{
             display: none;
         }
@@ -63,7 +64,8 @@
             }
         }
         &.show{
-            width: 250px;
+            min-width: 250px;
+            width: 30vw;
             box-shadow: 1px 0px 4px 0px $shadow;
             *{
                 display: block;

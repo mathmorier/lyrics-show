@@ -14,9 +14,16 @@ btnOpenPrinc.addEventListener('click', function() {
 const saveLyrics     = document.getElementById('save-lyrics')
 const clearLyrics    = document.getElementById('clear-lyrics')
 const shareLyrics    = document.getElementById('share-lyrics')
+const btnCopy        = document.getElementById('copy-link')
 let listItem         = document.getElementById('list-item')
+let listLink         = document.querySelector('#list-link')
 
 listItem = showList(listItem)
+
+btnCopy.addEventListener('click', function () {
+    listLink.children[0].select();
+    document.execCommand('copy');
+})
 
 shareLyrics.addEventListener('click', function () {
     createShare()
@@ -49,7 +56,12 @@ function createShare() {
         link += "-"
     })
     link = link.substring(0, link.length - 1)
-    alert(link);
+
+    listLink.classList.add('show')
+    listLink.children[0].value = link
+    console.log();
+
+
 }
 
 function addItemList(id,api_path,title,song_art_image_thumbnail_url) {
@@ -66,16 +78,10 @@ function addItemList(id,api_path,title,song_art_image_thumbnail_url) {
         title: title,
         song_art_image_thumbnail_url: song_art_image_thumbnail_url
     }
-
     if (list!=null) {
         list.push(line)
     }else{
-        list = [{
-            id: id,
-            api_path: api_path,
-            title: title,
-            song_art_image_thumbnail_url: song_art_image_thumbnail_url
-        }]
+        list = [line]
     }
 
     localStorage.setItem('saveList', JSON.stringify(list))

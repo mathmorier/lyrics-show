@@ -52,13 +52,16 @@ class LyricsController
         $main['script'] = [
             '<script src="/js/lyrics.js"></script>'
         ];
+
+        $main['script'][] = $li->saveNewList();
+        
+
         ob_start();
         require __DIR__.'/../views/listLyrics.php';
         $main['view'] = ob_get_clean();
 
         require __DIR__.'/../layouts/default.php';
 
-        // A modifier
 
     }
     public function addList($params = null)

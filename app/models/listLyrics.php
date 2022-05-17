@@ -33,6 +33,31 @@ class ListLyrics
             }
         }
     }
+    public function saveNewList()
+    {
+
+        // setcookie('saveList', 'test');
+        setcookie('saveList', json_encode($this->listSong));
+        ob_start();
+        ?>
+        <script>
+            const btnListSave = document.getElementById('btn-save-list')
+            btnListSave.addEventListener('click', function(){
+                
+
+                let cookies = document.cookie.split(';').
+                map(function(el){ return el.split('='); }).
+                reduce(function(prev,cur){ prev[cur[0]] = cur[1];return prev },{});
+
+                console.log(cookies['saveList']);
+                localStorage.removeItem('saveList')
+                localStorage.setItem('saveList', JSON.stringify(json_decode(cookies['saveList'])))
+            })
+        </script>
+        <?php
+        return ob_get_clean();       
+        
+    }
 }
 
 

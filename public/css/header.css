@@ -58,11 +58,12 @@
 
 #nav-princ .slider {
   background-color: #FDD04F;
+  min-width: 0;
   width: 0;
   height: 100vh;
   overflow: hidden;
-  -webkit-transition: width 500ms ease-in-out;
-  transition: width 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 #nav-princ .slider * {
@@ -81,7 +82,8 @@
 }
 
 #nav-princ .slider.show {
-  width: 250px;
+  min-width: 250px;
+  width: 30vw;
   -webkit-box-shadow: 1px 0px 4px 0px #444;
           box-shadow: 1px 0px 4px 0px #444;
 }
