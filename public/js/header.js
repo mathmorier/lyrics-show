@@ -13,13 +13,20 @@ btnOpenPrinc.addEventListener('click', function() {
 // ------------------- Save Liste -------------------------
 const saveLyrics     = document.getElementById('save-lyrics')
 const clearLyrics    = document.getElementById('clear-lyrics')
+const shareLyrics    = document.getElementById('share-lyrics')
 let listItem         = document.getElementById('list-item')
 
 listItem = showList(listItem)
 
+shareLyrics.addEventListener('click', function () {
+    createShare()
+})
+
+
 saveLyrics.addEventListener('click', function () {
 
     addItemList(
+        localStorage.getItem('id'),
         localStorage.getItem('api_path'),
         localStorage.getItem('title'), 
         localStorage.getItem('song_art_image_thumbnail_url')
@@ -33,7 +40,19 @@ clearLyrics.addEventListener('click', function () {
     listItem = showList(listItem)
 })
 
-function addItemList(api_path,title,song_art_image_thumbnail_url) {
+function createShare() {
+    let list = JSON.parse(localStorage.getItem('saveList'))
+    let link =  "http://localhost"
+    link += "/lyrics/list/"
+    list.forEach(e => {
+        link += e.id 
+        link += "-"
+    })
+    link = link.substring(0, link.length - 1)
+    alert(link);
+}
+
+function addItemList(id,api_path,title,song_art_image_thumbnail_url) {
     let list = JSON.parse(localStorage.getItem('saveList'))
     
     if (api_path == "") {
@@ -42,6 +61,7 @@ function addItemList(api_path,title,song_art_image_thumbnail_url) {
     }
 
     let line = {
+        id: id,
         api_path: api_path,
         title: title,
         song_art_image_thumbnail_url: song_art_image_thumbnail_url
@@ -51,6 +71,7 @@ function addItemList(api_path,title,song_art_image_thumbnail_url) {
         list.push(line)
     }else{
         list = [{
+            id: id,
             api_path: api_path,
             title: title,
             song_art_image_thumbnail_url: song_art_image_thumbnail_url

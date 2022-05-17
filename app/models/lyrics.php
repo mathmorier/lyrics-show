@@ -18,6 +18,7 @@ class Lyrics
         ob_start();
         ?>
         <script>
+            localStorage.setItem('id',                        '<?=$song->id ?? null?>' );
             localStorage.setItem('api_path',                        '<?=$song->api_path ?? null?>' );
             localStorage.setItem('song_art_image_thumbnail_url',    '<?=$song->song_art_image_thumbnail_url ?? null?>' );
             localStorage.setItem('title',                           '<?=$song->title ?? null?>' );

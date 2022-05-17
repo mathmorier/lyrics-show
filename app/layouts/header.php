@@ -14,6 +14,7 @@
         <div id="list-btn">
             <button id="save-lyrics">save</button>
             <button id="clear-lyrics">clear</button>
+            <button id="share-lyrics">share</button>
         </div>
     </div>
 </nav>

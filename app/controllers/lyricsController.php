@@ -1,7 +1,8 @@
 <?php
 namespace App\Controllers;
 use App\Src\SearchGenius    as SearchGenius;
-use App\Models\Lyrics as Lyrics;
+use App\Models\Lyrics       as Lyrics;
+use App\Models\ListLyrics   as ListLyrics;
 
 class LyricsController
 {
@@ -40,9 +41,13 @@ class LyricsController
     }
     public function reciveList($params = null)
     {
-        $list = json_decode($_GET['l'] ?? null);
-        // $list = $_GET['l'];
-        dump($list);
+        $li = new ListLyrics;
+        $li->stToArray($params['idList'] ?? "");
+        $li->createList();
+        dump($li->getListSong());
+
+        // A modifier
+
     }
     public function addList($params = null)
     {
