@@ -44,7 +44,19 @@ class LyricsController
         $li = new ListLyrics;
         $li->stToArray($params['idList'] ?? "");
         $li->createList();
-        dump($li->getListSong());
+        $main['list'] = $li->getListSong();
+
+        $main['head'] = [
+            '<link rel="stylesheet" href="/css/lyrics.css">'
+        ];
+        $main['script'] = [
+            '<script src="/js/lyrics.js"></script>'
+        ];
+        ob_start();
+        require __DIR__.'/../views/listLyrics.php';
+        $main['view'] = ob_get_clean();
+
+        require __DIR__.'/../layouts/default.php';
 
         // A modifier
 
