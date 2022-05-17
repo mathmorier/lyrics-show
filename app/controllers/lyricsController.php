@@ -38,6 +38,16 @@ class LyricsController
         $this->index(null,$song);
 
     }
+    public function reciveList($params = null)
+    {
+        $list = json_decode($_GET['l'] ?? null);
+        // $list = $_GET['l'];
+        dump($list);
+    }
+    public function addList($params = null)
+    {
+        echo 'addList';
+    }
 }
 
 ?>

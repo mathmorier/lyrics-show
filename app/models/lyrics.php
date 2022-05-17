@@ -26,7 +26,8 @@ class Lyrics
         return ob_get_clean();       
         
     }
-    public function getLyricsToGenuis($id = null){
+    public function getLyricsToGenuis($id = null)
+    {
         $lyric = [];
         if ($id != null) {
             $url = "https://genius.com/songs/".$id."/lyrics";
