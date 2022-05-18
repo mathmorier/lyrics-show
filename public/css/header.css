@@ -64,6 +64,16 @@
   overflow: hidden;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #nav-princ .slider * {
@@ -90,5 +100,64 @@
 
 #nav-princ .slider.show * {
   display: block;
+}
+
+#nav-princ #list {
+  background-color: aqua;
+  padding: 10px;
+}
+
+#nav-princ #list #list-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 0;
+}
+
+#nav-princ #list #list-btn button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+
+#nav-princ #list #list-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#nav-princ #list #list-item {
+  height: 40vh;
+  overflow: auto;
+  margin-top: 10px;
+}
+
+#nav-princ #list #list-item a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  margin: 2px;
 }
 /*# sourceMappingURL=header.css.map */

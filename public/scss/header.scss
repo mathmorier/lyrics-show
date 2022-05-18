@@ -51,6 +51,9 @@
         height: 100vh;
         overflow: hidden;
         transition: all 500ms ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         *{
             display: none;
         }
@@ -69,6 +72,42 @@
             box-shadow: 1px 0px 4px 0px $shadow;
             *{
                 display: block;
+            }
+        }
+    }
+    #list{
+        background-color: aqua;
+        padding: 10px;
+        #list-btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 10px 0;
+            button{
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                outline: none;
+                border: none;
+            }
+        }
+        #list-link{
+            display: flex;
+            justify-content: space-between;
+        }
+        #list-item{
+            height: 40vh;
+            overflow: auto;
+            margin-top: 10px;
+            a{
+                div{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: left;
+                    align-items: center;
+                    gap: 5px;
+                    margin: 2px;
+                }
             }
         }
     }
