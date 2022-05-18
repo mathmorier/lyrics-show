@@ -35,23 +35,16 @@ class ListLyrics
     }
     public function saveNewList()
     {
-
-        // setcookie('saveList', 'test');
-        setcookie('saveList', json_encode($this->listSong));
         ob_start();
         ?>
         <script>
             const btnListSave = document.getElementById('btn-save-list')
             btnListSave.addEventListener('click', function(){
-                
-
-                let cookies = document.cookie.split(';').
-                map(function(el){ return el.split('='); }).
-                reduce(function(prev,cur){ prev[cur[0]] = cur[1];return prev },{});
-
-                console.log(cookies['saveList']);
-                localStorage.removeItem('saveList')
-                localStorage.setItem('saveList', JSON.stringify(json_decode(cookies['saveList'])))
+                if (confirm("To save this list you must delete your current list !\n\nAre you sure you want to delete your current list?")) {
+                    let listNew = <?=json_encode($this->listSong);?>;
+                    localStorage.setItem('saveList', JSON.stringify(listNew))
+                    window.location.href = "/lyrics" + listNew[0].api_path
+                }
             })
         </script>
         <?php
