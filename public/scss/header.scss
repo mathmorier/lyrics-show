@@ -100,6 +100,7 @@
             overflow: auto;
             margin-top: 10px;
             a{
+                color: $black;
                 div{
                     display: flex;
                     flex-direction: row-reverse;
@@ -107,6 +108,9 @@
                     align-items: center;
                     gap: 5px;
                     margin: 2px;
+                }
+                &:hover{
+                    background-color: #DDD;
                 }
             }
         }

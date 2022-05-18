@@ -143,6 +143,10 @@
   margin-top: 10px;
 }
 
+#nav-princ #list #list-item a {
+  color: #000;
+}
+
 #nav-princ #list #list-item a div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,5 +163,9 @@
           align-items: center;
   gap: 5px;
   margin: 2px;
+}
+
+#nav-princ #list #list-item a:hover {
+  background-color: #DDD;
 }
 /*# sourceMappingURL=header.css.map */
