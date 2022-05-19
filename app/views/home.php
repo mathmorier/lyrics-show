@@ -3,6 +3,16 @@
 </div>
 <div class="search-genuis">
     <?=$main['src']['searchGenius'] ?? ''?>
+    <div class="table">
+        <a href="/lyrics">
+            <i class="fa-solid fa-music"></i>
+            <p>Lyrics</p>
+        </a>
+        <a href="/os">
+            <i class="fa-solid fa-person-chalkboard"></i>
+            <p>OpenSong</p>
+        </a>
+    </div>
 </div>
 <div id="info-site">
     <div class="container">

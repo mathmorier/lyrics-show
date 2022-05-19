@@ -24,6 +24,41 @@
   margin-bottom: 30vh;
 }
 
+.search-genuis .table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.search-genuis .table a {
+  color: #000;
+  background-color: #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-genuis .table a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 .title-princ {
   position: absolute;
   top: 20px;

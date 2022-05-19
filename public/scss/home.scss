@@ -20,6 +20,26 @@
 .search-genuis{
     margin-top: 40vh;
     margin-bottom: 30vh;
+    .table{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        a{
+            color: $black;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            &:hover{
+                color: $white;
+                background-color: $black;
+            }
+        }
+    }
 }
 .title-princ{
     position: absolute;
