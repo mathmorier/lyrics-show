@@ -24,12 +24,14 @@ class ListLyrics
         foreach ($this->idList as $key => $line) {
             if ($line){
                 $temp = $lyrics->getGenuisSong($line);
-                $this->listSong[] = [
-                    'id' => $temp->id,
-                    'api_path' => $temp->api_path,
-                    'song_art_image_thumbnail_url' => $temp->song_art_image_thumbnail_url,
-                    'title' => $temp->title
-                ];
+                if ($temp) {
+                    $this->listSong[] = [
+                        'id' => $temp->id,
+                        'api_path' => $temp->api_path,
+                        'song_art_image_thumbnail_url' => $temp->song_art_image_thumbnail_url,
+                        'title' => $temp->title
+                    ];
+                }
             }
         }
     }
@@ -43,7 +45,11 @@ class ListLyrics
                 if (confirm("To save this list you must delete your current list !\n\nAre you sure you want to delete your current list?")) {
                     let listNew = <?=json_encode($this->listSong);?>;
                     localStorage.setItem('saveList', JSON.stringify(listNew))
-                    window.location.href = "/lyrics" + listNew[0].api_path
+                    if (listNew == []) {
+                        window.location.href = "/lyrics" + listNew[0].api_path
+                    }else{
+                        window.location.href = "/"
+                    }
                 }
             })
         </script>

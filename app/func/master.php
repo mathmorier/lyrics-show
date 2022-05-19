@@ -6,10 +6,13 @@ function error($num)
     switch ($num) {
         case 404:
             # Error 404
-            header("HTTP/1.0 404 Not Found");
-            echo "<h1>404 Not Found</h1>";
-            echo "The page that you have requested could not be found.";
-            echo '<a href="/">home</a>';
+            header("HTTP/1.0 404 Not Found"); ?>
+            <div style="background-color: #ddd; margin: auto; height: 100%; width:100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1>404 Not Found</h1>
+                <p>The page that you have requested could not be found.<p>
+                <a href="/" style="text-decoration: none;">> home <</a>
+            </div>
+            <?php
             die();
         case 500 :
             echo "<h1>500 error metode</h1>";
@@ -20,6 +23,10 @@ function error($num)
             break;
     }
 
+}
+function get_http_response_code($url) {
+    $headers = get_headers($url);
+    return substr($headers[0], 9, 3);
 }
 
 

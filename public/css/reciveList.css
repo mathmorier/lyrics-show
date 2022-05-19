@@ -1,0 +1,56 @@
+/* SCSS Gradient */
+.container {
+  position: relative;
+  margin: 50px auto;
+  width: 95%;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px 20px 60px 20px;
+}
+
+.container .list .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  gap: 2vw;
+}
+
+.container .list .line .p1 {
+  font-size: 15px;
+  color: #888;
+}
+
+.container .list .line .p2 {
+  font-size: 10px;
+  color: #ddd;
+}
+
+.container #btn-save-list {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  text-transform: capitalize;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: #ddd;
+}
+
+.container #btn-save-list:hover {
+  background-color: #000;
+  color: #fff;
+}
+/*# sourceMappingURL=reciveList.css.map */

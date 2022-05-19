@@ -53,7 +53,7 @@ function createShare() {
     let list = JSON.parse(localStorage.getItem('saveList'))
     let link =  "http://localhost"
     link += "/lyrics/list/"
-    if (list == null) {
+    if (list == null || list.length == 0) {
         addItemList(
             localStorage.getItem('id'),
             localStorage.getItem('api_path'),

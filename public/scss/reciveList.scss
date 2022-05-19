@@ -1,0 +1,45 @@
+@import 'colors';
+
+.container{
+    position: relative;
+    margin: 50px auto;
+    width: 95%;
+    background-color: $white;
+    box-sizing: border-box;
+    padding: 30px 20px 60px 20px;
+    .list{
+
+        .line{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 5px;
+            gap: 2vw;
+            .p1{
+                font-size: 15px;
+                color: #888;
+            }
+            .p2{
+                font-size: 10px;
+                color: #ddd;
+            }
+        }
+    }
+
+    #btn-save-list{
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        text-transform: capitalize;
+        padding: 10px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background-color: #ddd;
+        &:hover{
+            background-color: $black;
+            color: $white;
+        }
+    }
+}

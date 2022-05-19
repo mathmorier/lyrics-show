@@ -47,7 +47,8 @@ class LyricsController
         $main['list'] = $li->getListSong();
 
         $main['head'] = [
-            '<link rel="stylesheet" href="/css/lyrics.css">'
+            '<link rel="stylesheet" href="/css/lyrics.css">',
+            '<link rel="stylesheet" href="/css/reciveList.css">',
         ];
         $main['script'] = [
             '<script src="/js/lyrics.js"></script>'

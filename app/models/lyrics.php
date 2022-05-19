@@ -10,8 +10,12 @@ class Lyrics
         $api = 'https://api.genius.com';
         $token = 'xkHGfcbtHLNZuvfUoHkz9ioSIISH7YsnvQSO_Mav4y9E2c-Z3iTo5FbzJqHb_fyI';
         $url = $api.$path.'?access_token='.$token;
-        $res = json_decode(file_get_contents($url));
-        return $res->response->song;
+        if (get_http_response_code($url) == 200) {
+            $res = json_decode(file_get_contents($url));
+            return $res->response->song;
+        }else{
+            return null;
+        }
     }
     public function createLinkSave($song = null)
     {
