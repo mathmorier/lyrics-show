@@ -23,6 +23,8 @@ listItem = showList(listItem)
 btnCopy.addEventListener('click', function () {
     listLink.children[0].select();
     document.execCommand('copy');
+    this.firstChild.classList.remove('fa-copy')
+    this.firstChild.classList.add('fa-check')
 })
 
 shareLyrics.addEventListener('click', function () {
@@ -51,6 +53,16 @@ function createShare() {
     let list = JSON.parse(localStorage.getItem('saveList'))
     let link =  "http://localhost"
     link += "/lyrics/list/"
+    if (list == null) {
+        addItemList(
+            localStorage.getItem('id'),
+            localStorage.getItem('api_path'),
+            localStorage.getItem('title'), 
+            localStorage.getItem('song_art_image_thumbnail_url')
+            )
+            listItem = showList(listItem)
+            list = JSON.parse(localStorage.getItem('saveList'))
+    }
     list.forEach(e => {
         link += e.id 
         link += "-"
@@ -85,19 +97,22 @@ function addItemList(id,api_path,title,song_art_image_thumbnail_url) {
     }
 
     localStorage.setItem('saveList', JSON.stringify(list))
-
+    listLink.classList.remove('show')
 }
 
 function clearList() {
     let ok = confirm('Delete the list ?')
     if (ok) {
         localStorage.removeItem('saveList')
+        listLink.classList.remove('show')
     }
 }
 
 function showList(listItem) {
     listItem.innerHTML = ""
     let list = JSON.parse(localStorage.getItem('saveList'))
+    btnCopy.firstChild.classList.add('fa-copy')
+    btnCopy.firstChild.classList.remove('fa-check')
 
 
 

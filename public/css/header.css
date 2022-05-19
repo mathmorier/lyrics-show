@@ -81,8 +81,16 @@
 }
 
 #nav-princ .slider li {
-  width: 100%;
-  margin: 10px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 5px 25px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#nav-princ .slider li:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 #nav-princ .slider li a {
@@ -103,8 +111,16 @@
 }
 
 #nav-princ #list {
-  background-color: aqua;
+  border-top: #ddd 1px solid;
   padding: 10px;
+}
+
+#nav-princ #list button:hover {
+  background-color: #000;
+}
+
+#nav-princ #list button:hover i {
+  color: #fff;
 }
 
 #nav-princ #list #list-btn {
@@ -129,6 +145,11 @@
 }
 
 #nav-princ #list #list-link {
+  display: none;
+  margin: 10px auto;
+}
+
+#nav-princ #list #list-link.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,14 +158,40 @@
           justify-content: space-between;
 }
 
+#nav-princ #list #list-link * {
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+#nav-princ #list #list-link input {
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+}
+
+#nav-princ #list #list-link button {
+  border-radius: 0 5px 5px 0;
+  padding: 7px 14px;
+  width: 60px;
+  height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #nav-princ #list #list-item {
-  height: 40vh;
+  max-height: 35vh;
   overflow: auto;
   margin-top: 10px;
 }
 
 #nav-princ #list #list-item a {
   color: #000;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 #nav-princ #list #list-item a div {
@@ -162,10 +209,10 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
-  margin: 2px;
 }
 
 #nav-princ #list #list-item a:hover {
-  background-color: #DDD;
+  background-color: #000;
+  color: #fff;
 }
 /*# sourceMappingURL=header.css.map */

@@ -2,6 +2,7 @@
 <?php //dump($main['list']); ?>
 
 <div class="container">
+    <button id="btn-save-list">save this list</button>
     <?php foreach ($main['list'] as $key => $line) {
     ?>
     <div class="line">
@@ -14,5 +15,4 @@
 <?php
     }
 ?>
-    <button id="btn-save-list">save this list</button>
 </div>
