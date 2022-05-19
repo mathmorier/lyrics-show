@@ -97,6 +97,7 @@
   top: 75px;
   left: 0;
   right: 0;
+  z-index: 5;
 }
 
 .search-box #search-res .serach-list {
@@ -124,5 +125,6 @@
   -webkit-box-shadow: 2px 2px 4px 0px #444;
           box-shadow: 2px 2px 4px 0px #444;
   gap: 10px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=searchBar.css.map */

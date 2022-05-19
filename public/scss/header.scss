@@ -46,16 +46,26 @@
     }
     .slider{
         background-color: $bgSlider;
+        min-width: 0;
         width: 0;
         height: 100vh;
         overflow: hidden;
-        transition: width 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         *{
             display: none;
         }
         li{
-            width: 100%;
-            margin: 10px 25px;
+            box-sizing: border-box;
+            margin: 5px 25px;
+            border-radius: 5px;
+            padding: 5px;
+            &:hover{
+                background-color: $black;
+                color: $white;
+            }
             a{
                 color: #fff;
                 text-transform: uppercase;
@@ -63,10 +73,85 @@
             }
         }
         &.show{
-            width: 250px;
+            min-width: 250px;
+            width: 30vw;
             box-shadow: 1px 0px 4px 0px $shadow;
             *{
                 display: block;
+            }
+        }
+    }
+    #list{
+        border-top: #ddd 1px solid;
+        padding: 10px;
+        button{
+            &:hover{
+                i{
+                    color: #fff;
+                }
+                background-color: $black;
+            }
+        }
+        #list-btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 10px 0;
+            button{
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                outline: none;
+                border: none;
+            }
+        }
+        #list-link{
+            display: none;
+            margin: 10px auto;
+            &.show{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            *{
+                height: 30px;
+                box-sizing: border-box;
+                outline: none;
+                border: none;
+            }
+            input{
+                width: 100%;
+                border-radius: 5px 0 0 5px;
+                padding: 5px;
+            }
+            button{
+                border-radius: 0 5px 5px 0;
+                padding: 7px 14px;
+                width: 60px;
+                height: 30px;
+                align-items: center;
+                
+            }
+        }
+        #list-item{
+            max-height: 35vh;
+            overflow: auto;
+            margin-top: 10px;
+            a{
+                color: $black;
+                border-radius: 5px;
+                padding: 5px;
+                div{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: left;
+                    align-items: center;
+                    gap: 5px;
+                }
+                &:hover{
+                    background-color: $black;
+                    color: $white;
+                }
             }
         }
     }

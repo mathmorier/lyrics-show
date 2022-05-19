@@ -12,7 +12,6 @@ class Home
                 '<link rel="stylesheet" href="/css/home.css">'
             ],
             'script' => [
-                '<script src="/js/home.js"></script>'
             ]
         ];
 

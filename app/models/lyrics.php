@@ -10,10 +10,29 @@ class Lyrics
         $api = 'https://api.genius.com';
         $token = 'xkHGfcbtHLNZuvfUoHkz9ioSIISH7YsnvQSO_Mav4y9E2c-Z3iTo5FbzJqHb_fyI';
         $url = $api.$path.'?access_token='.$token;
-        $res = json_decode(file_get_contents($url));
-        return $res->response->song;
+        if (get_http_response_code($url) == 200) {
+            $res = json_decode(file_get_contents($url));
+            return $res->response->song;
+        }else{
+            return null;
+        }
     }
-    public function getLyricsToGenuis($id = null){
+    public function createLinkSave($song = null)
+    {
+        ob_start();
+        ?>
+        <script>
+            localStorage.setItem('id',                        '<?=$song->id ?? null?>' );
+            localStorage.setItem('api_path',                        '<?=$song->api_path ?? null?>' );
+            localStorage.setItem('song_art_image_thumbnail_url',    '<?=$song->song_art_image_thumbnail_url ?? null?>' );
+            localStorage.setItem('title',                           '<?=$song->title ?? null?>' );
+        </script>
+        <?php
+        return ob_get_clean();       
+        
+    }
+    public function getLyricsToGenuis($id = null)
+    {
         $lyric = [];
         if ($id != null) {
             $url = "https://genius.com/songs/".$id."/lyrics";

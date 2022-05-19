@@ -64,6 +64,7 @@
         top: 75px;
         left: 0;
         right: 0;
+        z-index: 5;
         .serach-list{
             background-color: $white;
             margin: auto;
@@ -78,6 +79,7 @@
             border-bottom: 1px solid $gray;
             box-shadow: 2px 2px 4px 0px $shadow;
             gap: 10px;
+            cursor: pointer;
         }
     }
 }
