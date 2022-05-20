@@ -51,7 +51,7 @@ clearLyrics.addEventListener('click', function () {
 
 function createShare() {
     let list = JSON.parse(localStorage.getItem('saveList'))
-    let link =  "http://localhost"
+    let link =  "https://lyrics.lesmorier.ch"
     link += "/lyrics/list/"
     if (list == null || list.length == 0) {
         addItemList(
