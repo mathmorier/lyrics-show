@@ -13,7 +13,6 @@ class OsController
                 '<link rel="stylesheet" href="/css/os.css">'
             ],
             'script' => [
-                '<script src="/js/os.js"></script>'
             ]
         ];
 

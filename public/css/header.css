@@ -1,4 +1,14 @@
 /* SCSS Gradient */
+#block-bg {
+  background: #44444499;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+}
+
 #nav-princ {
   position: fixed;
   top: 0;
