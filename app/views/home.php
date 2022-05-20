@@ -13,12 +13,14 @@
             <p>OpenSong</p>
         </a>
     </div>
+    <div id="list-item-home"></div>
 </div>
 <div id="info-site">
     <div class="container">
         <div class="overlay">
             <h2 class="title">Lyrics - Show - OpenSong Files</h2>
-            <p>Une application pour projet des lyrics et télécharger le fichier au format OpenSong</p>
+            <p>An application to project lyrics and download the file in OpenSong format</p>
+            <div class="video"><p><i class="fa-solid fa-play"></i><br><br>Comming Soon</p></div>
         </div>
     </div>
 </div>
