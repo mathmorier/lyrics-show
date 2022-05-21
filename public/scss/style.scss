@@ -20,6 +20,13 @@ html{
 main{
     min-height: 100vh;
 }
+button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+}
 .rg_embed{
     width: 100%;
     background-color: $bgPrinc !important;

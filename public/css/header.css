@@ -1,14 +1,4 @@
 /* SCSS Gradient */
-#block-bg {
-  background: #44444499;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 9;
-}
-
 #nav-princ {
   position: fixed;
   top: 0;
@@ -43,6 +33,12 @@
   background-color: #000;
   height: 2px;
   width: 90%;
+}
+
+#nav-princ .btn-menu.show {
+  background-color: #ff7e3bff;
+  border-radius: 0 0 0 2px;
+  border-right: #aaa 1px solid;
 }
 
 #nav-princ .btn-menu.show .line {
@@ -107,6 +103,7 @@
   color: #fff;
   text-transform: uppercase;
   font-size: large;
+  display: inline;
 }
 
 #nav-princ .slider.show {
@@ -117,7 +114,7 @@
 }
 
 #nav-princ .slider.show * {
-  display: block;
+  display: inline-block;
 }
 
 #nav-princ #list {
@@ -194,6 +191,7 @@
 
 #nav-princ #list #list-item {
   max-height: 35vh;
+  min-height: 5vh;
   overflow: auto;
   margin-top: 10px;
 }

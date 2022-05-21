@@ -26,6 +26,9 @@
             width: 90%;
         }
         &.show{
+            background-color: $o1;
+            border-radius: 0 0 0 2px;
+            border-right: #aaa 1px solid;
             .line{
                 position: absolute;
                 top: 20px;
@@ -71,6 +74,7 @@
                 color: #fff;
                 text-transform: uppercase;
                 font-size: large;
+                display: inline;
             }
         }
         &.show{
@@ -78,9 +82,10 @@
             width: 30vw;
             box-shadow: 1px 0px 4px 0px $shadow;
             *{
-                display: block;
+                display: inline-block;
             }
         }
+        
     }
     #list{
         border-top: #ddd 1px solid;
@@ -136,6 +141,7 @@
         }
         #list-item{
             max-height: 35vh;
+            min-height: 5vh;
             overflow: auto;
             margin-top: 10px;
             a{

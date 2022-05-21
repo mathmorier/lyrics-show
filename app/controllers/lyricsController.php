@@ -19,7 +19,7 @@ class LyricsController
         $lyrics = new Lyrics;
         $main['script'][] = $lyrics->createLinkSave($song);
 
-        $main['src']['searchGenius'] = SearchGenius::index();
+        $main['src']['searchGenius'] = SearchGenius::index("/lyrics");
         $main['head'][] = SearchGenius::style();
         $main['script'][] = SearchGenius::script("/lyrics");
 
