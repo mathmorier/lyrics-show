@@ -19,6 +19,7 @@
 }
 
 .search-box #search-ask {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,6 +84,24 @@
 .search-box #search-ask div a .corss .cross-line:last-child {
   -webkit-transform: translateX(-50%) rotate(45deg);
           transform: translateX(-50%) rotate(45deg);
+}
+
+.search-box #search-ask .nav-icon {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.search-box #search-ask .nav-icon a {
+  color: #000;
+}
+
+.search-box #search-ask .nav-icon a:hover {
+  color: #fff;
 }
 
 .search-box #search-res {

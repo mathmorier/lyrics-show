@@ -20,6 +20,19 @@ html{
 main{
     min-height: 100vh;
 }
+button{
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    color: $black;
+    &:hover{
+        color: $white;
+        background-color: $black;
+    }
+    
+}
 .rg_embed{
     width: 100%;
     background-color: $bgPrinc !important;

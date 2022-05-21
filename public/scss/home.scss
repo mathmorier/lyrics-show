@@ -69,6 +69,9 @@
             flex-direction: row-reverse;
             align-items: center;
             gap: 10px;
+            &:hover{
+                color: $white;
+            }
         }
     }
 }

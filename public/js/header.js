@@ -1,13 +1,21 @@
 const btnOpenPrinc = document.getElementById('btn-open-princ')
 const navPrinc = document.getElementById('nav-princ')
 const sliderPrinc = document.getElementById('slider-princ')
-// btnOpenPrinc.classList.add('show');
-// sliderPrinc.classList.add('show');
 
 btnOpenPrinc.addEventListener('click', function() {
     this.classList.toggle('show');
     sliderPrinc.classList.toggle('show');
 })
+
+
+// -------------- Option close slider -----------------------
+// use : serach genius
+const searchHe    = document.getElementById('search')
+searchHe.addEventListener('click', function () {
+    btnOpenPrinc.classList.remove('show')
+    sliderPrinc.classList.remove('show')
+})
+//----------------------------------------------------------
 
 
 // ------------------- Save Liste -------------------------
@@ -42,6 +50,11 @@ saveLyrics.addEventListener('click', function () {
         )
 
     listItem = showList(listItem)
+    if (localStorage.getItem('id')) {
+        this.children[0].classList.remove('fa-heart')
+        this.children[0].classList.add('fa-circle-check')
+        this.disabled = true
+    }
 })
 
 clearLyrics.addEventListener('click', function () {
@@ -51,7 +64,8 @@ clearLyrics.addEventListener('click', function () {
 
 function createShare() {
     let list = JSON.parse(localStorage.getItem('saveList'))
-    let link =  "http://localhost"
+    let link = document.location.protocol + "//"
+    link += document.location.host
     link += "/lyrics/list/"
     if (list == null || list.length == 0) {
         addItemList(
@@ -104,8 +118,16 @@ function clearList() {
     let ok = confirm('Delete the list ?')
     if (ok) {
         localStorage.removeItem('saveList')
-        listLink.classList.remove('show')
+        listLink.classList.remove('show')    
+        saveLyrics.children[0].classList.replace('fa-circle-check','fa-heart')
+        saveLyrics.disabled = false
+        try {  
+            btnLike.children[0].classList.replace('fa-circle-check','fa-heart')
+            btnLike.disabled = false
+        } catch (e) {}
     }
+
+
 }
 
 function showList(listItem) {
@@ -118,6 +140,13 @@ function showList(listItem) {
 
     if (list!=null) {
         list.forEach(e => {
+
+            if (e.id == localStorage.getItem('id')) {
+                saveLyrics.children[0].classList.remove('fa-heart')
+                saveLyrics.children[0].classList.add('fa-circle-check')
+                saveLyrics.disabled = true;
+            }
+
             let a = document.createElement('a')
             a.href = "/lyrics"+e.api_path
             let div = document.createElement('div')

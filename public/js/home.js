@@ -1,4 +1,4 @@
-const listItemHome = document.getElementById('list-item-home')
+let listItemHome = document.getElementById('list-item-home')
 
 listItemHome = showList(listItemHome)
 

@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     #search-ask{
+        position: relative;
         display: flex;
         flex-direction: column;
         max-width: 800px;
@@ -53,6 +54,19 @@
                             transform: translateX(-50%) rotate(45deg);
                         }
                     }
+                }
+            }
+        }
+        .nav-icon{
+            position: absolute;
+            top: 0;
+            right: 50px;
+            display: flex;
+            gap: 10px;
+            a{
+                color: $black;
+                &:hover{
+                    color: $white;
                 }
             }
         }

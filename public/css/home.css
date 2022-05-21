@@ -114,6 +114,10 @@
   gap: 10px;
 }
 
+.search-genuis #list-item-home a div:hover {
+  color: #fff;
+}
+
 .title-princ {
   position: absolute;
   top: 20px;

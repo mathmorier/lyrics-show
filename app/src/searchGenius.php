@@ -13,6 +13,11 @@ class SearchGenius
         <div class="search-box">
             <div id="search-ask">
             <label for="search">Search Song</label>
+            <div class="nav-icon">
+                <a href="/"><i class="fa-solid fa-house"></i></a>
+                <a href="/lyrics"><i class="fa-solid fa-music"></i></a>
+                <a href="/os"><i class="fa-solid fa-person-chalkboard"></i></a>
+            </div>
             <div>
                 <input type="text" name="search" id="search" placeholder="Search ..." autofocus>
                 <a href="<?=$callBack = null ? $_SERVER['REQUEST_URI'] : $callBack?>">
