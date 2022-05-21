@@ -1,1 +1,1 @@
-<p>© developed by M.Morier</p>
+<p>© Developed by M.Morier | <a href="https://webmm.ch" target="_blank" rel="noopener noreferrer">Webmm.ch</a><br>Lyrics provided by <a href="https://genius.com" target="_blank" rel="noopener noreferrer">genius.com</a></p>

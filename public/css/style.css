@@ -24,10 +24,16 @@ main {
 
 button {
   height: 40px;
-  width: 40px;
+  min-width: 40px;
   border-radius: 50%;
   outline: none;
   border: none;
+  color: #000;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #000;
 }
 
 .rg_embed {

@@ -89,9 +89,9 @@
 #nav-princ .slider li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 5px 25px;
-  border-radius: 5px;
-  padding: 5px;
+  margin: 0 0 10px 0;
+  padding: 9px 0 9px 20px;
+  height: 40px;
 }
 
 #nav-princ .slider li:hover {
@@ -117,9 +117,19 @@
   display: inline-block;
 }
 
+#nav-princ .slider.show ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #nav-princ #list {
   border-top: #ddd 1px solid;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 #nav-princ #list button:hover {
@@ -153,7 +163,7 @@
 
 #nav-princ #list #list-link {
   display: none;
-  margin: 10px auto;
+  margin: 10px;
 }
 
 #nav-princ #list #list-link.show {
@@ -194,12 +204,19 @@
   min-height: 5vh;
   overflow: auto;
   margin-top: 10px;
+  width: 100%;
 }
 
 #nav-princ #list #list-item a {
   color: #000;
-  border-radius: 5px;
-  padding: 5px;
+  padding: 5px 5px 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #nav-princ #list #list-item a div {

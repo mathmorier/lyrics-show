@@ -63,9 +63,9 @@
         
         li{
             box-sizing: border-box;
-            margin: 5px 25px;
-            border-radius: 5px;
-            padding: 5px;
+            margin: 0 0 10px 0;
+            padding: 9px 0 9px 20px;
+            height: 40px;
             &:hover{
                 background-color: $black;
                 color: $white;
@@ -84,12 +84,17 @@
             *{
                 display: inline-block;
             }
+            ul{
+                display: flex;
+                flex-direction: column;
+            }
+
         }
         
     }
     #list{
         border-top: #ddd 1px solid;
-        padding: 10px;
+        padding: 10px 0;
         button{
             &:hover{
                 i{
@@ -113,7 +118,7 @@
         }
         #list-link{
             display: none;
-            margin: 10px auto;
+            margin: 10px;
             &.show{
                 display: flex;
                 justify-content: space-between;
@@ -144,10 +149,12 @@
             min-height: 5vh;
             overflow: auto;
             margin-top: 10px;
+            width: 100%;
             a{
                 color: $black;
-                border-radius: 5px;
-                padding: 5px;
+                padding: 5px 5px 5px 10px;
+                display: flex;
+                flex-direction: column;
                 div{
                     display: flex;
                     flex-direction: row-reverse;
