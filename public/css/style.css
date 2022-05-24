@@ -65,4 +65,51 @@ button:hover {
   color: #000;
   z-index: 1;
 }
+
+.list-Song {
+  margin: 10px auto 20px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.list-Song .list-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
+}
+
+.list-Song .list-item a {
+  color: #000;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.list-Song .list-item a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.list-Song .list-item a div img {
+  border-radius: 5px;
+}
+
+.list-Song .list-item a:hover {
+  color: #fff;
+  background: #000;
+}
 /*# sourceMappingURL=style.css.map */

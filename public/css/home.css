@@ -47,6 +47,9 @@
 }
 
 .search-genuis .table {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: -10px auto 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,11 +60,14 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .search-genuis .table a {
+  background-color: #fdd04fff;
   color: #000;
-  background-color: #ddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,13 +78,21 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 7px 10px;
+  border-radius: 0 0 5px 5px;
+  max-width: 300px;
+  width: 40%;
 }
 
 .search-genuis .table a:hover {
   color: #fff;
   background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .search-genuis .table {
+    display: none;
+  }
 }
 
 .search-genuis #list-item-home {

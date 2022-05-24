@@ -53,3 +53,37 @@ button{
     color: $black;
     z-index: 1;
 }
+
+
+.list-Song{
+    margin: 10px auto 20px auto;
+    width: 80%;
+    max-width: 800px;
+
+
+    .list-item{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 5px;
+        a{
+            color: $black;
+            background-color: $white;
+            padding: 10px;
+            border-radius: 15px;
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                flex-direction: row-reverse;
+                gap: 10px;
+                img{
+                    border-radius: 5px;
+                }
+            }
+            &:hover{
+                color: $white;
+                background: $black;
+            }
+        }
+    }
+}

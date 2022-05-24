@@ -5,5 +5,8 @@
     <i class="fa-solid fa-heart"></i>
 </button>
 <div>
-    <?php echo $song->embed_content ?? ''?>
+    <?=$song->embed_content ?? ''?>
+</div>
+<div class="list-Song">
+    <div class="list-item"></div>
 </div>

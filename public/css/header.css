@@ -237,6 +237,10 @@
   gap: 5px;
 }
 
+#nav-princ #list #list-item a div img {
+  border-radius: 3px;
+}
+
 #nav-princ #list #list-item a:hover {
   background-color: #000;
   color: #fff;
