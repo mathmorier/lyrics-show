@@ -1,29 +1,30 @@
-let listItemHome = document.getElementById('list-item-home')
+;
+// let listItemHome = document.getElementById('list-item-home')
 
-listItemHome = showList(listItemHome)
+// listItemHome = showList(listItemHome)
 
-function showList(listItem) {
-    listItem.innerHTML = ""
-    let list = JSON.parse(localStorage.getItem('saveList'))
+// function showList(listItem) {
+//     listItem.innerHTML = ""
+//     let list = JSON.parse(localStorage.getItem('saveList'))
 
-    if (list!=null) {
-        list.forEach(e => {
-            let a = document.createElement('a')
-            a.href = "/lyrics"+e.api_path
-            let div = document.createElement('div')
-            div.appendChild(document.createElement('p')).appendChild(document.createTextNode(e.title))
-            let img = document.createElement('img')
-            img.src = e.song_art_image_thumbnail_url
-            img.setAttribute("width",   35);
-            img.setAttribute("height",  35);
-            div.appendChild(img)
-            a.appendChild(div)
+//     if (list!=null) {
+//         list.forEach(e => {
+//             let a = document.createElement('a')
+//             a.href = "/lyrics"+e.api_path
+//             let div = document.createElement('div')
+//             div.appendChild(document.createElement('p')).appendChild(document.createTextNode(e.title))
+//             let img = document.createElement('img')
+//             img.src = e.song_art_image_thumbnail_url
+//             img.setAttribute("width",   35);
+//             img.setAttribute("height",  35);
+//             div.appendChild(img)
+//             a.appendChild(div)
 
 
-            listItem.appendChild(a)
+//             listItem.appendChild(a)
 
-        })
-    }
+//         })
+//     }
 
-    return listItem
-}
+//     return listItem
+// }

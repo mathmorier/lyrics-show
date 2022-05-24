@@ -46,6 +46,8 @@
 }
 
 .search-box #search-ask div input {
+  -webkit-box-shadow: 0 5px 4px -6px #444;
+          box-shadow: 0 5px 4px -6px #444;
   padding: 10px;
   width: 100%;
   border-radius: 15px 0 0 15px;
@@ -65,6 +67,8 @@
   width: 50px;
   border-radius: 0 15px 15px 0;
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .search-box #search-ask div a .corss .cross-line {
@@ -84,6 +88,10 @@
 .search-box #search-ask div a .corss .cross-line:last-child {
   -webkit-transform: translateX(-50%) rotate(45deg);
           transform: translateX(-50%) rotate(45deg);
+}
+
+.search-box #search-ask div a .corss:hover .cross-line {
+  background-color: #000;
 }
 
 .search-box #search-ask .nav-icon {

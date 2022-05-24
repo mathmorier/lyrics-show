@@ -35,23 +35,35 @@
     margin-top: 40vh;
     margin-bottom: 20vh;
     .table{
+        box-sizing: border-box;
+        margin: -10px auto 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
+        width: 80%;
+        max-width: 800px;
+        padding: 0 20px;
         a{
+            background-color: $y3;
             color: $black;
-            background-color: #ddd;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 5px;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 7px 10px;
+            border-radius: 0 0 5px 5px;
+            max-width: 300px;
+            width: 40%;
             &:hover{
                 color: $white;
                 background-color: $black;
             }
+        }
+    }
+    @media (max-width: $breakpoint-tablet) {
+        .table{
+            display: none;
         }
     }
     #list-item-home{
