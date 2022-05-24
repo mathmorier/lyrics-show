@@ -5,6 +5,7 @@
     position: fixed;
     top: 0;
     right: 0;
+    bottom: 0;
     z-index: 10;
 
     .btn-menu{
@@ -51,7 +52,7 @@
         background-color: $bgSlider;
         min-width: 0;
         width: 0;
-        height: 100vh;
+        height: 100%;
         overflow: hidden;
         transition: all 500ms ease-in-out;
         display: flex;
