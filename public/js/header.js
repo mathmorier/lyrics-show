@@ -10,11 +10,16 @@ btnOpenPrinc.addEventListener('click', function() {
 
 // -------------- Option close slider -----------------------
 // use : serach genius
-const searchHe    = document.getElementById('search')
-searchHe.addEventListener('click', function () {
-    btnOpenPrinc.classList.remove('show')
-    sliderPrinc.classList.remove('show')
-})
+try {
+    const searchHe    = document.getElementById('search')
+    searchHe.addEventListener('click', function () {
+        btnOpenPrinc.classList.remove('show')
+        sliderPrinc.classList.remove('show')
+    })
+} catch (e) {
+    
+}
+
 //----------------------------------------------------------
 
 

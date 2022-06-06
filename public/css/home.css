@@ -7,38 +7,55 @@
 
 .container .overlay {
   background-color: #f4da63ff;
-  padding: 20px;
+  padding: 40px 20px;
   border-radius: 10px;
-  min-height: 70vh;
-}
-
-.container .overlay h2 {
-  padding: 0 0 0 10px;
-}
-
-.container .overlay p {
-  margin: 10px 0 10px 0;
-}
-
-.container .overlay .video {
-  margin: 40px auto 20px auto;
-  width: 90%;
-  height: 60vh;
-  background-color: #ddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 20px;
 }
 
-.container .overlay .video * {
-  text-align: center;
-  color: #888;
+.container .overlay .card {
+  margin: 5px;
+  max-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.container .overlay .card i {
+  font-size: 46px;
+}
+
+.container .overlay .card h2 {
+  padding: 0 0 0 10px;
+}
+
+.container .overlay .card p {
+  margin: 10px 0 10px 0;
+  text-align: justify;
 }
 
 .search-genuis {
@@ -140,5 +157,37 @@
 
 .title-princ h1 {
   text-transform: capitalize;
+}
+
+#help-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+}
+
+#help-link a {
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#help-link a:hover {
+  color: #ccc;
 }
 /*# sourceMappingURL=home.css.map */
