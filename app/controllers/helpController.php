@@ -11,7 +11,17 @@ class HelpController
         ];
 
         ob_start();
-        ?><h2>HELP</h2><?php
+        ?>
+        <div>
+            <a href="/"><< back to Home</a>
+            <h2>HELP</h2>
+            <p>Coming Soon</p>
+            <a href="https://webmm.ch" target="_blank" rel="noopener noreferrer">Website of devlopper</a>
+            <br>
+        </div>
+        
+        
+        <?php
         $main['view'] = ob_get_clean();
 
         require __DIR__.'/../layouts/default.php';

@@ -1,5 +1,6 @@
 <div class="title-princ">
     <h1>Show Lyrics</h1>
+    <p>YWAM Turner Valley</p>
 </div>
 <div class="search-genuis">
     <?=$main['src']['searchGenius'] ?? ''?>
@@ -32,7 +33,7 @@
             <div class="card">
                 <i class="fa-solid fa-person-chalkboard"></i>
                 <h2>Genrate OpenSong Files</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis corporis ut deleniti dolores dolore non officiis excepturi exercitationem eveniet? Sapiente, nostrum? Iste rem harum mollitia inventore perferendis aliquam voluptatum magni!</p>
+                <p>You can download OpenSong compatible file for all songs from <a style="color: #000;" href="http://genius.com" target="_blank" rel="noopener noreferrer">genius.com database.</a> The file with the lyrics is generated automatically and may contain formatting errors.</p>
                 <a href="/os">let's go...</a>           
             </div>
         </div>

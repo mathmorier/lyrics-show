@@ -13,19 +13,19 @@
         justify-content: space-around;
         flex-wrap: wrap;
         flex-direction: row;
-        align-items: center;
-        gap: 20px;
+        align-items: flex-start;
 
         .card{
+            height: fit-content;
             margin: 5px;
             max-width: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             gap: 10px;
             i{
-                font-size: 46px;
+                font-size: 42px;
             }
             h2{
                 padding: 0 0 0 10px;
@@ -33,6 +33,7 @@
             p{
                 margin: 10px 0 10px 0;
                 text-align: justify;
+                min-height: 110px;
             }
 
         }
@@ -79,7 +80,9 @@
             &:hover{
                 color: $white;
                 background-color: $black;
+                
             }
+            
         }
     }
     @media (max-width: $breakpoint-tablet) {
