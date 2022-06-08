@@ -12,7 +12,7 @@
         
         $controller = "App\\Controllers\\".$controller ;
         $controller = new $controller ;
-    
+        
         if (is_callable(array($controller, $method))) {
             call_user_func_array(array($controller,$method), array($match['params']));
         }else{

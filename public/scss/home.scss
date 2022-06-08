@@ -6,29 +6,51 @@
     margin-bottom: 20px;
     .overlay{
         background-color: $y2;
-        padding: 20px;
+        padding: 40px 20px;
         border-radius: 10px;
-        min-height: 70vh;
 
-        h2{
-            padding: 0 0 0 10px;
-        }
-        p{
-            margin: 10px 0 10px 0;
-        }
-        .video{
-            margin: 40px auto 20px auto;
-            width: 90%;
-            height: 60vh;
-            background-color: #ddd;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .card{
+            height: fit-content;
+            margin: 5px;
+            max-width: 300px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            *{
-                text-align: center;
-                color: #888;
+            justify-content: space-between;
+            gap: 10px;
+            i{
+                font-size: 42px;
             }
+            h2{
+                padding: 0 0 0 10px;
+            }
+            p{
+                margin: 10px 0 10px 0;
+                text-align: justify;
+                min-height: 110px;
+            }
+
         }
+
+        // .video{
+        //     margin: 40px auto 20px auto;
+        //     width: 90%;
+        //     height: 60vh;
+        //     background-color: #ddd;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     *{
+        //         text-align: center;
+        //         color: #888;
+        //     }
+        // }
     }
 }
 .search-genuis{
@@ -58,7 +80,9 @@
             &:hover{
                 color: $white;
                 background-color: $black;
+                
             }
+            
         }
     }
     @media (max-width: $breakpoint-tablet) {
@@ -93,5 +117,21 @@
     left: 5%;
     h1{
         text-transform: capitalize;
+    }
+}
+#help-link{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    a{
+        color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        &:hover{
+            color: $gray;
+        }
     }
 }

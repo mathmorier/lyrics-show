@@ -8,6 +8,7 @@ class Routes
     {
         return [
           ['GET', '/', 'Home#index', 'home_index'],
+          ['GET', '/help', 'HelpController#index', 'help_index'],
           ['GET', '/lyrics', 'LyricsController#index', 'Lyrics_index'],
           ['GET', '/lyrics/songs/[i:id]', 'LyricsController#firstShow', 'Lyrics_firstShow'],
           ['GET', '/lyrics/list/[*:idList]', 'LyricsController#reciveList', 'Lyrics_reciveList'],
