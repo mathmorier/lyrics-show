@@ -38,14 +38,10 @@ btnLike.addEventListener('click', function () {
 
 btnFull.addEventListener('click', function () {
     if (changeFullNoFull()) {
-        this.children[0].classList.remove('fa-compress')
-        this.children[0].classList.add('fa-expand')
+        this.innerHTML = "<i class='fa-solid fa-expand'></i>Full Screen"
     }else{
-        this.children[0].classList.remove('fa-expand')
-        this.children[0].classList.add('fa-compress')
+        this.innerHTML = "<i class='fa-solid fa-compress'></i>Exit"
     }
-    
-    // this.disabled = true
 })
 
 function changeFullNoFull() {
