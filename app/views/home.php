@@ -1,6 +1,11 @@
 <div class="title-princ">
-    <h1>Show Lyrics</h1>
-    <p>YWAM Turner Valley</p>
+    <div class="logo-img">
+        <img src="/assets/image/ywam_tv_logo.webp" alt="Logo" width="64px" height="64px">
+    </div>
+    <div class="logo-title">
+        <h1>Show Lyrics</h1>
+        <p>YWAM Turner Valley</p>
+    </div>
 </div>
 <div class="search-genuis">
     <?=$main['src']['searchGenius'] ?? ''?>
