@@ -6,7 +6,7 @@
 }
 
 .container .overlay {
-  background-color: #f4da63ff;
+  background-color: #8bc540;
   padding: 40px 20px;
   border-radius: 10px;
   display: -webkit-box;
@@ -29,7 +29,7 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 5px;
+  margin: 15px 5px;
   max-width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,6 +61,12 @@
   min-height: 110px;
 }
 
+@media (max-width: 730px) {
+  .card p {
+    min-height: 0px !important;
+  }
+}
+
 .search-genuis {
   margin-top: 40vh;
   margin-bottom: 20vh;
@@ -86,8 +92,8 @@
 }
 
 .search-genuis .table a {
-  background-color: #fdd04fff;
-  color: #000;
+  background-color: #8bc540;
+  color: #0d232c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +112,7 @@
 
 .search-genuis .table a:hover {
   color: #fff;
-  background-color: #000;
+  background-color: #0d232c;
 }
 
 @media (max-width: 768px) {
@@ -134,7 +140,7 @@
 }
 
 .search-genuis #list-item-home a div {
-  color: #000;
+  color: #0d232c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,7 +191,7 @@
 }
 
 #help-link a {
-  color: #000;
+  color: #0d232c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

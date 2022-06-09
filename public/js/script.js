@@ -1,6 +1,8 @@
-let list = document.querySelector('.list-item')
+let lists = document.querySelectorAll('.list-item')
 
-list = showList(list)
+lists.forEach(list => {
+    list = showList(list)
+});
 
 function showList(listItem) {
     listItem.innerHTML = ""

@@ -52,17 +52,18 @@
   width: 100%;
   border-radius: 15px 0 0 15px;
   outline: none;
-  border: 2px solid #fdd04fff;
+  border: 2px solid #8bc540;
+  border-right: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .search-box #search-ask div a {
-  color: #000;
+  color: #0d232c;
 }
 
 .search-box #search-ask div a .corss {
-  background-color: #fdd04fff;
+  background-color: #8bc540;
   height: 50px;
   width: 50px;
   border-radius: 0 15px 15px 0;
@@ -91,7 +92,7 @@
 }
 
 .search-box #search-ask div a .corss:hover .cross-line {
-  background-color: #000;
+  background-color: #0d232c;
 }
 
 .search-box #search-ask .nav-icon {
@@ -105,7 +106,7 @@
 }
 
 .search-box #search-ask .nav-icon a {
-  color: #000;
+  color: #0d232c;
 }
 
 .search-box #search-ask .nav-icon a:hover {

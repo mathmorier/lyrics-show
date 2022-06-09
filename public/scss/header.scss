@@ -1,6 +1,5 @@
 @import 'colors';
 
-
 #nav-princ{
     position: fixed;
     top: 0;
@@ -26,6 +25,7 @@
             height: 2px;
             width: 90%;
         }
+        
         &.show{
             background-color: $o1;
             border-radius: 0 0 0 2px;
@@ -48,6 +48,8 @@
             }
         }
     }
+
+
     .slider{
         background-color: $bgSlider;
         min-width: 0;

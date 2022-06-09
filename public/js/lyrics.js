@@ -33,6 +33,9 @@ btnLike.addEventListener('click', function () {
         listItem = showList(listItem)
         btnOpenPrinc.classList.add('show');
         sliderPrinc.classList.add('show');
+        lists.forEach(list => {
+            list = showList(list)
+        });
     }
 })
 
@@ -78,17 +81,4 @@ function changeFullNoFull() {
         }
     }
     return isInFullScreen;
-    // var player = document.documentElement
-
-    // if (player.requestFullscreen){
-    //     player.requestFullscreen();
-    // }
-    // else if (player.mozRequestFullScreen){
-    //     player.mozRequestFullScreen(); // Firefox
-    // }
-    // else if (player.webkitRequestFullscreen){
-    //     player.webkitRequestFullscreen(); // Chrome and Safari
-    // }else{
-    //     alert('Use F11 for full screen')
-    // }
 }

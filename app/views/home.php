@@ -26,9 +26,6 @@
 <div id="info-site">
     <div class="container">
         <div class="overlay">
-            <!-- <h2 class="title">Show Lyrics - OpenSong Files</h2>
-            <p>An application to project lyrics and download the file in OpenSong format</p> -->
-            <!-- <div class="video"><p><i class="fa-solid fa-play"></i><br><br>Comming Soon</p></div> -->
             <div class="card">
                 <i class="fa-solid fa-music"></i>
                 <h2>Show the lyrics</h2>
