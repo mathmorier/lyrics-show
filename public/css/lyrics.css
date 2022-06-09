@@ -3,13 +3,28 @@
   margin: 0;
 }
 
-#like {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  padding: 3px 5vw;
 }
 
-#like i {
-  font-size: 20px;
+.banner button {
+  padding: 5px 15px;
+}
+
+.banner i {
+  font-size: 16px;
+  margin-right: 5px;
 }
 /*# sourceMappingURL=lyrics.css.map */

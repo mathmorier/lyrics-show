@@ -25,7 +25,7 @@ main {
 button {
   height: 40px;
   min-width: 40px;
-  border-radius: 50%;
+  border-radius: 20px;
   outline: none;
   border: none;
   color: #000;
@@ -34,6 +34,10 @@ button {
 button:hover {
   color: #fff;
   background-color: #000;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 .rg_embed {
