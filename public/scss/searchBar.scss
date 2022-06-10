@@ -103,6 +103,9 @@
             box-shadow: 2px 2px 4px 0px $shadow;
             gap: 10px;
             cursor: pointer;
+            &:hover{
+                background-color: $gray;
+            }
         }
     }
 }

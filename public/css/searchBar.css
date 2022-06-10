@@ -155,4 +155,8 @@
   gap: 10px;
   cursor: pointer;
 }
+
+.search-box #search-res .serach-list:hover {
+  background-color: #ccc;
+}
 /*# sourceMappingURL=searchBar.css.map */

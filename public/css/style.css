@@ -28,12 +28,12 @@ button {
   border-radius: 20px;
   outline: none;
   border: none;
-  color: #000;
+  color: #0d232c;
 }
 
 button:hover {
   color: #fff;
-  background-color: #000;
+  background-color: #0d232c;
 }
 
 button:disabled {
@@ -66,7 +66,7 @@ button:disabled {
 }
 
 .rg_embed_footer a {
-  color: #000;
+  color: #0d232c;
   z-index: 1;
 }
 
@@ -85,7 +85,7 @@ button:disabled {
 }
 
 .list-Song .list-item a {
-  color: #000;
+  color: #0d232c;
   background-color: #fff;
   padding: 10px;
   border-radius: 15px;
@@ -114,6 +114,6 @@ button:disabled {
 
 .list-Song .list-item a:hover {
   color: #fff;
-  background: #000;
+  background: #0d232c;
 }
 /*# sourceMappingURL=style.css.map */
