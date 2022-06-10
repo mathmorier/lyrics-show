@@ -2,14 +2,29 @@
 *{
     margin: 0;
 }
-#like{
-    position: absolute;
-    top: 10px;
-    left: 10px;
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 3px 5vw;
+    button{
+        padding: 5px 15px;
+    }
     i{
-        font-size: 20px;
-
+        font-size: 16px;
+        margin-right: 5px;
     }
 }
+// #like{
+//     // position: absolute;
+//     // top: 10px;
+//     // left: 10px;
+//     // i{
+//     //     font-size: 20px;
+
+//     // }
+// }
 
 

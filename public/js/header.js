@@ -59,6 +59,14 @@ saveLyrics.addEventListener('click', function () {
         this.children[0].classList.remove('fa-heart')
         this.children[0].classList.add('fa-circle-check')
         this.disabled = true
+        try {
+            btnLike.children[0].classList.replace('fa-heart','fa-circle-check')
+            btnLike.disabled = true
+            lists.forEach(list => {
+                list = showList(list)
+            });
+        } catch (error) {}
+        
     }
 })
 
@@ -129,6 +137,9 @@ function clearList() {
         try {  
             btnLike.children[0].classList.replace('fa-circle-check','fa-heart')
             btnLike.disabled = false
+            lists.forEach(list => {
+                list = showList(list)
+            });
         } catch (e) {}
     }
 

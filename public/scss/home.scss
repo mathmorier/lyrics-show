@@ -17,13 +17,15 @@
 
         .card{
             height: fit-content;
-            margin: 5px;
+            margin: 15px 5px;
             max-width: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             gap: 10px;
+
+            
             i{
                 font-size: 42px;
             }
@@ -37,20 +39,11 @@
             }
 
         }
-
-        // .video{
-        //     margin: 40px auto 20px auto;
-        //     width: 90%;
-        //     height: 60vh;
-        //     background-color: #ddd;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //     *{
-        //         text-align: center;
-        //         color: #888;
-        //     }
-        // }
+    }
+}
+@media (max-width: 730px){
+    .card p{
+        min-height: 0px !important;
     }
 }
 .search-genuis{
@@ -111,6 +104,7 @@
         }
     }
 }
+
 .title-princ{
     position: absolute;
     top: 20px;
