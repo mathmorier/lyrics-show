@@ -12,8 +12,6 @@ window.onload = function () {
             li.forEach(e => {
                 if (e.id == localStorage.getItem('id')) {
                     btnLike.children[0].classList.replace('fa-heart','fa-check')
-                    // btnLike.children[0].classList.remove('fa-heart')
-                    // btnLike.children[0].classList.add('fa-check')
                     saved = true
                 }
             })
@@ -71,7 +69,7 @@ function changeFullNoFull() {
         } else if (docElm.msRequestFullscreen) {
             docElm.msRequestFullscreen();
         }else{
-            alert('Use F11 for full screen')
+            alert('Not possible on your browser, try F11 for full screen or change your browser')
         }
     } else {
         if (document.exitFullscreen) {
@@ -83,7 +81,7 @@ function changeFullNoFull() {
         } else if (document.msExitFullscreen) {
             document.msExitFullscreen();
         }else{
-            alert('Use F11 for exit full screen')
+            alert('Not possible on your browser, try F11 for exit full screen or change your browser')
         }
     }
     return isInFullScreen;
