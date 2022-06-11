@@ -6,7 +6,9 @@
 </button> -->
 <div class="banner">
     <button id="full"><i class="fa-solid fa-expand"></i>Full Screen</button>
-    <button id="like" disabled><i class="fa-solid fa-heart"></i>Save</button>
+    <button id="btn-dark" style="display: none;"><i class="fa-solid fa-circle-half-stroke"></i>Black</button>
+    <button id="like" disabled style="display: none;"><i class="fa-solid fa-heart"></i>Save</button>
+
 </div>
 <div class="list-Song">
     <div class="list-item"></div>
@@ -14,7 +16,7 @@
 <?php
 if (isset($song->embed_content)) {
     ?>
-    <div>
+    <div id="embed-content-lyrics">
         <?=$song->embed_content ?? ''?>
     </div>
     <div class="list-Song">

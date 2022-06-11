@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAuBA,mBAAmB",
+    "mappings": "AA0BA,mBAAmB",
     "sources": [
         "../scss/colors.scss"
     ],

@@ -1,11 +1,18 @@
-let btnLike = document.querySelector('#like')
-let btnFull= document.querySelector('#full')
+let btnLike     = document.querySelector('#like')
+let btnFull     = document.querySelector('#full')
+let btnDark     = document.querySelector('#btn-dark')
+let emLyrics    = document.querySelector('#embed-content-lyrics')
+
+
+if (emLyrics != null) {
+    btnDark.style.display = 'block'   
+}
 
 window.onload = function () {
     if (localStorage.getItem('id') == "") {
-        btnLike.style.display = 'none'
         btnLike.disabled = false;
     }else{
+        btnLike.style.display = 'block'
         let li = JSON.parse(localStorage.getItem('saveList'))
         if (li != null) {
             let saved = false
@@ -48,6 +55,16 @@ btnFull.addEventListener('click', function () {
         this.innerHTML = "<i class='fa-solid fa-expand'></i>Full Screen"
     }else{
         this.innerHTML = "<i class='fa-solid fa-compress'></i>Exit"
+    }
+})
+
+btnDark.addEventListener('click', function () {
+    emLyrics.classList.toggle('dark')
+    btnDark.classList.toggle('dark')
+    if (btnDark.classList.contains('dark')) {
+        this.innerHTML = "<i class='fa-solid fa-circle-half-stroke'></i>White"
+    }else{
+        this.innerHTML = "<i class='fa-solid fa-circle-half-stroke'></i>Black"
     }
 })
 
