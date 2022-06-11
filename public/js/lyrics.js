@@ -4,16 +4,22 @@ let btnFull= document.querySelector('#full')
 window.onload = function () {
     if (localStorage.getItem('id') == "") {
         btnLike.style.display = 'none'
+        btnLike.disabled = false;
     }else{
         let li = JSON.parse(localStorage.getItem('saveList'))
         if (li != null) {
+            let saved = false
             li.forEach(e => {
                 if (e.id == localStorage.getItem('id')) {
-                    btnLike.children[0].classList.remove('fa-heart')
-                    btnLike.children[0].classList.add('fa-check')
-                    btnLike.disabled = true;
+                    btnLike.children[0].classList.replace('fa-heart','fa-check')
+                    // btnLike.children[0].classList.remove('fa-heart')
+                    // btnLike.children[0].classList.add('fa-check')
+                    saved = true
                 }
-            });
+            })
+            btnLike.disabled = saved
+        }else{
+            btnLike.disabled = false;
         }
         
     }
