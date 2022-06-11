@@ -73,6 +73,15 @@ saveLyrics.addEventListener('click', function () {
 clearLyrics.addEventListener('click', function () {
     clearList()
     listItem = showList(listItem)
+    try {
+        btnLike.children[0].classList.replace('fa-check','fa-heart')
+        btnLike.disabled = false
+    } catch (error) {}
+    try {
+        lists.forEach(list => {
+            list = showList(list)
+        });
+    } catch (error) {}
 })
 
 function createShare() {

@@ -34,17 +34,10 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            a{
-                background-color: #ddd;
-                box-shadow: 2px 2px 6px 0px #444;
-                padding: 10px;
-                border-radius: 5px;
-                text-align: center;
-                color: $black;
-                &:hover{
-                    background-color: $black;
-                    color: $white;
-                }
+
+            .btn{
+                padding: 10px 20px;
+                box-sizing: border-box;
             }
         }
     }

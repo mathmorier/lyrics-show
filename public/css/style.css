@@ -22,22 +22,26 @@ main {
   min-height: 100vh;
 }
 
-button {
+button, .btn {
   height: 40px;
   min-width: 40px;
   border-radius: 20px;
   outline: none;
   border: none;
   color: #0d232c;
+  background-color: #fff;
 }
 
-button:hover {
+button:hover, .btn:hover {
   color: #fff;
   background-color: #0d232c;
 }
 
-button:disabled {
+button:disabled, .btn:disabled {
   cursor: not-allowed;
+  opacity: 0.5;
+  color: #0d232c;
+  background-color: #fff;
 }
 
 .rg_embed {

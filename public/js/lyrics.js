@@ -4,16 +4,20 @@ let btnFull= document.querySelector('#full')
 window.onload = function () {
     if (localStorage.getItem('id') == "") {
         btnLike.style.display = 'none'
+        btnLike.disabled = false;
     }else{
         let li = JSON.parse(localStorage.getItem('saveList'))
         if (li != null) {
+            let saved = false
             li.forEach(e => {
                 if (e.id == localStorage.getItem('id')) {
-                    btnLike.children[0].classList.remove('fa-heart')
-                    btnLike.children[0].classList.add('fa-check')
-                    btnLike.disabled = true;
+                    btnLike.children[0].classList.replace('fa-heart','fa-check')
+                    saved = true
                 }
-            });
+            })
+            btnLike.disabled = saved
+        }else{
+            btnLike.disabled = false;
         }
         
     }
@@ -65,7 +69,7 @@ function changeFullNoFull() {
         } else if (docElm.msRequestFullscreen) {
             docElm.msRequestFullscreen();
         }else{
-            alert('Use F11 for full screen')
+            alert('Not possible on your browser, try F11 for full screen or change your browser')
         }
     } else {
         if (document.exitFullscreen) {
@@ -77,7 +81,7 @@ function changeFullNoFull() {
         } else if (document.msExitFullscreen) {
             document.msExitFullscreen();
         }else{
-            alert('Use F11 for exit full screen')
+            alert('Not possible on your browser, try F11 for exit full screen or change your browser')
         }
     }
     return isInFullScreen;

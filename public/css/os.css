@@ -59,18 +59,9 @@
   gap: 10px;
 }
 
-.container .download .down a {
-  background-color: #ddd;
-  -webkit-box-shadow: 2px 2px 6px 0px #444;
-          box-shadow: 2px 2px 6px 0px #444;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  color: #0d232c;
-}
-
-.container .download .down a:hover {
-  background-color: #0d232c;
-  color: #fff;
+.container .download .down .btn {
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=os.css.map */

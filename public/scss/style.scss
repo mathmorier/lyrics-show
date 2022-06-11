@@ -20,19 +20,23 @@ html{
 main{
     min-height: 100vh;
 }
-button{
+button, .btn{
     height: 40px;
     min-width: 40px;
     border-radius: 20px;
     outline: none;
     border: none;
     color: $black;
+    background-color: $btnBg;
     &:hover{
         color: $white;
         background-color: $black;
     }
     &:disabled{
         cursor: not-allowed;
+        opacity: 0.5;
+        color: $black;
+        background-color: $btnBg;
     }
     
 }
