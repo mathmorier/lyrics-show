@@ -16,6 +16,8 @@ class OsController
             ]
         ];
 
+        $ly = new Lyrics;
+        $main['script'][] = $ly->createLinkSave($data['song'] ?? null);
 
         $main['src']['searchGenius'] = SearchGenius::index('/os');
         $main['head'][] = SearchGenius::style();

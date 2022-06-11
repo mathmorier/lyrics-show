@@ -1,11 +1,24 @@
-let btnLike = document.querySelector('#like')
-let btnFull= document.querySelector('#full')
+let btnLike     = document.querySelector('#like')
+let btnFull     = document.querySelector('#full')
+let btnDark     = document.querySelector('#btn-dark')
+let emLyrics    = document.querySelector('#embed-content-lyrics')
+
+
+if (emLyrics != null) {
+    btnDark.style.display = 'block'   
+    if (localStorage.getItem('mode') == 'black') {
+        btnDark.classList.add('dark')
+    }else{
+        btnDark.classList.remove('dark')
+    }
+    changBtnDark()
+}
 
 window.onload = function () {
     if (localStorage.getItem('id') == "") {
-        btnLike.style.display = 'none'
         btnLike.disabled = false;
     }else{
+        btnLike.style.display = 'block'
         let li = JSON.parse(localStorage.getItem('saveList'))
         if (li != null) {
             let saved = false
@@ -50,6 +63,25 @@ btnFull.addEventListener('click', function () {
         this.innerHTML = "<i class='fa-solid fa-compress'></i>Exit"
     }
 })
+
+
+btnDark.addEventListener('click', function () {
+    btnDark.classList.toggle('dark')
+    changBtnDark()
+})
+
+function changBtnDark() {
+    if (btnDark.classList.contains('dark')) {
+        btnDark.innerHTML = "<i class='fa-solid fa-sun'></i>"
+        emLyrics.classList.add('dark')
+        localStorage.setItem('mode','black')
+    }else{
+        btnDark.innerHTML = "<i class='fa-solid fa-moon'></i>"
+        localStorage.setItem('mode','white')
+        emLyrics.classList.remove('dark')
+    }
+}
+
 
 function changeFullNoFull() {
 
