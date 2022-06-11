@@ -74,7 +74,7 @@ clearLyrics.addEventListener('click', function () {
     clearList()
     listItem = showList(listItem)
     try {
-        btnLike.children[0].classList.replace('fa-circle-check','fa-herat')
+        btnLike.children[0].classList.replace('fa-check','fa-heart')
         btnLike.disabled = false
     } catch (error) {}
     try {
