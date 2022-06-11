@@ -42,7 +42,7 @@ button, .btn{
 }
 .rg_embed{
     width: 100%;
-    background-color: $bgPrinc !important;
+    background-color: $white !important;
     display: flex !important;
     flex-direction: column-reverse !important;
 }
@@ -52,6 +52,18 @@ button, .btn{
     a{
         background-color: transparent !important;
     }
+}
+.dark{
+    .rg_embed{
+        background-color: $bgPrincDark !important;
+    }
+    .rg_embed_body p{
+        color: $textDark;
+        a{
+            color: $textDark !important;
+        }
+    }
+
 }
 .rg_embed_logo{
     z-index: 1;
