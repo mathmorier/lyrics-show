@@ -65,19 +65,21 @@
         }
         
         li{
-            box-sizing: border-box;
-            margin: 0 0 10px 0;
-            padding: 9px 0 9px 20px;
             height: 40px;
+            margin: 0 0 10px 0;
             &:hover{
                 background-color: $black;
                 color: $white;
             }
             a{
+                box-sizing: border-box;
                 color: #fff;
                 text-transform: uppercase;
                 font-size: large;
                 display: inline;
+                height: 100%;
+                width: 100%;
+                padding: 9px 0 9px 20px;
             }
         }
         &.show{
