@@ -135,14 +135,6 @@
   padding: 10px 0;
 }
 
-#nav-princ #list button:hover {
-  background-color: #0d232c;
-}
-
-#nav-princ #list button:hover i {
-  color: #fff;
-}
-
 #nav-princ #list #list-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,8 +152,6 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  outline: none;
-  border: none;
 }
 
 #nav-princ #list #list-link {

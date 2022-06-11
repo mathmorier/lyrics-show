@@ -44,48 +44,6 @@ button:disabled, .btn:disabled {
   background-color: #fff;
 }
 
-.rg_embed {
-  width: 100%;
-  background-color: #fff !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: reverse !important;
-      -ms-flex-direction: column-reverse !important;
-          flex-direction: column-reverse !important;
-}
-
-.rg_embed_body p {
-  text-align: center;
-  font-size: 3vw;
-}
-
-.rg_embed_body p a {
-  background-color: transparent !important;
-}
-
-.dark .rg_embed {
-  background-color: #000 !important;
-}
-
-.dark .rg_embed_body p {
-  color: #fff;
-}
-
-.dark .rg_embed_body p a {
-  color: #fff !important;
-}
-
-.rg_embed_logo {
-  z-index: 1;
-}
-
-.rg_embed_footer a {
-  color: #0d232c;
-  z-index: 1;
-}
-
 .list-Song {
   margin: 10px auto 20px auto;
   width: 80%;

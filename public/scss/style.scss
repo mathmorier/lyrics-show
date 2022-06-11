@@ -40,39 +40,6 @@ button, .btn{
     }
     
 }
-.rg_embed{
-    width: 100%;
-    background-color: $white !important;
-    display: flex !important;
-    flex-direction: column-reverse !important;
-}
-.rg_embed_body p{
-    text-align: center;
-    font-size: 3vw;
-    a{
-        background-color: transparent !important;
-    }
-}
-.dark{
-    .rg_embed{
-        background-color: $bgPrincDark !important;
-    }
-    .rg_embed_body p{
-        color: $textDark;
-        a{
-            color: $textDark !important;
-        }
-    }
-
-}
-.rg_embed_logo{
-    z-index: 1;
-}
-.rg_embed_footer a{
-    color: $black;
-    z-index: 1;
-}
-
 
 .list-Song{
     margin: 10px auto 20px auto;

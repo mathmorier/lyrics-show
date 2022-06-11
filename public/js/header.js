@@ -57,10 +57,10 @@ saveLyrics.addEventListener('click', function () {
     listItem = showList(listItem)
     if (localStorage.getItem('id')) {
         this.children[0].classList.remove('fa-heart')
-        this.children[0].classList.add('fa-circle-check')
+        this.children[0].classList.add('fa-check')
         this.disabled = true
         try {
-            btnLike.children[0].classList.replace('fa-heart','fa-circle-check')
+            btnLike.children[0].classList.replace('fa-heart','fa-check')
             btnLike.disabled = true
             lists.forEach(list => {
                 list = showList(list)
@@ -115,7 +115,7 @@ function createShare() {
 function addItemList(id,api_path,title,song_art_image_thumbnail_url) {
     let list = JSON.parse(localStorage.getItem('saveList'))
     
-    if (api_path == "") {
+    if (api_path == "" || api_path == null) {
         alert('No sing selected')
         return
     }
@@ -141,10 +141,10 @@ function clearList() {
     if (ok) {
         localStorage.removeItem('saveList')
         listLink.classList.remove('show')    
-        saveLyrics.children[0].classList.replace('fa-circle-check','fa-heart')
+        saveLyrics.children[0].classList.replace('fa-check','fa-heart')
         saveLyrics.disabled = false
         try {  
-            btnLike.children[0].classList.replace('fa-circle-check','fa-heart')
+            btnLike.children[0].classList.replace('fa-check','fa-heart')
             btnLike.disabled = false
             lists.forEach(list => {
                 list = showList(list)
@@ -168,7 +168,7 @@ function showList(listItem) {
 
             if (e.id == localStorage.getItem('id')) {
                 saveLyrics.children[0].classList.remove('fa-heart')
-                saveLyrics.children[0].classList.add('fa-circle-check')
+                saveLyrics.children[0].classList.add('fa-check')
                 saveLyrics.disabled = true;
             }
 

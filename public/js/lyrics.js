@@ -6,6 +6,12 @@ let emLyrics    = document.querySelector('#embed-content-lyrics')
 
 if (emLyrics != null) {
     btnDark.style.display = 'block'   
+    if (localStorage.getItem('mode') == 'black') {
+        btnDark.classList.add('dark')
+    }else{
+        btnDark.classList.remove('dark')
+    }
+    changBtnDark()
 }
 
 window.onload = function () {
@@ -58,15 +64,24 @@ btnFull.addEventListener('click', function () {
     }
 })
 
+
 btnDark.addEventListener('click', function () {
-    emLyrics.classList.toggle('dark')
     btnDark.classList.toggle('dark')
-    if (btnDark.classList.contains('dark')) {
-        this.innerHTML = "<i class='fa-solid fa-circle-half-stroke'></i>White"
-    }else{
-        this.innerHTML = "<i class='fa-solid fa-circle-half-stroke'></i>Black"
-    }
+    changBtnDark()
 })
+
+function changBtnDark() {
+    if (btnDark.classList.contains('dark')) {
+        btnDark.innerHTML = "<i class='fa-solid fa-sun'></i>"
+        emLyrics.classList.add('dark')
+        localStorage.setItem('mode','black')
+    }else{
+        btnDark.innerHTML = "<i class='fa-solid fa-moon'></i>"
+        localStorage.setItem('mode','white')
+        emLyrics.classList.remove('dark')
+    }
+}
+
 
 function changeFullNoFull() {
 

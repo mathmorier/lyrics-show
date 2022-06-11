@@ -5,8 +5,8 @@
     <i class="fa-solid fa-heart"></i>
 </button> -->
 <div class="banner">
+    <button id="btn-dark" style="display: none;" class="logo-only"><i class="fa-solid fa-moon"></i></button>
     <button id="full"><i class="fa-solid fa-expand"></i>Full Screen</button>
-    <button id="btn-dark" style="display: none;"><i class="fa-solid fa-circle-half-stroke"></i>Black</button>
     <button id="like" disabled style="display: none;"><i class="fa-solid fa-heart"></i>Save</button>
 
 </div>
