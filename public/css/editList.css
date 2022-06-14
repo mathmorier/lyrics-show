@@ -1,0 +1,25 @@
+/* SCSS Gradient */
+.list-item-edit .item {
+  color: #0d232c;
+  width: 500px;
+  margin: 10px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.list-item-edit .item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+/*# sourceMappingURL=editList.css.map */

@@ -1,0 +1,16 @@
+@import 'colors.scss';
+.list-item-edit{ 
+        .item{
+            color: $black;
+            width: 500px;
+            margin: 10px 5px;
+            display: flex;
+            justify-content: left;
+            flex-direction: row-reverse;
+            gap: 20px;
+            div{
+                display: flex;
+                gap: 5px;
+            }
+        }
+}

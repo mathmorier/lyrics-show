@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AC0BA,mBAAmB;ADzBnB,AACQ,eADO,CACP,KAAK,CAAA;EACD,KAAK,ECCR,OAAO;EDAJ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,QAAQ;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,IAAI;EACrB,cAAc,EAAE,WAAW;EAC3B,GAAG,EAAE,IAAI;CAKZ;;AAbT,AASY,eATG,CACP,KAAK,CAQD,GAAG,CAAA;EACC,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,GAAG;CACX",
+    "sources": [
+        "../scss/editList.scss",
+        "../scss/colors.scss"
+    ],
+    "names": [],
+    "file": "editList.css"
+}
