@@ -19,7 +19,7 @@ function showEditList() {
 
             up.innerHTML    = '<i class="fa-solid fa-angle-up"></i>'
             down.innerHTML  = '<i class="fa-solid fa-angle-down"></i>'
-            del.innerHTML   = '<i class="fa-solid fa-xmark"></i>'
+            del.innerHTML   = '<i class="fa-solid fa-trash"></i>'
 
             up.onclick = function ()    { moveUp(key) }
             down.onclick = function ()  { moveDown(key) }
@@ -32,13 +32,21 @@ function showEditList() {
             let div = document.createElement('div')
             div.classList.add('item')
 
-            div.appendChild(document.createElement('p')).appendChild(document.createTextNode(e.title))
-            div.append(img, cmd)
+            let songDiv = document.createElement('div')
+            songDiv.classList.add('song-info')
+            songDiv.append(img)
+            songDiv.appendChild(document.createElement('p')).appendChild(document.createTextNode(e.title))
+            div.append(songDiv)
+            // div.append(img)
+            // div.appendChild(document.createElement('p')).appendChild(document.createTextNode(e.title))
+            div.append(cmd)
             div.setAttribute('id', 'item-' + e.id)
             // div.setAttribute('draggable', true)
             listItemEdit.appendChild(div)
         
         })
+        listItemEdit.firstChild.lastChild.firstChild.disabled   = true
+        listItemEdit.lastChild.lastChild.children[1].disabled     = true
     }
 }
 function getList() {
