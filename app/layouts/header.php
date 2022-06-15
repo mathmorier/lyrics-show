@@ -18,6 +18,7 @@
             <div id="list-btn">
                 <button id="save-lyrics"><i class="fa-solid fa-heart"></i></button>
                 <button id="clear-lyrics"><i class="fa-solid fa-trash"></i></button>
+                <button id="setting-lyrics" onclick="window.location.replace('/edit/list')"><i class="fa-solid fa-gear"></i></button>
                 <button id="share-lyrics"><i class="fa-solid fa-share-nodes"></i></button>
             </div>
             <div id="list-item"></div>
