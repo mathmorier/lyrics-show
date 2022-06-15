@@ -25,6 +25,11 @@ function showList(listItem) {
             listItem.appendChild(a)
 
         })
+        let btnEditLink = document.createElement('a')
+        btnEditLink.href = "/edit/list"
+        btnEditLink.classList.add('setting-btn')
+        btnEditLink.innerHTML = '<i class="fa-solid fa-gears"></i>Edit List'
+        listItem.appendChild(btnEditLink)
     }
 
     return listItem

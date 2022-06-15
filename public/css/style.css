@@ -58,6 +58,24 @@ button:disabled, .btn:disabled {
   gap: 5px;
 }
 
+.list-Song .list-item .setting-btn {
+  min-height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-Song .list-item .setting-btn i {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
 .list-Song .list-item a {
   color: #0d232c;
   background-color: #fff;
