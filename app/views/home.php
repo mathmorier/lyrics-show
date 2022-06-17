@@ -23,6 +23,10 @@
         <div class="list-item"></div>
     </div>
 </div>
+<div class="info-help">
+    <h4>Quick Help</h4>
+    <p>If you want a fullscreen press "F11"</p>
+</div>
 <div id="info-site">
     <div class="container">
         <div class="overlay">
@@ -44,7 +48,7 @@
 <div id="help-link">
     <a href="/help">
         <i class="fa-solid fa-circle-info"></i>
-        <p>Do you need help ?</p>
+        <p>Do you need more help ?</p>
     </a>
 </div>
 
