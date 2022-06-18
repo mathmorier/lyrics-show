@@ -145,6 +145,9 @@
             overflow: auto;
             margin-top: 10px;
             width: 100%;
+            .setting-btn{
+                display: none;
+            }
             a{
                 color: $black;
                 padding: 5px 5px 5px 10px;

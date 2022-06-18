@@ -200,6 +200,10 @@
   width: 100%;
 }
 
+#nav-princ #list #list-item .setting-btn {
+  display: none;
+}
+
 #nav-princ #list #list-item a {
   color: #0d232c;
   padding: 5px 5px 5px 10px;

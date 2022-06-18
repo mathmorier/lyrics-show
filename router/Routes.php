@@ -15,7 +15,8 @@ class Routes
           ['POST', '/lyrics/list', 'LyricsController#addList', 'Lyrics_addList'],
           ['GET', '/os', 'OsController#index', 'Os_index'],
           ['GET', '/os/songs/[i:id]', 'OsController#fileShow', 'Os_FileShow'],
-          ['GET', '/xml/os/songs/[i:id]', 'XmlController#osDown', 'xml_osDown']
+          ['GET', '/xml/os/songs/[i:id]', 'XmlController#osDown', 'xml_osDown'],
+          ['GET', '/edit/list', 'EditController#list', 'edit_list']
         ];
     }
 }
