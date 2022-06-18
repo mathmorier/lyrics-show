@@ -9,6 +9,17 @@ function showList(listItem) {
     let list = JSON.parse(localStorage.getItem('saveList'))
 
     if (list!=null) {
+
+        let btnEditLink = document.createElement('a')
+        btnEditLink.href = "/edit/list"
+        if (window.location.pathname != "/") {
+            btnEditLink.href += "?callback=" + window.location.pathname 
+        }
+        btnEditLink.classList.add('setting-btn')
+        btnEditLink.innerHTML = '<i class="fa-solid fa-pen"></i>'
+        // btnEditLink.innerHTML = '<i class="fa-solid fa-gears"></i>'
+        listItem.appendChild(btnEditLink)
+
         list.forEach(e => {
             let a = document.createElement('a')
             a.href = "/lyrics"+e.api_path
@@ -25,11 +36,6 @@ function showList(listItem) {
             listItem.appendChild(a)
 
         })
-        let btnEditLink = document.createElement('a')
-        btnEditLink.href = "/edit/list"
-        btnEditLink.classList.add('setting-btn')
-        btnEditLink.innerHTML = '<i class="fa-solid fa-gears"></i>'
-        listItem.appendChild(btnEditLink)
     }
 
 

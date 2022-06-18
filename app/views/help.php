@@ -6,8 +6,8 @@
     <div class="content">
         <div class="section">
             <h3>You need more ?</h3>
-            <p>Contact the devlopper of this page :</p>
-            <a href="https://webmm.ch" target="_blank" rel="noopener noreferrer" class="btn">Website of devlopper</a>
+            <p>Contact the developer of this page :</p>
+            <a href="https://webmm.ch" target="_blank" rel="noopener noreferrer" class="btn">Website of developer</a>
         </div>
         <div class="section">
             <h3>Home Page</h3>

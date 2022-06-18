@@ -16,6 +16,7 @@ ul{
 }
 html{
     background: url('/assets/image/bg-princ.jpg') $bgPrinc ;
+    scroll-behavior: smooth;
 }
 main{
     min-height: 100vh;
@@ -77,19 +78,22 @@ button, .btn{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 5px;
+        // padding-top: 35px;
         .setting-btn{
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
             position: absolute;
-            top: -15px;
-            left: -20px;
+            top: 50%;
+            right: -33px;
             padding: 0;
-            border-radius: 50%;
+            box-sizing: border-box;
+            border-radius: 20px ;
             display: flex;
             justify-content: center;
             align-items: center;
+            transform: translateY(-50%);
             i{
-                font-size: 12px;
+                font-size: 14px;
             }
         }
         a{

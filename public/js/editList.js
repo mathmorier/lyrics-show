@@ -56,7 +56,11 @@ function setList(list) {
     localStorage.setItem('saveEditList', JSON.stringify(list))
 }
 function saveList() {
-    localStorage.setItem('saveList', localStorage.getItem('saveEditList'))
+    if (getList().length == 0) {
+        localStorage.removeItem('saveList')
+    }else{
+        localStorage.setItem('saveList', localStorage.getItem('saveEditList'))
+    }
     localStorage.removeItem("saveEditList");
     window.location.replace("/")
 }
