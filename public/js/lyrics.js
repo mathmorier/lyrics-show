@@ -75,10 +75,12 @@ function changBtnDark() {
         btnDark.innerHTML = "<i class='fa-solid fa-sun'></i>"
         emLyrics.classList.add('dark')
         localStorage.setItem('mode','black')
+        document.getElementsByTagName('body')[0].classList.add('dark')
     }else{
         btnDark.innerHTML = "<i class='fa-solid fa-moon'></i>"
         localStorage.setItem('mode','white')
         emLyrics.classList.remove('dark')
+        document.getElementsByTagName('body')[0].classList.remove('dark')
     }
 }
 

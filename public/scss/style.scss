@@ -19,7 +19,7 @@ html{
     scroll-behavior: smooth;
 }
 main{
-    min-height: 100vh;
+    min-height: 94vh;
 }
 button, .btn{
     height: 40px;
@@ -40,6 +40,28 @@ button, .btn{
         background-color: $btnBg;
     }
     
+}
+body{
+    overflow: overlay;
+    &.dark{
+        margin-top: -10px;
+        padding-top: 10px;
+        background-color: #00000070;
+        &::-webkit-scrollbar-thumb {
+            background-color: $black; /* color of the scroll thumb */
+        }
+    }
+    &::-webkit-scrollbar{
+        width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+    }   
+
+    &::-webkit-scrollbar-thumb {
+    background-color: #aaa; /* color of the scroll thumb */
+    border-radius: 8px 0 0 8px; /* roundness of the scroll thumb */
+    }
 }
 .info-help{
     margin: 20px auto;

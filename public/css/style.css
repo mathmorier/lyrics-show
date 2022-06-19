@@ -20,7 +20,7 @@ html {
 }
 
 main {
-  min-height: 100vh;
+  min-height: 94vh;
 }
 
 button, .btn {
@@ -43,6 +43,37 @@ button:disabled, .btn:disabled {
   opacity: 0.5;
   color: #0d232c;
   background-color: #fff;
+}
+
+body {
+  overflow: overlay;
+}
+
+body.dark {
+  margin-top: -10px;
+  padding-top: 10px;
+  background-color: #00000070;
+}
+
+body.dark::-webkit-scrollbar-thumb {
+  background-color: #0d232c;
+  /* color of the scroll thumb */
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  /* color of the scroll thumb */
+  border-radius: 8px 0 0 8px;
+  /* roundness of the scroll thumb */
 }
 
 .info-help {
