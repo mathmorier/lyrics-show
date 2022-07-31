@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\Home         as HomeModel ;
-use App\Src\SearchGenius    as SearchGenius ;
+use App\Src\SearchShir    as SearchShir ;
 
 class Home
 {
@@ -17,9 +17,9 @@ class Home
         ];
 
 
-        $main['src']['searchGenius'] = SearchGenius::index();
-        $main['head'][] = SearchGenius::style();
-        $main['script'][] = SearchGenius::script("/lyrics");
+        $main['src']['searchShir'] = SearchShir::index();
+        $main['head'][] = SearchShir::style();
+        $main['script'][] = SearchShir::script("/lyrics");
      
 
 
