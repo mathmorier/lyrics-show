@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\Home         as HomeModel ;
-use App\Src\SearchShir    as SearchShir ;
+use App\Src\SearchApi       as SearchApi ;
 
 class Home
 {
@@ -17,9 +17,9 @@ class Home
         ];
 
 
-        $main['src']['searchShir'] = SearchShir::index();
-        $main['head'][] = SearchShir::style();
-        $main['script'][] = SearchShir::script("/lyrics");
+        $main['src']['searchShir'] = SearchApi::index();
+        $main['head'][] = SearchApi::style();
+        $main['script'][] = SearchApi::script("/lyrics");
      
 
 

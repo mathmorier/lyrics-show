@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AA0BA,mBAAmB",
-    "sources": [
-        "../scss/colors.scss"
-    ],
-    "names": [],
-    "file": "colors.css"
-}
+{"version":3,"sources":["../scss/colors.scss"],"names":[],"mappings":"AA0BA,kBAAA","file":"colors.css"}

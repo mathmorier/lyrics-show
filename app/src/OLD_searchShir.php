@@ -27,7 +27,6 @@ class SearchShir
                     </div>
                 </a>
             </div>
-            </div>
             <div id="search-res"></div>
         </div>
         <?php 
@@ -49,8 +48,7 @@ class SearchShir
                 let data = await searchGenuisApi(search.value)
 
                 searchRes.innerHTML = "";
-                // console.log(data);
-
+                
                 let totalHits = data.query.searchinfo.totalhits ;
 
                 if (totalHits > 0) {
@@ -64,7 +62,7 @@ class SearchShir
                     let item = document.createElement('div')
                     let title = document. createTextNode(e.title)
                     let song_art_image_thumbnail_url = document.createElement('img')
-                    song_art_image_thumbnail_url.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png'
+                    song_art_image_thumbnail_url.src = 'http://shir.fr/w/shir-carre-150.png'
                     song_art_image_thumbnail_url.setAttribute("width", 60);
                     song_art_image_thumbnail_url.setAttribute("height", 60);
 
@@ -73,33 +71,14 @@ class SearchShir
                     item.appendChild(song_art_image_thumbnail_url)
                     item.appendChild(document.createElement('p')).appendChild(title)
                     item.addEventListener('click', function () {
-                        window.location.replace("<?=$callBack?>"+ "/lyrics/shir/" + e.pageid)
+                        window.location.replace("<?=$callBack?>"+ "/shir/" + e.pageid)
                     })
                     searchRes.appendChild(item);
                         
                     });
 
                 }
-
                 console.log(totalHits);
-
-                // data.query.pages.forEach(e => {
-                //     let item = document.createElement('div')
-                //     let title = document. createTextNode(e.result.full_title)
-                //     let song_art_image_thumbnail_url = document.createElement('img')
-                //     song_art_image_thumbnail_url.src = e.result.song_art_image_thumbnail_url
-                //     song_art_image_thumbnail_url.setAttribute("width", 60);
-                //     song_art_image_thumbnail_url.setAttribute("height", 60);
-
-                //     item.classList.add('serach-list')
-                //     item.setAttribute("id", e.result.api_path)
-                //     item.appendChild(song_art_image_thumbnail_url)
-                //     item.appendChild(document.createElement('p')).appendChild(title)
-                //     item.addEventListener('click', function () {
-                //         window.location.replace("<?=$callBack?>"+e.result.api_path)
-                //     })
-                //     searchRes.appendChild(item);
-                // });
             })
 
             async function searchGenuisApi(q){
@@ -110,7 +89,8 @@ class SearchShir
                 + '?action=query'
                 + '&generator=search'
                 + '&gsrsearch='+ q 
-                + '&format=json';
+                + '&format=json'
+                + '&gsrlimit=20';
                 let res = await fetch(url)
                 .then(response => response.json())
                 .then(data => {return data})

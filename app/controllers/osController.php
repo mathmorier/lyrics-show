@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
-use App\Src\SearchGenius    as SearchGenius ;
-use App\Models\Lyrics as Lyrics ;
+use App\Src\SearchApi   as SearchApi ;
+use App\Models\Lyrics   as Lyrics ;
 
 
 class OsController  
@@ -19,9 +19,9 @@ class OsController
         $ly = new Lyrics;
         $main['script'][] = $ly->createLinkSave($data['song'] ?? null);
 
-        $main['src']['searchGenius'] = SearchGenius::index('/os');
-        $main['head'][] = SearchGenius::style();
-        $main['script'][] = SearchGenius::script('/os');
+        $main['src']['searchGenius'] = SearchApi::index('/os');
+        $main['head'][] = SearchApi::style();
+        $main['script'][] = SearchApi::script('/os');
 
         $main['song'] = $data['song'] ?? null;
      

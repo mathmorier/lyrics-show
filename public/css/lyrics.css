@@ -4,31 +4,21 @@
 }
 
 .banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 3px 5vw;
 }
-
 .banner button {
   padding: 5px 15px;
 }
-
 .banner i {
   font-size: 16px;
   margin-right: 5px;
   text-align: center;
 }
-
 .banner .logo-only i {
   margin-right: 0;
   width: 15px;
@@ -37,20 +27,14 @@
 .rg_embed {
   width: 100%;
   background-color: #fff !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: reverse !important;
-      -ms-flex-direction: column-reverse !important;
-          flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
 }
 
 .rg_embed_body p {
   text-align: center;
   font-size: 3vw;
 }
-
 .rg_embed_body p a {
   background-color: transparent !important;
 }
@@ -61,12 +45,9 @@
   padding-top: 20px !important;
   color: #ddd !important;
 }
-
 .rg_embed_logo::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-
 .rg_embed_logo::before {
   top: 17px !important;
 }
@@ -79,20 +60,15 @@
 .dark .rg_embed {
   background-color: #000 !important;
 }
-
 .dark .rg_embed_body p {
   color: #fff;
 }
-
 .dark .rg_embed_body p a {
   color: #fff !important;
 }
-
 .dark .rg_embed_footer a {
   color: #fff;
 }
-
 .dark .rg_embed_logo {
   color: #444 !important;
-}
-/*# sourceMappingURL=lyrics.css.map */
+}/*# sourceMappingURL=lyrics.css.map */

@@ -4,88 +4,52 @@
   width: 90%;
   max-width: 600px;
 }
-
 .container h2 {
   margin-bottom: 30px;
 }
-
 .container .list-Song-edit {
   padding: 5px 10px 10px 10px;
   border-radius: 20px;
   background-color: #8bc540;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .container .list-Song-edit .list-item-edit .item {
   color: #0d232c;
   width: 100%;
   min-height: 60px;
   margin: 0 auto 15px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
   gap: 20px;
 }
-
 .container .list-Song-edit .list-item-edit .item .song-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: left;
+  align-items: center;
   gap: 10px;
 }
-
 .container .list-Song-edit .list-item-edit .item .song-info img {
   border-radius: 3px;
 }
-
 .container .list-Song-edit .list-item-edit .item .song-info p {
   text-align: left;
 }
-
 .container .list-Song-edit .list-item-edit .item .cmd {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 5px;
 }
-
 .container .list-Song-edit .list-item-edit .item .cmd button:last-child:hover {
   background-color: #d00000;
 }
-
 .container .list-Song-edit .cmd-princ {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 30px;
 }
-
 .container .list-Song-edit .cmd-princ .btn-cmd {
   padding: 5px 10px;
   width: 30%;
-}
-/*# sourceMappingURL=editList.css.map */
+}/*# sourceMappingURL=editList.css.map */

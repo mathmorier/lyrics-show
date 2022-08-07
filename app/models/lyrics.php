@@ -17,6 +17,30 @@ class Lyrics
             return null;
         }
     }
+    public function getShirSong($id)
+    {
+        $url = 'http://shir.fr/w/api.php?action=query&format=json&pageids='.$id;
+        if (get_http_response_code($url) == 200) {
+            $res = json_decode(file_get_contents($url));
+            $url = "http://shir.fr/chant/paroles/".$res->query->pages->$id->title.".html";
+            
+            $file_headers = @get_headers($url);
+            if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
+                return null ;
+            }elseif ($file_headers[0] == 'HTTP/1.1 403 Forbidden') {
+                return null ;
+            }
+
+            $source_code = file_get_contents($url);
+
+            $song['embed_content'] = $source_code ;
+
+            return $song;
+            
+        }else{
+            return null;
+        }
+    }
     public function createLinkSave($song = null)
     {
         ob_start();

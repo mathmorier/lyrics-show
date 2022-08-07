@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers;
-use App\Src\SearchGenius    as SearchGenius;
+use App\Src\SearchApi       as SearchApi;
 use App\Models\Lyrics       as Lyrics;
 use App\Models\ListLyrics   as ListLyrics;
 
@@ -19,9 +19,9 @@ class LyricsController
         $lyrics = new Lyrics;
         $main['script'][] = $lyrics->createLinkSave($song);
 
-        $main['src']['searchGenius'] = SearchGenius::index("/lyrics");
-        $main['head'][] = SearchGenius::style();
-        $main['script'][] = SearchGenius::script("/lyrics");
+        $main['src']['searchGenius'] = SearchApi::index("/lyrics");
+        $main['head'][] = SearchApi::style();
+        $main['script'][] = SearchApi::script("/lyrics");
 
         $main['api_path'] = $song->api_path ?? ""; 
 
@@ -37,6 +37,15 @@ class LyricsController
         $lyrics = new Lyrics;
         $song = $lyrics->getGenuisSong($params['id']);
         $this->index(null,$song);
+
+    }
+    public function shirShow($params)
+    {
+        $lyrics = new Lyrics;
+        $song = $lyrics->getShirSong($params['id']);
+dump($song);
+
+        // $this->index(null,$song);
 
     }
     public function reciveList($params = null)

@@ -6,7 +6,6 @@
   bottom: 0;
   z-index: 10;
 }
-
 #nav-princ .btn-menu {
   position: absolute;
   top: 0;
@@ -14,92 +13,61 @@
   padding: 10px;
   height: 40px;
   width: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
 }
-
 #nav-princ .btn-menu .line {
   background-color: #0d232c;
   height: 2px;
   width: 90%;
 }
-
 #nav-princ .btn-menu.show {
-  background-color: #ff7e3bff;
+  background-color: #ff7e3b;
   border-radius: 0 0 0 2px;
   border-right: #aaa 1px solid;
 }
-
 #nav-princ .btn-menu.show .line {
   position: absolute;
   top: 20px;
   left: 15%;
   width: 70%;
 }
-
 #nav-princ .btn-menu.show .line:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 #nav-princ .btn-menu.show .line:nth-child(2) {
   display: none;
 }
-
 #nav-princ .btn-menu.show .line:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-
 #nav-princ .slider {
   background-color: #8bc540;
   min-width: 0;
   width: 0;
   height: 100%;
   overflow: hidden;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 #nav-princ .slider * {
   display: none;
 }
-
 #nav-princ .slider li {
   height: 40px;
   margin: 0 0 10px 0;
 }
-
 #nav-princ .slider li:hover {
   background-color: #0d232c;
   color: #fff;
 }
-
 #nav-princ .slider li a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #fff;
   text-transform: uppercase;
   font-size: large;
@@ -108,90 +76,59 @@
   width: 100%;
   padding: 9px 0 9px 20px;
 }
-
 #nav-princ .slider.show {
   min-width: 250px;
   width: 30vw;
-  -webkit-box-shadow: 1px 0px 4px 0px #444;
-          box-shadow: 1px 0px 4px 0px #444;
+  box-shadow: 1px 0px 4px 0px #444;
 }
-
 #nav-princ .slider.show * {
   display: inline-block;
 }
-
 #nav-princ .slider.show ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 #nav-princ #list {
   border-top: #ddd 1px solid;
   padding: 10px 0;
 }
-
 #nav-princ #list #list-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
   padding: 10px 0;
 }
-
 #nav-princ #list #list-btn button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
 }
-
 #nav-princ #list #list-link {
   display: none;
   margin: 10px;
 }
-
 #nav-princ #list #list-link.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #nav-princ #list #list-link * {
   height: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   border: none;
 }
-
 #nav-princ #list #list-link input {
   width: 100%;
   border-radius: 5px 0 0 5px;
   padding: 5px;
 }
-
 #nav-princ #list #list-link button {
   border-radius: 0 5px 5px 0;
   padding: 7px 14px;
   width: 60px;
   height: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #nav-princ #list #list-item {
   max-height: 35vh;
   min-height: 5vh;
@@ -199,46 +136,26 @@
   margin-top: 10px;
   width: 100%;
 }
-
 #nav-princ #list #list-item .setting-btn {
   display: none;
 }
-
 #nav-princ #list #list-item a {
   color: #0d232c;
   padding: 5px 5px 5px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 #nav-princ #list #list-item a div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-items: center;
   gap: 5px;
 }
-
 #nav-princ #list #list-item a div img {
   border-radius: 3px;
 }
-
 #nav-princ #list #list-item a:hover {
   background-color: #0d232c;
   color: #fff;
-}
-/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=header.css.map */
