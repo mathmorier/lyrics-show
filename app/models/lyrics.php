@@ -31,11 +31,29 @@ class Lyrics
                 return null ;
             }
 
-            $source_code = file_get_contents($url);
+            $source_code = file($url);
+    
+            $copy = false;
+            $table = [];
 
-            $song['embed_content'] = $source_code ;
+            for ($i=0; $i < count($source_code); $i++) { 
 
-            return $song;
+                $copy = str_contains($source_code[$i], "<div class='title'>")  ? true  : $copy ;
+                $copy = str_contains($source_code[$i], "<div class='footer'>") ? false : $copy ;
+
+                if ($copy) { array_push($table, $source_code[$i]); }
+
+            }
+
+            ob_start();
+            foreach ($table as $line ) { echo $line; }
+            $song['embed_content'] = ob_get_clean();
+            $song['id'] = $id;
+            $song['api_path'] = "/shir/".$id;
+            $song['song_art_image_thumbnail_url'] = 'http://shir.fr/w/shir-carre-150.png';
+            $song['title'] = $res->query->pages->$id->title;
+
+            return json_decode(json_encode($song));
             
         }else{
             return null;

@@ -58,7 +58,7 @@ class SearchApi
                     // ---FAIRE LE BTN SELECTEUR
 
                     searchRes.innerHTML = "";
-                    data.response.hits.forEach(e => {
+                    data2.response.hits.forEach(e => {
                         let item = document.createElement('div')
                         let title = document. createTextNode(e.result.full_title)
                         let song_art_image_thumbnail_url = document.createElement('img')

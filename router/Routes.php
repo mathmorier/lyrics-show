@@ -12,9 +12,9 @@ class Routes
           ['GET', '/lyrics', 'LyricsController#index', 'Lyrics_index'],
           ['GET', '/lyrics/songs/[i:id]', 'LyricsController#firstShow', 'Lyrics_firstShow'],
           ['GET', '/lyrics/list/[*:idList]', 'LyricsController#reciveList', 'Lyrics_reciveList'],
-          ['POST', '/lyrics/list', 'LyricsController#addList', 'Lyrics_addList'],
           ['GET', '/os', 'OsController#index', 'Os_index'],
           ['GET', '/os/songs/[i:id]', 'OsController#fileShow', 'Os_FileShow'],
+          ['GET', '/os/shir/[i:id]', 'OsController#shirShow', 'Os_ShirShow'],
           ['GET', '/xml/os/songs/[i:id]', 'XmlController#osDown', 'xml_osDown'],
           ['GET', '/edit/list', 'EditController#list', 'edit_list'],
           ['GET', '/lyrics/shir/[i:id]', 'LyricsController#shirShow', 'Lyrics_shirShow']

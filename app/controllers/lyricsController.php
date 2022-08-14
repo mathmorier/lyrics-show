@@ -31,7 +31,6 @@ class LyricsController
 
         require __DIR__.'/../layouts/default.php';
     }
-
     public function firstShow($params)
     {
         $lyrics = new Lyrics;
@@ -43,9 +42,7 @@ class LyricsController
     {
         $lyrics = new Lyrics;
         $song = $lyrics->getShirSong($params['id']);
-dump($song);
-
-        // $this->index(null,$song);
+        $this->index(null,$song);
 
     }
     public function reciveList($params = null)
@@ -73,10 +70,6 @@ dump($song);
         require __DIR__.'/../layouts/default.php';
 
 
-    }
-    public function addList($params = null)
-    {
-        echo 'addList';
     }
 }
 

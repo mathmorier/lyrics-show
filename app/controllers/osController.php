@@ -39,6 +39,10 @@ class OsController
 
         $this->index(null, $data);
     }
+    public function shirShow($param = null)
+    {
+        header('Location: /os');
+    }
 }
 
 
