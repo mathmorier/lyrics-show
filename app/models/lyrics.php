@@ -17,41 +17,39 @@ class Lyrics
             return null;
         }
     }
-    public function getShirSong($id)
+    public function getShirSong($id, $embedContent = true)
     {
         $url = 'http://shir.fr/w/api.php?action=query&format=json&pageids='.$id;
         if (get_http_response_code($url) == 200) {
             $res = json_decode(file_get_contents($url));
-            $url = "http://shir.fr/chant/paroles/".$res->query->pages->$id->title.".html";
-            
-            $file_headers = @get_headers($url);
-            if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
-                return null ;
-            }elseif ($file_headers[0] == 'HTTP/1.1 403 Forbidden') {
-                return null ;
-            }
 
-            $source_code = file($url);
-    
-            $copy = false;
-            $table = [];
-
-            for ($i=0; $i < count($source_code); $i++) { 
-
-                $copy = str_contains($source_code[$i], "<div class='title'>")  ? true  : $copy ;
-                $copy = str_contains($source_code[$i], "<div class='footer'>") ? false : $copy ;
-
-                if ($copy) { array_push($table, $source_code[$i]); }
-
-            }
-
-            ob_start();
-            foreach ($table as $line ) { echo $line; }
-            $song['embed_content'] = ob_get_clean();
-            $song['id'] = $id;
+            $song['id'] = 'S'.$id;
             $song['api_path'] = "/shir/".$id;
             $song['song_art_image_thumbnail_url'] = 'http://shir.fr/w/shir-carre-150.png';
-            $song['title'] = $res->query->pages->$id->title;
+            $song['title'] = $res->query->pages->$id->title ?? 'no-name';
+
+            if ($embedContent && isset($res->query->pages->$id->title)) {
+
+                $url = "http://shir.fr/chant/paroles/".$res->query->pages->$id->title.".html";
+                
+                $file_headers = @get_headers($url);
+                if      (!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found')    {return null ;}
+                elseif  ($file_headers[0] == 'HTTP/1.1 403 Forbidden')                      {return null ;}
+    
+                $source_code = file($url);
+        
+                $copy = false;
+                $table = [];
+    
+                for ($i=0; $i < count($source_code); $i++) { 
+                    $copy = str_contains($source_code[$i], "<div class='title'>")  ? true  : $copy ;
+                    $copy = str_contains($source_code[$i], "<div class='footer'>") ? false : $copy ;
+                    if ($copy) { array_push($table, $source_code[$i]); }
+                }
+                ob_start();
+                foreach ($table as $line ) { echo $line; }
+                $song['embed_content'] = ob_get_clean();
+            }
 
             return json_decode(json_encode($song));
             
