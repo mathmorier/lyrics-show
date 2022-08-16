@@ -18,6 +18,16 @@ class SearchApi
                 <a href="/lyrics"><i class="fa-solid fa-music"></i></a>
                 <a href="/os"><i class="fa-solid fa-person-chalkboard"></i></a>
             </div>
+            <div id="api-select">
+                <div class="box">
+                    <label for="genuis.com">genius</label>
+                    <input type="checkbox" name="genius.com" id="genuis.com" checked>
+                </div>
+                <div class="box">
+                    <label for="shir.fr">shir.fr</label>
+                    <input type="checkbox" name="shir.fr" id="shir.fr">
+                </div>
+            </div>
             <div>
                 <input type="text" name="search" id="search" placeholder="Search ..." autofocus>
                 <a href="<?=$callBack = null ? $_SERVER['REQUEST_URI'] : $callBack?>">
@@ -44,21 +54,46 @@ class SearchApi
         <script>
             const search    = document.getElementById('search')
             const searchRes = document.getElementById('search-res')
+            const shirBox   = document.getElementById('shir.fr')
+            const geniusBox = document.getElementById('genuis.com')
 
-            search.addEventListener('input',async function () {
+            let apiSelect = 'genuis.com';
+
+            shirBox.addEventListener('change', function(){
+                if (this.checked) {
+                    apiSelect = 'shir.fr'
+                    geniusBox.checked = false;
+                    createListFromApi()
+                }
+            })
+            geniusBox.addEventListener('change', function(){
+                if (this.checked) {
+                    apiSelect = 'genuis.com'
+                    shirBox.checked = false;
+                    createListFromApi()
+                }
+            })
+
+
+            search.addEventListener('input', createListFromApi)
+            
+            async function createListFromApi() {
                 if (search.value != '') {
                     let data = await searchGenuisApi(search.value)
 
-                    // MODIFIICATION EN COUR POUR API SHIR
-
-                    let data2 = await searchShirApi(search.value)
-                    
-
-                    // ---------------------------------
-                    // ---FAIRE LE BTN SELECTEUR
+                    switch (apiSelect) {
+                        case 'genuis.com':
+                            data = await searchGenuisApi(search.value)
+                            break;
+                        case 'shir.fr':
+                            data = await searchShirApi(search.value)
+                            break;
+                        default:
+                            break;
+                    }
 
                     searchRes.innerHTML = "";
-                    data2.response.hits.forEach(e => {
+                    data.response.hits.forEach(e => {
                         let item = document.createElement('div')
                         let title = document. createTextNode(e.result.full_title)
                         let song_art_image_thumbnail_url = document.createElement('img')
@@ -78,7 +113,7 @@ class SearchApi
                 }else{
                     searchRes.innerHTML = "";
                 }
-            })
+            }
 
             async function searchGenuisApi(q){
                 q = q.replace('&', '')

@@ -67,6 +67,7 @@
             }
         }
         .nav-icon{
+            height: 18px;
             position: absolute;
             top: 0;
             right: 50px;
@@ -106,6 +107,31 @@
             cursor: pointer;
             &:hover{
                 background-color: $gray;
+            }
+        }
+    }
+    #api-select{
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        .box{
+            margin-bottom: -2px;
+            font-size: 12px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            input{
+                height: 14px;    
+
+            }
+            label{
+                margin: 0 10px 0 5px;
+                height: 18px;
+                width: 57px;
             }
         }
     }

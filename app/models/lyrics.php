@@ -44,10 +44,16 @@ class Lyrics
                 for ($i=0; $i < count($source_code); $i++) { 
                     $copy = str_contains($source_code[$i], "<div class='title'>")  ? true  : $copy ;
                     $copy = str_contains($source_code[$i], "<div class='footer'>") ? false : $copy ;
-                    if ($copy) { array_push($table, $source_code[$i]); }
+                    if ($copy) { 
+                        $source_code[$i] = str_replace("\n", "<br>", $source_code[$i]);
+                        $source_code[$i] = str_replace("</div><br>", "</div>", $source_code[$i]);
+                        array_push($table, $source_code[$i]); 
+                    }
                 }
                 ob_start();
+                echo '<div class="rg_embed shir">';
                 foreach ($table as $line ) { echo $line; }
+                echo '</div>';
                 $song['embed_content'] = ob_get_clean();
             }
 

@@ -64,6 +64,7 @@
   background-color: #0d232c;
 }
 .search-box #search-ask .nav-icon {
+  height: 18px;
   position: absolute;
   top: 0;
   right: 50px;
@@ -104,4 +105,28 @@
 }
 .search-box #search-res .serach-list:hover {
   background-color: #ccc;
+}
+.search-box #api-select {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.search-box #api-select .box {
+  margin-bottom: -2px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+}
+.search-box #api-select .box input {
+  height: 14px;
+}
+.search-box #api-select .box label {
+  margin: 0 10px 0 5px;
+  height: 18px;
+  width: 57px;
 }/*# sourceMappingURL=searchBar.css.map */

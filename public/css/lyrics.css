@@ -30,6 +30,27 @@
   display: flex !important;
   flex-direction: column-reverse !important;
 }
+.rg_embed.shir {
+  flex-direction: column !important;
+  text-align: center;
+  font-size: 3vw;
+  padding: 0 0 20px 0;
+}
+.rg_embed.shir .title {
+  font-size: 14px;
+  line-height: 1.45em;
+  letter-spacing: 0.02em;
+  padding: 9px 8px 8px 1em;
+  text-align: left;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rg_embed.shir .author {
+  font-size: 14px;
+  padding: 0 9px 8px 1em;
+  margin-bottom: 20px;
+  text-align: left;
+}
 
 .rg_embed_body p {
   text-align: center;
@@ -59,6 +80,9 @@
 
 .dark .rg_embed {
   background-color: #000 !important;
+}
+.dark .rg_embed.shir {
+  color: #fff;
 }
 .dark .rg_embed_body p {
   color: #fff;
