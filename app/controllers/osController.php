@@ -31,17 +31,21 @@ class OsController
         require __DIR__.'/../layouts/default.php';
 
     }
-    public function fileShow($param = null)
+    public function fileShow($params = null)
+    {
+        $lyrics = new Lyrics;
+        $data['song'] = $lyrics->getGenuisSong($params['id']);
+        $data['song']->api_path_full = "/xml/os".$data['song']->api_path;
+        $this->index(null,$data);
+
+    }
+    public function shirShow($params = null)
     {
         $lyrics = new Lyrics();
-
-        $data['song'] = $lyrics->getGenuisSong($param['id']);
-
+        $data['song'] = $lyrics->getShirSong($params['id']);
+        $data['song']->api_path_full = "http://shir.fr/chant/opensong/".$data['song']->title;
         $this->index(null, $data);
-    }
-    public function shirShow($param = null)
-    {
-        header('Location: /os');
+
     }
 }
 

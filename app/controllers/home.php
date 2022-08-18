@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use App\Models\Home         as HomeModel ;
 use App\Src\SearchApi       as SearchApi ;
+use App\Src\Db              as Db ;
 
 class Home
 {
@@ -29,6 +30,12 @@ class Home
         require __DIR__.'/../views/home.php';
         $main['view'] = ob_get_clean();
         require __DIR__.'/../layouts/default.php';
+    }
+    public function analyse($params = null)
+    {
+        // ANALYSE
+        dump(Db::info());
+        
     }
 }
 

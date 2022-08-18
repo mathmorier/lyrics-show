@@ -7,7 +7,7 @@
         ?>
         <p style="color: #888; font-size: 12px;"><i class="fa-solid fa-triangle-exclamation"></i> flie is auto-generate <i class="fa-solid fa-triangle-exclamation"></i></p>
         <div class="down">
-            <a href="/xml/os<?=$main['song']->api_path?>" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-download"></i> Lyrics file for OpenSong</a>
+            <a href="<?=$main['song']->api_path_full?>" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-download"></i> Lyrics file for OpenSong</a>
         </div>
         <?php
     }else{
