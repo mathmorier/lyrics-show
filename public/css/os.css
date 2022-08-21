@@ -32,4 +32,18 @@
 .container .download .down .btn {
   padding: 10px 20px;
   box-sizing: border-box;
+}
+
+.rg_embed.shir {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.rg_embed.shir .title {
+  font-size: large;
+  font-weight: bold;
+}
+.rg_embed.shir .author {
+  font-style: italic;
 }/*# sourceMappingURL=os.css.map */

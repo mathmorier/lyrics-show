@@ -19,13 +19,19 @@ class SearchApi
                 <a href="/os"><i class="fa-solid fa-person-chalkboard"></i></a>
             </div>
             <div id="api-select">
+                <!-- <div class="box">
+                    <select name="t" id="t">
+                        <option value="1">Genius</option>
+                        <option value="2">shir.fr</option>
+                    </select>
+                </div> -->
                 <div class="box">
                     <label for="genuis.com">genius</label>
-                    <input type="checkbox" name="genius.com" id="genuis.com" checked>
+                    <input type="radio" name="apiSelect" value="genius.com" id="genuis.com">
                 </div>
                 <div class="box">
                     <label for="shir.fr">shir.fr</label>
-                    <input type="checkbox" name="shir.fr" id="shir.fr">
+                    <input type="radio" name="apiSelect" value="shir.fr" id="shir.fr">
                 </div>
             </div>
             <div>
@@ -59,17 +65,31 @@ class SearchApi
 
             let apiSelect = 'genuis.com';
 
+            if (localStorage.getItem('apiSelected') != null) { apiSelect = localStorage.getItem('apiSelected') }
+
+            switch (apiSelect) {
+                case 'genuis.com':
+                    geniusBox.checked = true;
+                    break;
+                case 'shir.fr':
+                    shirBox.checked = true;
+                    break;
+                default:
+                    break;
+            }
+
+
             shirBox.addEventListener('change', function(){
                 if (this.checked) {
                     apiSelect = 'shir.fr'
-                    geniusBox.checked = false;
+                    localStorage.setItem('apiSelected','shir.fr')
                     createListFromApi()
                 }
             })
             geniusBox.addEventListener('change', function(){
                 if (this.checked) {
                     apiSelect = 'genuis.com'
-                    shirBox.checked = false;
+                    localStorage.setItem('apiSelected','genuis.com')
                     createListFromApi()
                 }
             })
@@ -79,7 +99,7 @@ class SearchApi
             
             async function createListFromApi() {
                 if (search.value != '') {
-                    let data = await searchGenuisApi(search.value)
+                    let data = null ;
 
                     switch (apiSelect) {
                         case 'genuis.com':
@@ -89,6 +109,7 @@ class SearchApi
                             data = await searchShirApi(search.value)
                             break;
                         default:
+                            data = await searchGenuisApi(search.value)
                             break;
                     }
 
@@ -135,7 +156,7 @@ class SearchApi
                 + '&generator=search'
                 + '&gsrsearch='+ q 
                 + '&format=json'
-                + '&gsrlimit=5';
+                + '&gsrlimit=10';
                 let res = await fetch(url)
                 .then(response => response.json())
                 .then(data => {return data})
@@ -159,7 +180,16 @@ class SearchApi
                         }
                         resformat.response.hits.push(temp);
                     })
-                } 
+                } else{
+                    let temp = {
+                        'result': {
+                            'full_title' : 'need more info or no result',
+                            'song_art_image_thumbnail_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png',
+                            'api_path' : '#' 
+                        }
+                    }
+                    resformat.response.hits.push(temp);
+            }
                 return resformat ;
             }
         </script>

@@ -26,6 +26,7 @@
 
 .rg_embed{
     width: 100%;
+    min-height: 100vh;
     background-color: $white !important;
     display: flex !important;
     flex-direction: column-reverse !important;

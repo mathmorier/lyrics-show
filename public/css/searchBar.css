@@ -1,5 +1,5 @@
 /* SCSS Gradient */
-.search-box {
+body .search-box {
   position: relative;
   margin: 10px auto;
   width: 80%;
@@ -8,26 +8,27 @@
   flex-direction: column;
   align-items: center;
 }
-.search-box #search-ask {
+body .search-box #search-ask {
   position: relative;
   display: flex;
   flex-direction: column;
   max-width: 800px;
   width: 100%;
 }
-.search-box #search-ask label {
+body .search-box #search-ask label {
   background-color: transparent;
   margin: 0 0 5px 20px;
   text-transform: uppercase;
   font-weight: 700;
 }
-.search-box #search-ask div {
+body .search-box #search-ask div {
   display: flex;
   height: 50px;
 }
-.search-box #search-ask div input {
+body .search-box #search-ask div input {
   box-shadow: 0 5px 4px -6px #444;
-  padding: 10px;
+  padding: 10px 85px 10px 10px;
+  box-sizing: border-box;
   width: 100%;
   border-radius: 15px 0 0 15px;
   outline: none;
@@ -35,10 +36,10 @@
   border-right: none;
   box-sizing: border-box;
 }
-.search-box #search-ask div a {
+body .search-box #search-ask div a {
   color: #0d232c;
 }
-.search-box #search-ask div a .corss {
+body .search-box #search-ask div a .corss {
   background-color: #8bc540;
   height: 50px;
   width: 50px;
@@ -46,7 +47,7 @@
   position: relative;
   box-sizing: border-box;
 }
-.search-box #search-ask div a .corss .cross-line {
+body .search-box #search-ask div a .corss .cross-line {
   position: absolute;
   top: 25px;
   left: 25px;
@@ -54,16 +55,16 @@
   width: 25px;
   background-color: #fff;
 }
-.search-box #search-ask div a .corss .cross-line:first-child {
+body .search-box #search-ask div a .corss .cross-line:first-child {
   transform: translateX(-50%) rotate(-45deg);
 }
-.search-box #search-ask div a .corss .cross-line:last-child {
+body .search-box #search-ask div a .corss .cross-line:last-child {
   transform: translateX(-50%) rotate(45deg);
 }
-.search-box #search-ask div a .corss:hover .cross-line {
+body .search-box #search-ask div a .corss:hover .cross-line {
   background-color: #0d232c;
 }
-.search-box #search-ask .nav-icon {
+body .search-box #search-ask .nav-icon {
   height: 18px;
   position: absolute;
   top: 0;
@@ -71,13 +72,13 @@
   display: flex;
   gap: 10px;
 }
-.search-box #search-ask .nav-icon a {
+body .search-box #search-ask .nav-icon a {
   color: #0d232c;
 }
-.search-box #search-ask .nav-icon a:hover {
+body .search-box #search-ask .nav-icon a:hover {
   color: #fff;
 }
-.search-box #search-res {
+body .search-box #search-res {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -87,7 +88,7 @@
   z-index: 5;
   max-height: 500px;
 }
-.search-box #search-res .serach-list {
+body .search-box #search-res .serach-list {
   background-color: #fff;
   margin: auto;
   padding: 7px 10px;
@@ -103,10 +104,10 @@
   gap: 10px;
   cursor: pointer;
 }
-.search-box #search-res .serach-list:hover {
+body .search-box #search-res .serach-list:hover {
   background-color: #ccc;
 }
-.search-box #api-select {
+body .search-box #api-select {
   position: absolute;
   top: 30px;
   right: 50px;
@@ -115,18 +116,18 @@
   flex-direction: column;
   justify-content: left;
 }
-.search-box #api-select .box {
+body .search-box #api-select .box {
   margin-bottom: -2px;
   font-size: 12px;
   display: flex;
   justify-content: space-between;
   align-items: left;
 }
-.search-box #api-select .box input {
+body .search-box #api-select .box input {
   height: 14px;
 }
-.search-box #api-select .box label {
-  margin: 0 10px 0 5px;
+body .search-box #api-select .box label {
+  margin: 0 5px 0 5px;
   height: 18px;
   width: 57px;
   color: #ccc;

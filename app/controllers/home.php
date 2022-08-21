@@ -34,7 +34,9 @@ class Home
     public function analyse($params = null)
     {
         // ANALYSE
+        dump(Db::getCountAll("/"));
         dump(Db::getAll());
+        
         
     }
 }
