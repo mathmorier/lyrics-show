@@ -14,11 +14,7 @@ class Db extends PDO{
         try {
             $db     = new PDO(self::$dsn, self::$user, self::$passwd);
             $stmt   = $db->prepare("INSERT INTO `request` (`id`, `time`, `uri`) VALUES (NULL, ? , ?);");
-            $stmt->execute(
-                array(
-                    gmdate("Y-m-d H:i:s",$time),
-                    $uri)
-                );
+            $stmt->execute( [ gmdate("Y-m-d H:i:s", $time ), $uri ] );
             return true;
         } catch (\Throwable $th) {
             return $th;
@@ -28,21 +24,26 @@ class Db extends PDO{
     static public function getAll($uri = null)
     {
         $db  = new PDO(self::$dsn, self::$user, self::$passwd);
-        $stmt   = $db->prepare("SELECT * FROM request");
-        $stmt->execute(); 
+        if ($uri == null) {
+            $stmt   = $db->prepare("SELECT * FROM request");
+            $stmt->execute(); 
+        }else{
+            $stmt   = $db->prepare("SELECT * FROM request WHERE uri=?");
+            $stmt->execute([$uri]); 
+        }
         return $stmt->fetchAll();
     }
 
     static public function getCountAll($uri = null)
     {
-        $sql    = "SELECT COUNT(*) FROM request ";
-        if ($uri) {
-            $sql .= "WHERE 'uri'='".$uri."'";
-        }
-        dump($sql);
         $db     = new PDO(self::$dsn, self::$user, self::$passwd);
-        $stmt   = $db->prepare($sql);
-        $stmt->execute(); 
+        if ($uri == null) {
+            $stmt   = $db->prepare("SELECT COUNT(*) FROM request");
+            $stmt->execute(); 
+        }else{
+            $stmt   = $db->prepare("SELECT COUNT(*) FROM request WHERE uri LIKE ?");
+            $stmt->execute([$uri]); 
+        }
         return $stmt->fetchAll();
     }
 

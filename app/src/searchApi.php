@@ -19,19 +19,11 @@ class SearchApi
                 <a href="/os"><i class="fa-solid fa-person-chalkboard"></i></a>
             </div>
             <div id="api-select">
-                <!-- <div class="box">
-                    <select name="t" id="t">
-                        <option value="1">Genius</option>
-                        <option value="2">shir.fr</option>
+                <div class="box">
+                    <select name="apiSelect" id="apiSelect">
+                        <option value="genius.com"  id="genius.com" >Genius</option>
+                        <option value="shir.fr"     id="shir.fr"    >Shir.fr</option>
                     </select>
-                </div> -->
-                <div class="box">
-                    <label for="genuis.com">genius</label>
-                    <input type="radio" name="apiSelect" value="genius.com" id="genuis.com">
-                </div>
-                <div class="box">
-                    <label for="shir.fr">shir.fr</label>
-                    <input type="radio" name="apiSelect" value="shir.fr" id="shir.fr">
                 </div>
             </div>
             <div>
@@ -60,40 +52,19 @@ class SearchApi
         <script>
             const search    = document.getElementById('search')
             const searchRes = document.getElementById('search-res')
-            const shirBox   = document.getElementById('shir.fr')
-            const geniusBox = document.getElementById('genuis.com')
+            const apiSelectBox = document.getElementById('apiSelect')
 
-            let apiSelect = 'genuis.com';
+            let apiSelect = 'genius.com';
 
             if (localStorage.getItem('apiSelected') != null) { apiSelect = localStorage.getItem('apiSelected') }
 
-            switch (apiSelect) {
-                case 'genuis.com':
-                    geniusBox.checked = true;
-                    break;
-                case 'shir.fr':
-                    shirBox.checked = true;
-                    break;
-                default:
-                    break;
-            }
+            apiSelectBox.value = apiSelect;
 
-
-            shirBox.addEventListener('change', function(){
-                if (this.checked) {
-                    apiSelect = 'shir.fr'
-                    localStorage.setItem('apiSelected','shir.fr')
-                    createListFromApi()
-                }
+            apiSelectBox.addEventListener('change', function(){
+                localStorage.setItem('apiSelected',apiSelectBox.value)
+                apiSelect = apiSelectBox.value
+                createListFromApi()
             })
-            geniusBox.addEventListener('change', function(){
-                if (this.checked) {
-                    apiSelect = 'genuis.com'
-                    localStorage.setItem('apiSelected','genuis.com')
-                    createListFromApi()
-                }
-            })
-
 
             search.addEventListener('input', createListFromApi)
             
@@ -102,7 +73,7 @@ class SearchApi
                     let data = null ;
 
                     switch (apiSelect) {
-                        case 'genuis.com':
+                        case 'genius.com':
                             data = await searchGenuisApi(search.value)
                             break;
                         case 'shir.fr':
@@ -183,8 +154,8 @@ class SearchApi
                 } else{
                     let temp = {
                         'result': {
-                            'full_title' : 'need more info or no result',
-                            'song_art_image_thumbnail_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png',
+                            'full_title' : 'Need more info or no result',
+                            'song_art_image_thumbnail_url': '/assets/image/150px-Search_Icon.svg.png',
                             'api_path' : '#' 
                         }
                     }

@@ -113,27 +113,47 @@ body{
         }
         #api-select{
             position: absolute;
-            top: 30px;
+            top: 25px;
             right: 50px;
-            height: 18px;
+            height: 16px;
             display: flex;
             flex-direction: column;
             justify-content: left;
             .box{
+                position: relative;
                 margin-bottom: -2px;
                 font-size: 12px; 
                 display: flex;
                 justify-content: space-between;
                 align-items: left;
-                input{
-                    height: 14px;    
-
-                }
-                label{
-                    margin: 0 5px 0 5px;
-                    height: 18px;
-                    width: 57px;
+                select{
+                    border: none;
+                    outline: none;
+                    height: 46px;
+                    width: 80px;
+                    padding: 0 5px 0 5px;
+                    box-sizing: border-box;
                     color: $gray;
+                    font-weight: bold;
+                    cursor: pointer;
+                    background: transparent;
+                    &:hover{
+                        color: $grayHover;
+                    }
+                    option{
+                        font-size: 16px;
+                        color: $grayHover;
+                        font-weight: bold;
+                    }
+                }
+                &::before{
+                    content: '';
+                    background: $whiteDark;
+                    height: 30px;
+                    width: 1px;
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
                 }
             }
         }

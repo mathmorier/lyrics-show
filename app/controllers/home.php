@@ -31,13 +31,13 @@ class Home
         $main['view'] = ob_get_clean();
         require __DIR__.'/../layouts/default.php';
     }
-    public function analyse($params = null)
+    public function stat($params = null)
     {
-        // ANALYSE
-        dump(Db::getCountAll("/"));
-        dump(Db::getAll());
-        
-        
+        $countHome = Db::getCountAll("/");
+        echo "HOME PAGE COUNT : ".$countHome[0][0];
+        echo "<br>";
+        $countAll = Db::getCountAll("/%");
+        echo "ALL PAGE COUNT : ".$countAll[0][0];
     }
 }
 

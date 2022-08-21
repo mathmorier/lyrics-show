@@ -99,36 +99,57 @@ body .search-box #search-res .serach-list {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   box-shadow: 2px 2px 4px 0px #444;
   gap: 10px;
   cursor: pointer;
 }
 body .search-box #search-res .serach-list:hover {
-  background-color: #ccc;
+  background-color: #bbb;
 }
 body .search-box #api-select {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 50px;
-  height: 18px;
+  height: 16px;
   display: flex;
   flex-direction: column;
   justify-content: left;
 }
 body .search-box #api-select .box {
+  position: relative;
   margin-bottom: -2px;
   font-size: 12px;
   display: flex;
   justify-content: space-between;
   align-items: left;
 }
-body .search-box #api-select .box input {
-  height: 14px;
+body .search-box #api-select .box select {
+  border: none;
+  outline: none;
+  height: 46px;
+  width: 80px;
+  padding: 0 5px 0 5px;
+  box-sizing: border-box;
+  color: #bbb;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
 }
-body .search-box #api-select .box label {
-  margin: 0 5px 0 5px;
-  height: 18px;
-  width: 57px;
-  color: #ccc;
+body .search-box #api-select .box select:hover {
+  color: #aaa;
+}
+body .search-box #api-select .box select option {
+  font-size: 16px;
+  color: #aaa;
+  font-weight: bold;
+}
+body .search-box #api-select .box::before {
+  content: "";
+  background: #dddddd;
+  height: 30px;
+  width: 1px;
+  position: absolute;
+  top: 8px;
+  left: 0;
 }/*# sourceMappingURL=searchBar.css.map */
