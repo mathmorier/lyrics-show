@@ -33,11 +33,24 @@ class Home
     }
     public function stat($params = null)
     {
-        $countHome = Db::getCountAll("/");
-        echo "HOME PAGE COUNT : ".$countHome[0][0];
-        echo "<br>";
-        $countAll = Db::getCountAll("/%");
-        echo "ALL PAGE COUNT : ".$countAll[0][0];
+        echo "<br>ALL REQUEST COUNT :<br>";
+        $temp = Db::getAllTimeCount();
+        foreach ($temp as $key => $value) {
+            echo $key." ".$value."<br>";
+        }
+        echo "<br>HOME REQUEST COUNT :<br>";
+        $temp = Db::getAllTimeCount('/');
+        foreach ($temp as $key => $value) {
+            echo $key." ".$value."<br>";
+        }
+        echo "<br>SONG REQUEST COUNT :<br>";
+        $temp = Db::getAllTimeCount('/lyrics/%');
+        foreach ($temp as $key => $value) {
+            echo $key." ".$value."<br>";
+        }
+
+        echo "<br><a href='/'>back home page</a>";
+
     }
 }
 
