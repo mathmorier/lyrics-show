@@ -24,6 +24,9 @@
             <p>You can download OpenSong compatible file for all songs from <a style="color: #000;" href="http://genius.com" target="_blank" rel="noopener noreferrer">genius.com database.</a> The file with the lyrics is generated automatically and may contain formatting errors.</p>
             <div class="video"></div>        
         </div>
+        <div class="section">
+            <a href="/stat">You want some statistic about the website ?</a>
+        </div>
     </div>
 </div>
 

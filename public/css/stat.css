@@ -1,0 +1,46 @@
+/* SCSS Gradient */
+h1 {
+  margin: 10px 10px 5px 10px;
+}
+
+a.btn {
+  margin: 0 10px 5px 10px;
+  padding: 5px 10px;
+}
+
+.stat {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.stat .box {
+  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 100%;
+  text-transform: capitalize;
+}
+.stat .box h3 {
+  margin: 10px;
+}
+.stat .box div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+@media only screen and (min-width : 600px) {
+  .stat .box {
+    width: 48%;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .stat .box {
+    max-width: 350px;
+    width: 30%;
+    min-width: 200px;
+  }
+}/*# sourceMappingURL=stat.css.map */

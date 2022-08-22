@@ -5,9 +5,9 @@ use PDO;
 
 class Db extends PDO{
 
-    private static $dsn = "mysql:host=localhost:3306;dbname=lyrics";
-    private static $user = "root";
-    private static $passwd = "";
+    private static $dsn = "mysql:host=db5009861608.hosting-data.io:3306;dbname=dbs8361182";
+    private static $user = "dbu2008304";
+    private static $passwd = "xCPV!9MvvfU8dvD";
 
     static public function saveUri($uri = null, $time = 0)
     {

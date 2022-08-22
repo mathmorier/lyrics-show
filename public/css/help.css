@@ -40,6 +40,13 @@ main {
   flex-direction: column;
   gap: 10px;
 }
+.container .content .section a {
+  color: #bbb;
+  text-align: center;
+}
+.container .content .section a:hover {
+  color: #0d232c;
+}
 
 .video {
   position: relative;

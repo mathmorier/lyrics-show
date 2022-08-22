@@ -39,3 +39,13 @@ $gradient-radial: radial-gradient(#fff383ff, #f4da63ff, #fdd04fff, #ff7e3bff, #9
 
 $breakpoint-tablet: 768px;
 
+// Media
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 600px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";
+$media-desktop-min: "only screen and (min-width : 1024px)";
+$media-tablet-min: "only screen and (min-width : 768px)";
+$media-mobile-min: "only screen and (min-width : 600px)";
+$media-mobile-sm-min: "only screen and (min-width : 480px)";
+
