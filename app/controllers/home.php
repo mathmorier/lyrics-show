@@ -31,27 +31,6 @@ class Home
         $main['view'] = ob_get_clean();
         require __DIR__.'/../layouts/default.php';
     }
-    public function stat($params = null)
-    {
-        echo "<br>ALL REQUEST COUNT :<br>";
-        $temp = Db::getAllTimeCount();
-        foreach ($temp as $key => $value) {
-            echo $key." ".$value."<br>";
-        }
-        echo "<br>HOME REQUEST COUNT :<br>";
-        $temp = Db::getAllTimeCount('/');
-        foreach ($temp as $key => $value) {
-            echo $key." ".$value."<br>";
-        }
-        echo "<br>SONG REQUEST COUNT :<br>";
-        $temp = Db::getAllTimeCount('/lyrics/%');
-        foreach ($temp as $key => $value) {
-            echo $key." ".$value."<br>";
-        }
-
-        echo "<br><a href='/'>back home page</a>";
-
-    }
 }
 
 ?>
