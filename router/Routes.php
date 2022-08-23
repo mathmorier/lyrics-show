@@ -19,7 +19,9 @@ class Routes
           ['GET', '/edit/list', 'EditController#list', 'edit_list'],
           ['GET', '/lyrics/shir/[i:id]', 'LyricsController#shirShow', 'Lyrics_shirShow'],
           ['GET', '/shir/api', 'LyricsController#apiAsk', 'Lyrics_apiAsk'],
-          ['GET', '/stat', 'statController#index', 'stat']
+          ['GET', '/stat', 'statController#index', 'stat'],
+          ['GET', '/create/[i:success]?', 'SongTVController#create', 'create'],
+          ['POST', '/create', 'SongTVController#createPost', 'create_post']
         ];
     }
 }

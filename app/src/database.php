@@ -47,6 +47,13 @@ class Db extends PDO{
             'all'   =>  self::getCountAll($uri)[0][0]
         );
     }
+    static public function createSong($title,$author,$content,$creator)
+    {
+        $db     = new PDO(self::$dsn, self::$user, self::$passwd);
+        $stmt   = $db->prepare("INSERT INTO `songtv` (`id`, `title`, `author`, `content`, `creator`, `dt`) VALUES (NULL, ?, ?, ?, ?, current_timestamp());");
+        $stmt->execute([$title,$author,$content,$creator]); 
+        return $stmt->fetchAll();
+    }
 
 }
 
