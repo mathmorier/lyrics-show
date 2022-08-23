@@ -4,7 +4,9 @@ $bgPrincDark: #000;
 $textDark: #fff;
 $black : #0d232c;
 $white : #fff;
-$gray : #ccc;
+$whiteDark : #dddddd;
+$gray : #bbb;
+$grayHover : #aaa;
 
 
 $osColor : #954396;
@@ -36,4 +38,14 @@ $gradient-bottom-left: linear-gradient(315deg, #fff383ff, #f4da63ff, #fdd04fff, 
 $gradient-radial: radial-gradient(#fff383ff, #f4da63ff, #fdd04fff, #ff7e3bff, #95491aff);
 
 $breakpoint-tablet: 768px;
+
+// Media
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 600px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";
+$media-desktop-min: "only screen and (min-width : 1024px)";
+$media-tablet-min: "only screen and (min-width : 768px)";
+$media-mobile-min: "only screen and (min-width : 600px)";
+$media-mobile-sm-min: "only screen and (min-width : 480px)";
 

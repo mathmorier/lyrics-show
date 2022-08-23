@@ -1,1 +1,1 @@
-<p>© Developed by M.Morier | <a href="https://webmm.ch" target="_blank" rel="noopener noreferrer">Webmm.ch</a><br>Lyrics provided by <a href="https://genius.com" target="_blank" rel="noopener noreferrer">genius.com</a></p>
+<p>© Developed by M.Morier | <a href="https://webmm.ch" target="_blank" rel="noopener noreferrer">Webmm.ch</a><br>Lyrics provided by <a href="https://genius.com" target="_blank" rel="noopener noreferrer">genius.com</a> & <a href="http://shir.fr" target="_blank" rel="noopener noreferrer">shir.fr</a></p>

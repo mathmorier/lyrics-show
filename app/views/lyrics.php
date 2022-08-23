@@ -1,9 +1,6 @@
 <div class="search-genuis">
     <?=$main['src']['searchGenius'] ?? ''?>
 </div>
-<!-- <button id="like">
-    <i class="fa-solid fa-heart"></i>
-</button> -->
 <div class="banner">
     <button id="btn-dark" style="display: none;" class="logo-only"><i class="fa-solid fa-moon"></i></button>
     <button id="full"><i class="fa-solid fa-expand"></i>Full Screen</button>

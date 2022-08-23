@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers;
-use App\Src\SearchGenius    as SearchGenius;
+use App\Src\SearchApi       as SearchApi;
 use App\Models\Lyrics       as Lyrics;
 use App\Models\ListLyrics   as ListLyrics;
 
@@ -19,9 +19,9 @@ class LyricsController
         $lyrics = new Lyrics;
         $main['script'][] = $lyrics->createLinkSave($song);
 
-        $main['src']['searchGenius'] = SearchGenius::index("/lyrics");
-        $main['head'][] = SearchGenius::style();
-        $main['script'][] = SearchGenius::script("/lyrics");
+        $main['src']['searchGenius'] = SearchApi::index("/lyrics");
+        $main['head'][] = SearchApi::style();
+        $main['script'][] = SearchApi::script("/lyrics");
 
         $main['api_path'] = $song->api_path ?? ""; 
 
@@ -31,11 +31,17 @@ class LyricsController
 
         require __DIR__.'/../layouts/default.php';
     }
-
     public function firstShow($params)
     {
         $lyrics = new Lyrics;
         $song = $lyrics->getGenuisSong($params['id']);
+        $this->index(null,$song);
+
+    }
+    public function shirShow($params)
+    {
+        $lyrics = new Lyrics;
+        $song = $lyrics->getShirSong($params['id']);
         $this->index(null,$song);
 
     }
@@ -65,9 +71,12 @@ class LyricsController
 
 
     }
-    public function addList($params = null)
+    public function apiAsk()
     {
-        echo 'addList';
+        // SKIP CORPS PROBLEME HTTP ET HTTPS
+        if (isset($_GET['gsrsearch'])) {
+            echo file('http://shir.fr/w/api.php?action=query&generator=search&gsrsearch='.$_GET['gsrsearch'].'&format=json&gsrlimit=10')[0];
+        }
     }
 }
 

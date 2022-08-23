@@ -21,25 +21,31 @@ html{
 main{
     min-height: 94vh;
 }
-button, .btn{
-    height: 40px;
-    min-width: 40px;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    color: $black;
-    background-color: $btnBg;
-    &:hover{
-        color: $white;
-        background-color: $black;
+body{
+    &.dark{
+        button, .btn{
+            background-color: $whiteDark;
+        }
     }
-    &:disabled{
-        cursor: not-allowed;
-        opacity: 0.5;
+    button, .btn{
+        height: 40px;
+        min-width: 40px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
         color: $black;
         background-color: $btnBg;
+        &:hover{
+            color: $white;
+            background-color: $black;
+        }
+        &:disabled{
+            cursor: not-allowed;
+            opacity: 0.5;
+            color: $black;
+            background-color: $btnBg;
+        }
     }
-    
 }
 body{
     overflow: overlay;
@@ -123,6 +129,8 @@ body{
             background-color: $white;
             padding: 10px;
             border-radius: 15px;
+            display: flex;
+            align-items: center;
             div{
                 display: flex;
                 align-items: center;
@@ -137,6 +145,13 @@ body{
                 color: $white;
                 background: $black;
             }
+        }
+    }
+}
+body.dark{
+    .list-item{
+        a{
+            background: $whiteDark;
         }
     }
 }

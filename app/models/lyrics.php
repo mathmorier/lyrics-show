@@ -17,6 +17,78 @@ class Lyrics
             return null;
         }
     }
+    public function getShirSong($id, $embedContent = true)
+    {
+        $url = 'http://shir.fr/w/api.php?action=query&format=json&pageids='.$id;
+        if (get_http_response_code($url) == 200) {
+            $res = json_decode(file_get_contents($url));
+
+            $song['id'] = 'S'.$id;
+            $song['api_path'] = "/shir/".$id;
+            $song['song_art_image_thumbnail_url'] = '/assets/image/shir-carre-150.png';
+            $song['title'] = $res->query->pages->$id->title ?? 'no-name';
+
+            if ($embedContent && isset($res->query->pages->$id->title)) {
+                
+                $url = "http://shir.fr/chant/paroles/".$res->query->pages->$id->title.".html";
+                $url = str_replace(' ', '%20', $url);
+                
+                $file_headers = @get_headers($url);
+                if ($file_headers[0] == 'HTTP/1.1 200 OK') {
+                    $source_code = file($url);
+
+                    $copy = false;
+                    $table = [];
+        
+                    for ($i=0; $i < count($source_code); $i++) { 
+                        $copy = str_contains($source_code[$i], "<div class='title'>")  ? true  : $copy ;
+                        $copy = str_contains($source_code[$i], "<div class='footer'>") ? false : $copy ;
+                        if ($copy) { 
+                            $source_code[$i] = str_replace("\n", "<br>", $source_code[$i]);
+                            $source_code[$i] = str_replace("</div><br>", "</div>", $source_code[$i]);
+                            array_push($table, $source_code[$i]); 
+                        }
+                    }
+                    ob_start();
+                    echo '<div class="rg_embed shir">';
+                    foreach ($table as $line ) { echo $line; }
+                    echo '</div>';
+                    $song['embed_content'] = ob_get_clean();
+                }else{
+                    ob_start();
+                    echo '<p style="text-align:center;">ERROR : '.$file_headers[0]??''.'<p>';
+                    $song['embed_content'] = ob_get_clean();
+                }
+
+
+
+
+                // $ch = curl_init();
+                // curl_setopt($ch, CURLOPT_URL, $url); 
+                // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+                // $source_code = curl_exec($ch);  
+
+                // elseif  ($file_headers[0] == 'HTTP/1.1 400 Bad Request')                    {
+                //     // SOLUTION PROVISOIR probleme avec chant chir 1279
+                //     // Impossible de charger l'url générer alors qu'il fonctionne très bien en copier collé
+                //     ob_start();
+                //     echo '<div class="rg_embed shir">';
+                //     echo '<a href="'.$url.'" target="_blank">'.$song['title'].'</a>';
+                //     echo '</div>';
+                //     dump($url);
+                //     $song['embed_content'] = ob_get_clean();
+                //     return json_decode(json_encode($song));
+                // }
+
+        
+            }
+
+            return json_decode(json_encode($song));
+            
+        }else{
+            return null;
+        }
+    }
     public function createLinkSave($song = null)
     {
         ob_start();

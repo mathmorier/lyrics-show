@@ -26,9 +26,31 @@
 
 .rg_embed{
     width: 100%;
+    min-height: 100vh;
     background-color: $white !important;
     display: flex !important;
     flex-direction: column-reverse !important;
+    &.shir{
+        flex-direction: column !important;
+        text-align: center;
+        font-size: 3vw;
+        padding: 0 0 20px 0;
+        .title{
+            font-size: 14px;
+            line-height: 1.45em;
+            letter-spacing: .02em;
+            padding: 9px 8px 8px 1em;
+            text-align: left;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .author{
+            font-size: 14px;
+            padding: 0 9px 8px 1em;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+    }
 }
 .rg_embed_body p{
     text-align: center;
@@ -58,6 +80,9 @@
 .dark{
     .rg_embed{
         background-color: $bgPrincDark !important;
+        &.shir{
+            color: $textDark;
+        }
     }
     .rg_embed_body p{
         color: $textDark;

@@ -22,8 +22,8 @@
         error(404);
     }
 
-    
-
+    // Analyse
+    App\Src\Db::saveUri($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_TIME'])
 
     // https://programmierfrage.com/items/how-to-call-controller-method-with-alto-router
 

@@ -1,7 +1,8 @@
 <?php
 namespace App\Controllers;
 use App\Models\Home         as HomeModel ;
-use App\Src\SearchGenius    as SearchGenius ;
+use App\Src\SearchApi       as SearchApi ;
+use App\Src\Db              as Db ;
 
 class Home
 {
@@ -17,9 +18,9 @@ class Home
         ];
 
 
-        $main['src']['searchGenius'] = SearchGenius::index();
-        $main['head'][] = SearchGenius::style();
-        $main['script'][] = SearchGenius::script("/lyrics");
+        $main['src']['searchShir'] = SearchApi::index();
+        $main['head'][] = SearchApi::style();
+        $main['script'][] = SearchApi::script("/lyrics");
      
 
 

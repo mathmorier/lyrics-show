@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="search-genuis">
-    <?=$main['src']['searchGenius'] ?? ''?>
+    <?=$main['src']['searchShir'] ?? ''?>
     <div class="table">
         <a href="/lyrics">
             <i class="fa-solid fa-music"></i>

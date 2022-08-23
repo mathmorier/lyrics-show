@@ -22,8 +22,15 @@ class ListLyrics
     {
         $lyrics = new Lyrics;
         foreach ($this->idList as $key => $line) {
+
             if ($line){
-                $temp = $lyrics->getGenuisSong($line);
+
+                if (str_contains($line,'S')) {
+                    $temp = $lyrics->getShirSong(substr($line,1) , false);
+                }else{
+                    $temp = $lyrics->getGenuisSong($line);
+                }
+                
                 if ($temp) {
                     $this->listSong[] = [
                         'id' => $temp->id,
@@ -32,7 +39,9 @@ class ListLyrics
                         'title' => $temp->title
                     ];
                 }
+
             }
+
         }
     }
     public function saveNewList()

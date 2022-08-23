@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AC0BA,mBAAmB;ADxBnB,AAAA,MAAM,CAAA;EACF,gBAAgB,ECCX,OAAO;EDAZ,KAAK,ECCA,IAAI;EDAT,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAatB;;AAnBD,AAOI,MAPE,CAOF,CAAC,CAAA;EACG,MAAM,EAAE,KAAK;EACb,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,IAAI;CACpB;;AAZL,AAaI,MAbE,CAaF,CAAC,CAAA;EACG,KAAK,ECXJ,IAAI;CDeR;;AAlBL,AAeQ,MAfF,CAaF,CAAC,AAEI,MAAM,CAAA;EACH,KAAK,ECHZ,SAAS;CDIL",
-    "sources": [
-        "../scss/footer.scss",
-        "../scss/colors.scss"
-    ],
-    "names": [],
-    "file": "footer.css"
-}
+{"version":3,"sources":["../scss/colors.scss","../scss/footer.scss","footer.css"],"names":[],"mappings":"AA4BA,kBAAA;AC1BA;EACI,yBDCK;ECAL,WDCK;ECAL,gBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;ACAJ;ADCI;EACI,aAAA;EACA,eAAA;EACA,kBAAA;EACA,iBAAA;ACCR;ADCI;EACI,WDXC;AEYT;ADAQ;EACI,cDDP;AEGL","file":"footer.css"}
