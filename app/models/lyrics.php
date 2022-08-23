@@ -25,7 +25,7 @@ class Lyrics
 
             $song['id'] = 'S'.$id;
             $song['api_path'] = "/shir/".$id;
-            $song['song_art_image_thumbnail_url'] = 'http://shir.fr/w/shir-carre-150.png';
+            $song['song_art_image_thumbnail_url'] = '/assets/image/shir-carre-150.png';
             $song['title'] = $res->query->pages->$id->title ?? 'no-name';
 
             if ($embedContent && isset($res->query->pages->$id->title)) {

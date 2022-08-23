@@ -74,7 +74,9 @@ class LyricsController
     public function apiAsk()
     {
         // SKIP CORPS PROBLEME HTTP ET HTTPS
-        echo file('http://shir.fr/w/api.php?action=query&generator=search&gsrsearch='.$_GET['gsrsearch'].'&format=json&gsrlimit=10')[0];
+        if (isset($_GET['gsrsearch'])) {
+            echo file('http://shir.fr/w/api.php?action=query&generator=search&gsrsearch='.$_GET['gsrsearch'].'&format=json&gsrlimit=10')[0];
+        }
     }
 }
 

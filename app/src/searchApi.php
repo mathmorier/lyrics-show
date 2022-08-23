@@ -140,7 +140,7 @@ class SearchApi
                         let temp = {
                             'result': {
                                 'full_title' : res.query.pages[key].title,
-                                'song_art_image_thumbnail_url': 'http://shir.fr/w/shir-carre-150.png',
+                                'song_art_image_thumbnail_url': '/assets/image/shir-carre-150.png',
                                 'api_path' : '/shir/' + res.query.pages[key].pageid
                             }
                         }
