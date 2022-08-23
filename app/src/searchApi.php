@@ -43,7 +43,7 @@ class SearchApi
     }
     static function style()
     {
-        return '<link rel="stylesheet" href="/css/searchBar.css">';
+        return '<link rel="stylesheet" href="/css/searchBarV2.css">';
     }
     static function script($callBack = "/")
     {
@@ -120,14 +120,9 @@ class SearchApi
             }
             async function searchShirApi(q){
                 q = q.replace('&', '')
-                const api = 'http://shir.fr/w/api.php';
+                const api = '/shir/api';
                 const token = '';
-                const url = api
-                + '?action=query'
-                + '&generator=search'
-                + '&gsrsearch='+ q 
-                + '&format=json'
-                + '&gsrlimit=10';
+                const url = api + '?gsrsearch='+ q ;
                 let res = await fetch(url)
                 .then(response => response.json())
                 .then(data => {return data})

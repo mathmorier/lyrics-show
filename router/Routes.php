@@ -18,6 +18,7 @@ class Routes
           ['GET', '/xml/os/songs/[i:id]', 'XmlController#osDown', 'xml_osDown'],
           ['GET', '/edit/list', 'EditController#list', 'edit_list'],
           ['GET', '/lyrics/shir/[i:id]', 'LyricsController#shirShow', 'Lyrics_shirShow'],
+          ['GET', '/shir/api', 'LyricsController#apiAsk', 'Lyrics_apiAsk'],
           ['GET', '/stat', 'statController#index', 'stat']
         ];
     }
