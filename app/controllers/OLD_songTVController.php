@@ -41,7 +41,7 @@ class SongTVController
         if (isset($postTrime['creator']) AND $postTrime['creator']   != ''   ){ $params['creator'] = $postTrime['creator']; }else{ $params['done'] =  false;   }
 
         if ($params['done']) {
-            Db::createSong($postTrime['title'],$postTrime['author'],$postTrime['content'],$postTrime['creator']);
+            Db::postValueTvSong($postTrime['title'],$postTrime['author'],$postTrime['content'],$postTrime['creator']);
             header("Location: " . $_SERVER['HTTP_ORIGIN'] ."/create/1");
         }else{
             $params['success'] = 2;

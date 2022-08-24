@@ -45,6 +45,12 @@ class LyricsController
         $this->index(null,$song);
 
     }
+    public function tvSongShow($params)
+    {
+        $lyrics = new Lyrics;
+        $song = $lyrics->getTvSongShow($params['id']);
+        $this->index(null,$song);
+    }
     public function reciveList($params = null)
     {
         $li = new ListLyrics;

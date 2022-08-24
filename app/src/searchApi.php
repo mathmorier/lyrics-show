@@ -23,6 +23,7 @@ class SearchApi
                     <select name="apiSelect" id="apiSelect">
                         <option value="genius.com"  id="genius.com" >Genius</option>
                         <option value="shir.fr"     id="shir.fr"    >Shir.fr</option>
+                        <option value="baseSong"    id="baseSong"   >BaseTV</option>
                     </select>
                 </div>
             </div>
@@ -78,6 +79,9 @@ class SearchApi
                             break;
                         case 'shir.fr':
                             data = await searchShirApi(search.value)
+                            break;
+                        case 'baseSong':
+                            data = await searchBaseSongApi(search.value)
                             break;
                         default:
                             data = await searchGenuisApi(search.value)
@@ -155,8 +159,36 @@ class SearchApi
                         }
                     }
                     resformat.response.hits.push(temp);
+                }
+                    return resformat ;
             }
-                return resformat ;
+            async function searchBaseSongApi(q){
+                let api = "/tvsong/api"
+
+                let url = api + "?q=" + q
+                let res = await fetch(url)
+                .then(response => response.json())
+                .then(data => {return data})
+                .catch(err => console.error(err))
+
+
+                let resformat = {
+                    'response' : {
+                        'hits':[]
+                    }
+                }
+                res.forEach(key => {
+                    let temp = {
+                        'result': {
+                            'full_title' : key.title + " by " + key.author,
+                            'song_art_image_thumbnail_url': '/assets/image/ywam_tv_logo.webp',
+                            'api_path' : '/tvsong/' + key.id
+                        }
+                    }
+                    resformat.response.hits.push(temp)
+                })
+                return resformat 
+
             }
         </script>
         <?php

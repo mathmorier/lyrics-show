@@ -14,6 +14,10 @@ class XmlController
         header("Content-Disposition: attachment; filename=".$song->title);
         echo $xmlFile;
     }
+    public function osTvDown($param = null)
+    {
+        echo 'COMMING SOON';
+    }
 }
 
 

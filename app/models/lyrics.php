@@ -1,6 +1,8 @@
 <?php
 namespace App\Models;
 
+use App\Src\Db as Db;
+
 class Lyrics  
 {
 
@@ -59,28 +61,6 @@ class Lyrics
                     echo '<p style="text-align:center;">ERROR : '.$file_headers[0]??''.'<p>';
                     $song['embed_content'] = ob_get_clean();
                 }
-
-
-
-
-                // $ch = curl_init();
-                // curl_setopt($ch, CURLOPT_URL, $url); 
-                // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-                // $source_code = curl_exec($ch);  
-
-                // elseif  ($file_headers[0] == 'HTTP/1.1 400 Bad Request')                    {
-                //     // SOLUTION PROVISOIR probleme avec chant chir 1279
-                //     // Impossible de charger l'url générer alors qu'il fonctionne très bien en copier collé
-                //     ob_start();
-                //     echo '<div class="rg_embed shir">';
-                //     echo '<a href="'.$url.'" target="_blank">'.$song['title'].'</a>';
-                //     echo '</div>';
-                //     dump($url);
-                //     $song['embed_content'] = ob_get_clean();
-                //     return json_decode(json_encode($song));
-                // }
-
-        
             }
 
             return json_decode(json_encode($song));
@@ -88,6 +68,34 @@ class Lyrics
         }else{
             return null;
         }
+    }
+    public function getTvSongShow($id, $embedContent = true)
+    {
+        $temp = Db::getTvSongWithId($id);
+        $temp[0]['content'] = str_replace("\r\n", "<br>", $temp[0]['content']);
+        
+        if ($embedContent) {
+            ob_start();
+            echo '<div class="rg_embed shir tv-song">';
+            echo '<div class="title">';
+            echo $temp[0]['title'];
+            echo '</div>';
+            echo '<div class="author">';
+            echo $temp[0]['author']." | File create by ".$temp[0]['creator'];
+            echo '</div>';
+            echo '<div class="lyrics">';
+            echo $temp[0]['content'];
+            echo '</div>';
+            echo '</div>';
+            $song['embed_content'] = ob_get_clean();
+        }
+        
+        $song['id'] = 'T'.$id;
+        $song['api_path'] = "/tvsong/".$id;
+        $song['song_art_image_thumbnail_url'] = '/assets/image/ywam_tv_logo.webp';
+        $song['title'] = $temp[0]['title'] ?? 'no-name';
+
+        return json_decode(json_encode($song));
     }
     public function createLinkSave($song = null)
     {

@@ -27,6 +27,8 @@ class ListLyrics
 
                 if (str_contains($line,'S')) {
                     $temp = $lyrics->getShirSong(substr($line,1) , false);
+                }elseif (str_contains($line,'T')){
+                    $temp = $lyrics->getTvSongShow(substr($line,1));
                 }else{
                     $temp = $lyrics->getGenuisSong($line);
                 }
