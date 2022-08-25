@@ -1,16 +1,29 @@
-<div class="list">
+<section id="list-tv-song">
+    <h2>List of All Base Song T.V.</h2>
     <div class="item add">
         <a href="/tvsong/create?t=<?=$_SESSION['token']?>" class="btn">create new song</a>
     </div>
     <?php foreach ($main['data'] as $key => $value) {?>
         <div class="item" id="i-<?=$value['id']?>">
-            <p><?=$value['title']?></p>
-            <p><?=$value['author']?></p>
-            <p><?=$value['creator']?></p>
+            <div class="line">
+                <p class="name">#<?=$value['id']?></p>
+            </div>
+            <div class="line">
+                <p class="name">Title :  </p>
+                <p> <?=$value['title']?></p>
+            </div>
+            <div class="line">
+                <p class="name">Author : </p>
+                <p> <?=$value['author']?></p>
+            </div>
+            <div class="line">
+                <p class="name">Creator :</p>
+                <p> <?=$value['creator']?></p>
+            </div>
             <div class="cmd">
                 <a href="/tvsong/up/<?=$value['id'].'?t='.$_SESSION['token']?>" class="btn">edit</a>
-                <a href="/tvsong/del/<?=$value['id'].'?t='.$_SESSION['token']?>" class="btn">delete</a>
+                <a href="/tvsong/del/<?=$value['id'].'?t='.$_SESSION['token']?>" class="btn del">delete</a>
             </div>
         </div>
     <?php } ?>
-</div>
+</section>

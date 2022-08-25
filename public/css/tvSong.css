@@ -1,0 +1,168 @@
+/* SCSS Gradient */
+#login {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login form {
+  width: 90vw;
+  max-width: 400px;
+  background: #fff;
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+#login form .line {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+#login form .line input {
+  height: 42px;
+  width: 70vw;
+  max-width: 280px;
+  outline: none;
+  border: 2px solid #8bc540;
+  padding: 3px 10px;
+  border-radius: 18px;
+  box-sizing: border-box;
+}
+#login form .line button {
+  background-color: #0d232c;
+  color: #fff;
+  width: 120px;
+}
+#login form .line button:hover {
+  background-color: #bbb;
+}
+#login form .line a {
+  color: #bbb;
+  font-size: 12px;
+}
+
+#list-tv-song {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#list-tv-song .item {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 10px;
+}
+#list-tv-song .item.add {
+  justify-content: center;
+}
+#list-tv-song .item .line {
+  display: flex;
+}
+#list-tv-song .item .line .name {
+  width: 80px;
+  color: #bbb;
+}
+#list-tv-song .item .cmd {
+  min-height: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#list-tv-song .item .btn {
+  background-color: #0d232c;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0 5px;
+  min-width: 100px;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+#list-tv-song .item .btn.del {
+  background-color: #ff7e3b;
+}
+#list-tv-song .item .btn:hover {
+  background-color: #bbb;
+}
+
+#form-edit {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#form-edit form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+#form-edit form .line {
+  display: flex;
+  flex-direction: column;
+}
+#form-edit form .line textarea {
+  width: 95vw;
+  height: 90vh;
+  resize: none;
+  text-align: center;
+  font-size: 3vw;
+  padding: 20px 0;
+  border: 2px solid #8bc540;
+}
+#form-edit form .line input {
+  height: 42px;
+  outline: none;
+  border: 2px solid #8bc540;
+  padding: 3px 18px;
+  border-radius: 18px;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+#form-edit form .line label {
+  margin-left: 18px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+#form-edit form .line.cmd {
+  background-color: #fff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#form-edit form .line.cmd .btn {
+  background-color: #0d232c;
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 45vw;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px 10px;
+  text-transform: capitalize;
+}
+#form-edit form .line.cmd .btn.back {
+  background-color: #ff7e3b;
+}
+#form-edit form .line.cmd .btn.del {
+  background-color: #f00;
+}
+#form-edit form .line.cmd .btn:hover {
+  background-color: #bbb;
+}/*# sourceMappingURL=tvSong.css.map */

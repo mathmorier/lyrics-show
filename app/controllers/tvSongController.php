@@ -22,6 +22,7 @@ class TvSongController
             require __DIR__.'/../views/loginTvSong.php';
             $main['view'] = ob_get_clean();
         }
+        $main['head'] = ['<link rel="stylesheet" href="/css/tvSong.css">'] ;
         require __DIR__.'/../layouts/default.php';
     }
     public function apiAskSong($params = null)
@@ -46,6 +47,7 @@ class TvSongController
             require __DIR__.'/../views/loginTvSong.php';
             $main['view'] = ob_get_clean();
         }
+        $main['head'] = ['<link rel="stylesheet" href="/css/tvSong.css">'] ;
         require __DIR__.'/../layouts/default.php';
     }
     public function upSongPost($params = null)
@@ -65,7 +67,6 @@ class TvSongController
                 ob_start();
                 require __DIR__.'/../views/formTvSong.php';
                 $main['view'] = ob_get_clean();
-                require __DIR__.'/../layouts/default.php';
             }
 
         }else{
@@ -73,8 +74,9 @@ class TvSongController
             $main['backLink'] = '/tvsong/up/'.$params['id'];
             require __DIR__.'/../views/loginTvSong.php';
             $main['view'] = ob_get_clean();
-            require __DIR__.'/../layouts/default.php';
         }
+        $main['head'] = ['<link rel="stylesheet" href="/css/tvSong.css">'] ;
+        require __DIR__.'/../layouts/default.php';
     }
     public function delSong($params = null)
     {
@@ -94,6 +96,7 @@ class TvSongController
             require __DIR__.'/../views/loginTvSong.php';
             $main['view'] = ob_get_clean();
         }
+        $main['head'] = ['<link rel="stylesheet" href="/css/tvSong.css">'] ;
         require __DIR__.'/../layouts/default.php';
     }
     public function delSongPost($params = null)
@@ -106,8 +109,9 @@ class TvSongController
             $main['backLink'] = '/tvsong/del/'.$params['id'];
             require __DIR__.'/../views/loginTvSong.php';
             $main['view'] = ob_get_clean();
-            require __DIR__.'/../layouts/default.php';
         }
+        $main['head'] = ['<link rel="stylesheet" href="/css/tvSong.css">'] ;
+        require __DIR__.'/../layouts/default.php';
         
     }
     public function createSong($params = null)
@@ -124,6 +128,7 @@ class TvSongController
             require __DIR__.'/../views/loginTvSong.php';
             $main['view'] = ob_get_clean();
         }
+        $main['head'] = ['<link rel="stylesheet" href="/css/tvSong.css">'] ;
         require __DIR__.'/../layouts/default.php';
     }
     public function createSongPost($params = null)
@@ -151,6 +156,7 @@ class TvSongController
             require __DIR__.'/../views/loginTvSong.php';
             $main['view'] = ob_get_clean();
         }
+        $main['head'] = ['<link rel="stylesheet" href="/css/tvSong.css">'] ;
         require __DIR__.'/../layouts/default.php';
     }
 
