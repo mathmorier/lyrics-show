@@ -71,8 +71,16 @@
 #list-tv-song .item .line {
   display: flex;
 }
+#list-tv-song .item .line p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  white-space: normal;
+}
 #list-tv-song .item .line .name {
-  width: 80px;
+  width: 90px;
   color: #bbb;
 }
 #list-tv-song .item .cmd {
@@ -96,6 +104,36 @@
 }
 #list-tv-song .item .btn:hover {
   background-color: #bbb;
+}
+@media only screen and (min-width : 1024px) {
+  #list-tv-song .item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #list-tv-song .item .cmd {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #list-tv-song .item .line {
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+  }
+  #list-tv-song .item .id {
+    width: 50px;
+  }
+  #list-tv-song .item .content-lyrics {
+    width: 250px;
+  }
+  #list-tv-song .item.add {
+    justify-content: right;
+  }
+  #list-tv-song .item.add .btn {
+    background-color: #8bc540;
+  }
+  #list-tv-song .item.add .btn:hover {
+    background-color: #bbb;
+  }
 }
 
 #form-edit {

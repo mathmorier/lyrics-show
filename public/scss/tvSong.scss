@@ -63,19 +63,23 @@
         display: flex;
         flex-direction: column;
         justify-content: left;
-        // MODIF POUR ORDI
-        // flex-direction: row;
-        // justify-content: space-between;
         gap: 10px;
         &.add{
             justify-content: center;
         }
         .line{
             display: flex;
+            p{
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                hyphens: auto;
+                white-space: normal;
+            }
             .name{
-                width: 80px;
+                width: 90px;
                 color: $gray;
             }
+
         }
         .cmd{
             min-height: 50px;
@@ -101,7 +105,38 @@
 
         }
     }
+    @media #{$media-desktop-min} {
+        .item{
+                flex-direction: row;
+                justify-content: space-between;
+                .cmd{
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .line{
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 150px;
+                }
+                .id{
+                    width: 50px;
+                }
+                .content-lyrics{
+                    width: 250px;
+                }
+                &.add{
+                    justify-content: right;
+                    .btn{
+                        background-color: $y3;
+                        &:hover{
+                            background-color: $gray;
+                        }
+                    }
+                }
+        }
+    }
 }
+
 #form-edit{
     padding: 20px 0;
     display: flex;

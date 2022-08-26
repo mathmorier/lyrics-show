@@ -5,7 +5,7 @@
     </div>
     <?php foreach ($main['data'] as $key => $value) {?>
         <div class="item" id="i-<?=$value['id']?>">
-            <div class="line">
+            <div class="line id">
                 <p class="name">#<?=$value['id']?></p>
             </div>
             <div class="line">
@@ -19,6 +19,10 @@
             <div class="line">
                 <p class="name">Creator :</p>
                 <p> <?=$value['creator']?></p>
+            </div>
+            <div class="line content-lyrics">
+                <p class="name">Lyrics :</p>
+                <p> <?=substr($value['content'], 0 , 40)?> ...</p>
             </div>
             <div class="cmd">
                 <a href="/tvsong/up/<?=$value['id'].'?t='.$_SESSION['token']?>" class="btn">edit</a>
