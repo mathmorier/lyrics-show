@@ -38,7 +38,7 @@ class TvSong
     static public function checkLogin($get = null)
     {
         $userOk = 'worship';
-        $passOk = 'Hallelujah2022';
+        $passOk = 'pass';
 
         $token = $get['t'] ?? null ;
         $u = $get['u'] ?? null;

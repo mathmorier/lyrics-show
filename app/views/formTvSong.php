@@ -7,15 +7,15 @@
         </div>
         <div class="line">
             <label for="title">title</label>
-            <input type="name" name="title" value="<?=$main['data'][0]['title']??''; ?>" <?=$main['option'] ?? ''; ?>>
+            <input type="name" name="title" value="<?=$main['data'][0]['title']??''; ?>" <?=$main['option'] ?? ''; ?> required>
         </div>
         <div class="line">
             <label for="author">author</label>
-            <input type="name" name="author" value="<?=$main['data'][0]['author']??''; ?>" <?=$main['option'] ?? ''; ?>>
+            <input type="name" name="author" value="<?=$main['data'][0]['author']??''; ?>" <?=$main['option'] ?? ''; ?> required>
         </div>
         <div class="line">
             <label for="creator">create by</label>
-            <input type="name" name="creator" value="<?=$main['data'][0]['creator']??''; ?>" <?=$main['option'] ?? ''; ?>>
+            <input type="name" name="creator" value="<?=$main['data'][0]['creator']??''; ?>" <?=$main['option'] ?? ''; ?> required>
         </div>
         <div class="line">
             <label for="content">lyrics</label>
