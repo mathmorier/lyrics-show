@@ -61,7 +61,7 @@ class Db extends PDO{
     static public function getAllTvSong()
     {
         self::connect();
-        $stmt   = self::$db->prepare("SELECT * FROM `songtv`");
+        $stmt   = self::$db->prepare("SELECT * FROM `songtv` ORDER BY title");
         $stmt->execute(); 
         self::disconnect();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

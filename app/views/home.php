@@ -42,6 +42,12 @@
                 <p>You can download OpenSong compatible file for all songs from <a style="color: #000;" href="http://genius.com" target="_blank" rel="noopener noreferrer">genius.com database.</a> The file with the lyrics is generated automatically and may contain formatting errors.</p>
                 <a href="/os">let's go...</a>           
             </div>
+            <div class="card">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>Turner Valley Song</h2>
+                <p>If you are on the base now you can connect to the edit page. Create or edit your home made base songs. Ask the base for the access.</p>
+                <a href="/tvsong">let's go...</a>
+            </div>
         </div>
     </div>
 </div>

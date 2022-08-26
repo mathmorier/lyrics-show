@@ -180,7 +180,7 @@ class SearchApi
                 res.forEach(key => {
                     let temp = {
                         'result': {
-                            'full_title' : key.title + " by " + key.author,
+                            'full_title' : key.title + " - " + key.author + " - " + key.creator,
                             'song_art_image_thumbnail_url': '/assets/image/ywam_tv_logo.webp',
                             'api_path' : '/tvsong/' + key.id
                         }
