@@ -22,8 +22,8 @@ class SearchApi
                 <div class="box">
                     <select name="apiSelect" id="apiSelect">
                         <option value="genius.com"  id="genius.com" >Genius</option>
+                        <option value="baseSong"    id="baseSong"   >TVsong</option>
                         <option value="shir.fr"     id="shir.fr"    >Shir.fr</option>
-                        <option value="baseSong"    id="baseSong"   >BaseTV</option>
                     </select>
                 </div>
             </div>

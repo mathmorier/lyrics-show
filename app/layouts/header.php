@@ -9,7 +9,7 @@
             <li><a href="/"><i class="fa-solid fa-house"></i> home</a></li>
             <li><a href="/lyrics<?=$main['song']->api_path ?? ""?>"><i class="fa-solid fa-music"></i> lyrics</a></li>
             <li><a href="/os<?=$main['api_path'] ?? ""?>"><i class="fa-solid fa-person-chalkboard"></i> OpenSong</a></li>
-            <li><a href="/tvsong"><i class="fa-solid fa-pen-to-square"></i> Base Song Edit</a></li>
+            <li><a href="/tvsong"><i class="fa-solid fa-pen-to-square"></i> TV Song Edit</a></li>
         </ul>
         <div id="list">
             <div id="list-link">
