@@ -47,6 +47,13 @@ class OsController
         $this->index(null, $data);
 
     }
+    public function tvSongShow($params = null)
+    {
+        $lyrics = new Lyrics();
+        $data['song'] = $lyrics->getTvSongShow($params['id']);
+        $data['song']->api_path_full = "/xml/os/tvsong/".$data['song']->id;
+        $this->index(null, $data);
+    }
 }
 
 

@@ -1,0 +1,211 @@
+@import 'colors.scss';
+
+#login{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        width: 90vw;
+        max-width: 400px;
+        background: $white;
+        padding: 25px;
+        box-sizing: border-box;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        .line{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            input{
+                height: 42px;
+                width: 70vw;
+                max-width: 280px;
+                outline: none;
+                border: 2px solid $y3;
+                padding: 3px 10px;
+                border-radius: 18px;
+                box-sizing: border-box;
+            }
+            button{
+                background-color: $black;
+                color: $white;
+                width: 120px;
+                &:hover{
+                    background-color: $gray;
+                }
+            }
+            a{
+                color: $gray;
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+#list-tv-song{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .item{
+        background-color: $white;
+        border-radius: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        gap: 10px;
+        &.add{
+            justify-content: center;
+        }
+        .line{
+            display: flex;
+            p{
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                hyphens: auto;
+                white-space: normal;
+            }
+            .name{
+                width: 90px;
+                color: $gray;
+            }
+
+        }
+        .cmd{
+            min-height: 50px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .btn{
+            background-color: $black;
+            color: $white;
+            text-align: center;
+            padding: 10px 20px;
+            margin: 0 5px;
+            min-width: 100px;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            &.del{
+                background-color: $o1;
+            }
+            &:hover{
+                background-color: $gray;
+            }
+
+        }
+    }
+    @media #{$media-desktop-min} {
+        .item{
+                flex-direction: row;
+                justify-content: space-between;
+                .cmd{
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .line{
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 150px;
+                }
+                .id{
+                    width: 50px;
+                }
+                .content-lyrics{
+                    width: 250px;
+                }
+                &.add{
+                    justify-content: right;
+                    .btn{
+                        background-color: $y3;
+                        &:hover{
+                            background-color: $gray;
+                        }
+                    }
+                }
+        }
+    }
+}
+
+#form-edit{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        .line{
+            display: flex;
+            flex-direction: column;
+            textarea{
+                width: 95vw;
+                height: 90vh;
+                resize: none;
+                text-align: center;
+                font-size: 3vw;
+                padding: 20px 0;
+                border: 2px solid $y3;
+            }
+            input{
+                height: 42px;
+                outline: none;
+                border: 2px solid $y3;
+                padding: 3px 18px;
+                border-radius: 18px;
+                box-sizing: border-box;
+                font-size: 22px;
+            }
+            label{
+                margin-left: 18px;
+                text-transform: capitalize;
+                margin-bottom: 5px;
+            }
+            &.cmd{
+                background-color: $white;
+                border-radius: 25px;
+                box-sizing: border-box;
+                padding: 10px 10px;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .btn{
+                    background-color: $black;
+                    color: $white;
+                    font-size: 16px;
+                    box-sizing: border-box;
+                    width: 45vw;
+                    max-width: 200px;
+                    text-align: center;
+                    padding: 10px 10px;
+                    text-transform: capitalize;
+                    &.back{
+                        background-color: $o1;
+                    }
+                    &.del{
+                        background-color: #f00;
+                    }
+                    &:hover{
+                        background-color: $gray;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+}

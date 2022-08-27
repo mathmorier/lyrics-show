@@ -40,4 +40,12 @@ function getGenuisSong($id)
     return $res->response->song;
 }
 
+function checkImput($data){
+    # Vérification anti attaque
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 ?>
