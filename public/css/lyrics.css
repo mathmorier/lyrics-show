@@ -52,6 +52,9 @@
   margin-bottom: 20px;
   text-align: left;
 }
+.rg_embed.shir .lyrics {
+  line-height: 1.6;
+}
 
 .rg_embed_body p {
   text-align: center;
