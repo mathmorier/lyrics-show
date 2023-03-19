@@ -31,7 +31,10 @@ class Routes
           ['GET', '/tvsong/del/[i:id]', 'TvSongController#delSong', 'delSong'],
           ['POST', '/tvsong/del/[i:id]/[*:token]', 'TvSongController#delSongPost', 'delSongPost'],
           ['GET', '/tvsong/api', 'TvSongController#apiAskSong', 'apiAskSong'],
-          ['GET', '/bible', 'BibleController#index', 'Bible_index']
+          ['GET', '/bible', 'BibleController#bibleSelect', 'BibleSelect'],
+          ['GET', '/bible/[:version]', 'BibleController#bibleShow', 'BibleShow'],
+          ['GET', '/bible/[:version]/[:book]', 'BibleController#bibleBookShow', 'BibleBookShow'],
+          ['GET', '/bible/[:version]/[:book]/[:reference]', 'BibleController#bibleBookShowPart', 'BibleBookShowPart']
 
         ];
     }

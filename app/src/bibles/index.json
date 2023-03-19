@@ -20,5 +20,14 @@
                 "abbreviation": "fr_apee"
             }
         ]
+    },
+    {
+        "language": "Spanish",
+        "versions": [
+            {
+                "name": "Reina Valera",
+                "abbreviation": "es_rvr"
+            }
+        ]
     }
 ]

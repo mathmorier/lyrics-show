@@ -5,12 +5,10 @@ use App\Models\Bible        as Bible;
 
 class BibleController
 {
-    
-    public function index($params = null, $song = null)
-    {
 
-        // echo file_get_contents(__DIR__.'/../src/biblesFiles/fr_apee.json');
-        // die;
+    
+    public function index($params = null, $main = [])
+    {
 
         $main['head'] = [
             '<link rel="stylesheet" href="/css/bible.css">'
@@ -19,15 +17,61 @@ class BibleController
             '<script src="/js/bible.js"></script>'
         ];
 
-        Bible::getLang();
-
-        Bible::getText();
-
         ob_start();
         require __DIR__.'/../views/bible.php';
         $main['view'] = ob_get_clean();
 
         require __DIR__.'/../layouts/default.php';
     }
+
+    public function bibleSelect($params = null)
+    {
+        $bible = new Bible ;
+        $main['biblesList'] = $bible->getAllVersions();
+
+        $this->index($params, $main);
+    }
+
+    public function bibleShow($params = null)
+    {
+        $bible = new Bible ;
+        $bible->setVersion($params['version']);
+
+        $main['bible'] = $bible->getBible();
+        $main['bibleVersion'] = $bible->getVersion();
+
+        $this->index($params, $main);
+    }
+    public function bibleBookShow($params = null)
+    {
+        $bible = new Bible ;
+        $bible->setVersion($params['version']);
+        $bible->setBook($params['book']);
+
+        $main['book'] = $bible->getBook();
+
+        $main['bibleVersion'] = $bible->getVersion();
+        $this->index($params, $main);
+
+    }
+    public function bibleBookShowPart($params = null)
+    {
+        $bible = new Bible ;
+        $bible->setVersion($params['version']);
+        $bible->setBook($params['book']);
+        $bible->setReference($params['reference']);
+
+        $main['book'] = $bible->getReference();
+
+        
+
+
+
+
+        $main['bibleVersion'] = $bible->getVersion();
+        $this->index($params, $main);
+
+    }
+
 }
 ?>
