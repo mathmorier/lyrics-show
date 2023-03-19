@@ -15,7 +15,6 @@
   align-items: flex-start;
 }
 .container .overlay .card {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 15px 5px;

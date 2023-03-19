@@ -1,0 +1,24 @@
+[
+    {
+        "language": "English",
+        "versions": [
+            {
+                "name": "Basic English",
+                "abbreviation": "en_bbe"
+            },
+            {
+                "name": "King James Version",
+                "abbreviation": "en_kjv"
+            }
+        ]
+    },
+    {
+        "language": "French",
+        "versions": [
+            {
+                "name": "Le Bible de I'Épée",
+                "abbreviation": "fr_apee"
+            }
+        ]
+    }
+]

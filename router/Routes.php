@@ -30,7 +30,8 @@ class Routes
           ['POST', '/tvsong/create/[*:token]', 'TvSongController#createSongPost', 'createSongPost'],
           ['GET', '/tvsong/del/[i:id]', 'TvSongController#delSong', 'delSong'],
           ['POST', '/tvsong/del/[i:id]/[*:token]', 'TvSongController#delSongPost', 'delSongPost'],
-          ['GET', '/tvsong/api', 'TvSongController#apiAskSong', 'apiAskSong']
+          ['GET', '/tvsong/api', 'TvSongController#apiAskSong', 'apiAskSong'],
+          ['GET', '/bible', 'BibleController#index', 'Bible_index']
 
         ];
     }
