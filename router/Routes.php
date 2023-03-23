@@ -34,7 +34,11 @@ class Routes
           ['GET', '/bible', 'BibleController#bibleSelect', 'BibleSelect'],
           ['GET', '/bible/[:version]', 'BibleController#bibleShow', 'BibleShow'],
           ['GET', '/bible/[:version]/[:book]', 'BibleController#bibleBookShow', 'BibleBookShow'],
-          ['GET', '/bible/[:version]/[:book]/[:reference]', 'BibleController#bibleBookShowPart', 'BibleBookShowPart']
+          ['GET', '/bible/[:version]/[:book]/[:reference]', 'BibleController#bibleBookShowPart', 'BibleBookShowPart'],
+          ['GET', '/api/bible', 'BibleController#apiAskBible', 'BibleApiAskAllBible'],
+          ['GET', '/api/bible/[:version]', 'BibleController#apiAskBible', 'BibleApiAskBible'],
+          ['GET', '/api/bible/[:version]/[:book]', 'BibleController#apiAskBible', 'BibleApiAskBibleBook'],
+          ['GET', '/api/bible/[:version]/[:book]/[:reference]', 'BibleController#apiAskBible', 'BibleApiAskBibleBookRef'],
 
         ];
     }

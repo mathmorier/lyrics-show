@@ -23,7 +23,6 @@ class BibleController
 
         require __DIR__.'/../layouts/default.php';
     }
-
     public function bibleSelect($params = null)
     {
         $bible = new Bible ;
@@ -31,7 +30,6 @@ class BibleController
 
         $this->index($params, $main);
     }
-
     public function bibleShow($params = null)
     {
         $bible = new Bible ;
@@ -72,6 +70,21 @@ class BibleController
         $this->index($params, $main);
 
     }
+    public function apiAskBible($params = null)
+    {
+        $bible = new Bible;
+        $bible->setVersion($params["version"]??'en_kjv');
+        $bible->setBook($params['book'] ?? null);
+        $bible->setReference($params['reference'] ?? null);
 
+        if (isset($params["reference"])) {
+            $data = $bible->getReference();
+        }else if (isset($params["version"])) {
+            $data = $bible->getBibleStruct();
+        }else {
+            $data = $bible->getAllVersions();
+        }
+        echo json_encode($data);
+    }
 }
 ?>

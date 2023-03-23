@@ -20,7 +20,7 @@ class Bible
             try {
                 return json_decode(file_get_contents(__DIR__.'/../src/bibles/'.$this->version.'.json'));
             } catch (\Throwable $th) {
-                return null;
+                return json_decode(file_get_contents(__DIR__.'/../src/bibles/en_kjv.json'));
             }
         }
 
@@ -37,7 +37,8 @@ class Bible
                     'name'=>$version->name,
                     'abbreviation'=>$version->abbreviation,
                     'language'=>$lang->language,
-                    'path'=>'/bible/'.$version->abbreviation
+                    'path'=>'/bible/'.$version->abbreviation,
+                    'pathApi'=>'/api/bible/'.$version->abbreviation
                 ]);
             }
         }
@@ -66,6 +67,28 @@ class Bible
 
         return $bible;
     }
+    public function getBibleStruct()
+    {
+        $bible = $this->getBibleFile();
+        $data = [];
+
+        foreach ($bible as $book) {
+            if ($this->book == null OR $book->abbrev == $this->book) {  
+                $chaptersList = [];
+                foreach ($book->chapters as $key => $value) {
+                    $chaptersList[$key+1] = count($value);
+                }
+                array_push($data,[
+                    "abbrev"        => $book->abbrev,
+                    "name"          => $book->name,
+                    "chaptersCount" => count($book->chapters),
+                    "chapters" => $chaptersList,
+                ]);
+            }
+        }
+
+        return $data;
+    }
     public function getBook()
     {
         $books = [];
@@ -76,11 +99,14 @@ class Bible
                 }
             }
             // Correction Erreur numéro (départ 0 -> départ 1)
-            $new = [];
-            for ($i=0; $i < count($book->chapters); $i++) { 
-                $new[$i+1] = $book->chapters[$i];
+            if ($books != []) {
+                $new = [];
+                for ($i=0; $i < count($books->chapters); $i++) { 
+                    $new[$i+1] = $books->chapters[$i];
+                }
+                $books->chapters = $new;
             }
-            $books->chapters = $new;
+            
         }
         return $books;
     }

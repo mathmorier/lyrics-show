@@ -14,6 +14,10 @@
             <i class="fa-solid fa-music"></i>
             <p>Lyrics</p>
         </a>
+        <a href="/bible">
+            <i class="fa-solid fa-book-bible"></i>
+            <p>Bible</p>
+        </a>
         <a href="/os">
             <i class="fa-solid fa-person-chalkboard"></i>
             <p>OpenSong</p>
