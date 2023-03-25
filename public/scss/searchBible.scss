@@ -1,0 +1,162 @@
+@import 'colors';
+
+body{
+    .search-box{
+        position: relative;
+        margin: 10px auto;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        #search-ask{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            width: 100%;
+            label{
+                background-color: transparent;
+                margin: 0 0 5px 20px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }   
+             
+            div{
+                display: flex;
+                height: 50px;
+                input{
+                    box-shadow: 0 5px 4px -6px #444;
+                    padding: 10px 85px 10px 10px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    border-radius: 15px 0 0 15px;
+                    outline: none;
+                    border: 2px solid $y3;
+                    border-right: none;
+                    box-sizing: border-box;
+                }
+                a{
+                    color: $black;
+                    .corss{
+                        background-color: $y3;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 0 15px 15px 0;
+                        position: relative;
+                        box-sizing: border-box;
+                        .cross-line{
+                            position: absolute;
+                            top: 25px;
+                            left: 25px;
+                            
+                            height: 2px;
+                            width: 25px;
+                            background-color: $white;
+                            &:first-child{
+                                transform: translateX(-50%) rotate(-45deg);
+                            }
+                            &:last-child{
+                                transform: translateX(-50%) rotate(45deg);
+                            }
+                        }
+                        &:hover{
+                            .cross-line{
+                                background-color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+            .nav-icon{
+                height: 18px;
+                position: absolute;
+                top: 0;
+                right: 50px;
+                display: flex;
+                gap: 10px;
+                a{
+                    color: $black;
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        #search-res{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 75px;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            max-height: 500px;
+            .serach-list{
+                background-color: $white;
+                margin: auto;
+                padding: 7px 10px;
+                width: 94%;
+                max-width: 750px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                border-bottom: 1px solid $gray;
+                box-shadow: 2px 2px 4px 0px $shadow;
+                gap: 10px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $gray;
+                }
+            }
+        }
+        #api-select{
+            position: absolute;
+            top: 25px;
+            right: 50px;
+            height: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            .box{
+                position: relative;
+                margin-bottom: -2px;
+                font-size: 12px; 
+                display: flex;
+                justify-content: space-between;
+                align-items: left;
+                select{
+                    border: none;
+                    outline: none;
+                    height: 46px;
+                    width: 80px;
+                    padding: 0 5px 0 5px;
+                    box-sizing: border-box;
+                    color: $gray;
+                    font-weight: bold;
+                    cursor: pointer;
+                    background: transparent;
+                    &:hover{
+                        color: $grayHover;
+                    }
+                    option{
+                        font-size: 16px;
+                        color: $grayHover;
+                        font-weight: bold;
+                    }
+                }
+                &::before{
+                    content: '';
+                    background: $whiteDark;
+                    height: 30px;
+                    width: 1px;
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+                }
+            }
+        }
+    } 
+}

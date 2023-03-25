@@ -1,0 +1,155 @@
+/* SCSS Gradient */
+body .search-box {
+  position: relative;
+  margin: 10px auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body .search-box #search-ask {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+}
+body .search-box #search-ask label {
+  background-color: transparent;
+  margin: 0 0 5px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+body .search-box #search-ask div {
+  display: flex;
+  height: 50px;
+}
+body .search-box #search-ask div input {
+  box-shadow: 0 5px 4px -6px #444;
+  padding: 10px 85px 10px 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 15px 0 0 15px;
+  outline: none;
+  border: 2px solid #8bc540;
+  border-right: none;
+  box-sizing: border-box;
+}
+body .search-box #search-ask div a {
+  color: #0d232c;
+}
+body .search-box #search-ask div a .corss {
+  background-color: #8bc540;
+  height: 50px;
+  width: 50px;
+  border-radius: 0 15px 15px 0;
+  position: relative;
+  box-sizing: border-box;
+}
+body .search-box #search-ask div a .corss .cross-line {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  height: 2px;
+  width: 25px;
+  background-color: #fff;
+}
+body .search-box #search-ask div a .corss .cross-line:first-child {
+  transform: translateX(-50%) rotate(-45deg);
+}
+body .search-box #search-ask div a .corss .cross-line:last-child {
+  transform: translateX(-50%) rotate(45deg);
+}
+body .search-box #search-ask div a .corss:hover .cross-line {
+  background-color: #0d232c;
+}
+body .search-box #search-ask .nav-icon {
+  height: 18px;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  display: flex;
+  gap: 10px;
+}
+body .search-box #search-ask .nav-icon a {
+  color: #0d232c;
+}
+body .search-box #search-ask .nav-icon a:hover {
+  color: #fff;
+}
+body .search-box #search-res {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  max-height: 500px;
+}
+body .search-box #search-res .serach-list {
+  background-color: #fff;
+  margin: auto;
+  padding: 7px 10px;
+  width: 94%;
+  max-width: 750px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #bbb;
+  box-shadow: 2px 2px 4px 0px #444;
+  gap: 10px;
+  cursor: pointer;
+}
+body .search-box #search-res .serach-list:hover {
+  background-color: #bbb;
+}
+body .search-box #api-select {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+body .search-box #api-select .box {
+  position: relative;
+  margin-bottom: -2px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+}
+body .search-box #api-select .box select {
+  border: none;
+  outline: none;
+  height: 46px;
+  width: 80px;
+  padding: 0 5px 0 5px;
+  box-sizing: border-box;
+  color: #bbb;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+}
+body .search-box #api-select .box select:hover {
+  color: #aaa;
+}
+body .search-box #api-select .box select option {
+  font-size: 16px;
+  color: #aaa;
+  font-weight: bold;
+}
+body .search-box #api-select .box::before {
+  content: "";
+  background: #dddddd;
+  height: 30px;
+  width: 1px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}/*# sourceMappingURL=searchBible.css.map */

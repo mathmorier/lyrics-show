@@ -1,6 +1,5 @@
 <div class="container">
-    <a href="/bible"><h2>Bible</h2></a>
-    <br>
+    <?= $main['src']['search'] ?? "" ?>
     <div class="list-bible">
         <?php
         foreach ($main['biblesList'] ?? [] as $bible) {

@@ -16,7 +16,7 @@ class SearchApi
             <div class="nav-icon">
                 <a href="/"><i class="fa-solid fa-house"></i></a>
                 <a href="/lyrics"><i class="fa-solid fa-music"></i></a>
-                <a href="/os"><i class="fa-solid fa-person-chalkboard"></i></a>
+                <a href="/bible"><i class="fa-solid fa-book-bible"></i></a>
             </div>
             <div id="api-select">
                 <div class="box">

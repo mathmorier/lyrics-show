@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers;
-use App\Src\SearchApi       as SearchApi;
+use App\Src\SearchBible       as SearchBible;
 use App\Models\Bible        as Bible;
 
 class BibleController
@@ -16,6 +16,9 @@ class BibleController
         $main['script'] = [
             '<script src="/js/bible.js"></script>'
         ];
+        $main['src']['search'] = SearchBible::index("/bible");
+        $main['head'][] = SearchBible::style();
+        $main['script'][] = SearchBible::script();
 
         ob_start();
         require __DIR__.'/../views/bible.php';
