@@ -19,17 +19,30 @@ class SearchBible
             </div>
             <div id="api-select">
                 <div class="box">
-                    <select name="apiSelect" id="apiSelect">
+                    <select name="bibleSelect" id="bibleSelect">
                     </select>
                 </div>
             </div>
             <div>
                 <!-- <input type="text" name="search" id="search" placeholder="Search ..." autofocus> -->
-                <select name="book" id="book"></select>
-                <select name="StartChapter" id="StartChapter"></select>
-                <select name="StartVerse" id="StartVerse"></select>
-                <select name="EndChapter" id="EndChapter"></select>
-                <select name="EndVerse" id="EndVerse"></select>
+                <select name="searchBook" id="searchBook"></select>
+                <label for="startChapter">Chapter</label>
+                <select name="startChapter" id="startChapter">
+                    <option value="1">1</option>
+                </select>
+                <label for="startVerse">Verse</label>
+                <select name="startVerse" id="startVerse">
+                    <option value="1">1</option>
+                </select>
+                <p>TO :</p>
+                <label for="endChapter">Chapter</label>
+                <select name="endChapter" id="endChapter">
+                    <option value="1">1</option>
+                </select>
+                <label for="endVerse">Verse</label>
+                <select name="endVerse" id="endVerse">
+                    <option value="1">1</option>
+                </select>
 
                 <a href="<?=$callBack = null ? $_SERVER['REQUEST_URI'] : $callBack?>">
                     <div class="corss">
@@ -53,7 +66,61 @@ class SearchBible
         ob_start();
         ?>
         <script>
-            console.log('done serach 7');
+            listBible();
+            getBooks();
+            getChapters();
+
+            async function listBible(){
+                const bibleSelect = document.getElementById('bibleSelect') ;
+                const api = '/api/bible';
+                const url = api
+                let res = await fetch(url)
+                .then(response => response.json())
+                .then(data => {return data})
+                .catch(err => console.error(err));
+                
+                res.forEach((e)=>{
+                    let opt = document.createElement('option');
+                    opt.value = e.abbreviation;
+                    opt.innerHTML = e.name;
+                    bibleSelect.appendChild(opt);
+                })
+
+            }
+            async function getBooks(version = 'en_kjv'){
+                const searchBook = document.querySelector('#searchBook');
+                const api = '/api/bible/';
+                const url = api + version ;
+                let res = await fetch(url)
+                .then(response => response.json())
+                .then(data => {return data})
+                .catch(err => console.error(err));
+                res.forEach((e)=>{
+                    let opt = document.createElement('option');
+                    opt.value = e.abbreviation;
+                    opt.innerHTML = e.name;
+                    searchBook.appendChild(opt);
+                })
+            }
+            async function getChapters(version = 'en_kjv', book = 'gn'){
+                const startChapter = document.querySelector('#startChapter');
+                const api = '/api/bible/';
+                const url = api + version + '/' + book;
+                let res = await fetch(url)
+                .then(response => response.json())
+                .then(data => {return data})
+                .catch(err => console.error(err));
+                res.forEach((e)=>{
+                    console.log(e.chapters);
+                    e.chapters.forEach((e2) => {
+                        console.log(e2);
+                        // let opt = document.createElement('option');
+                        // opt.value = e2.abbreviation;
+                        // opt.innerHTML = e2.name;
+                        // startChapter.appendChild(opt);
+                    });
+                })
+            }
         </script>
         <?php
         return ob_get_clean();
